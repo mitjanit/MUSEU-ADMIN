@@ -1,0 +1,44 @@
+
+
+// EUROPE
+
+"Spain","France","Portugal","Italy", "Germany", "Austria", "United Kingdom",
+    "Switzerland", "Ireland", "Belgium", "Netherlands", "Denmark", "Luxembourg",
+    "Czech Republic", "Poland", "Slovakia", "Hungary", "Slovenia", "Sweden",
+    "Norway", "Finland", "Greece", "Albania", "Croatia", "Romania", "Bosnia and Herzegovina",
+    "Montenegro", "Moldova", "Ukraine", "Belarus", "Lithuania", "Latvia", "Estonia",
+    "Turkey", "Serbia", "Kosovo", "Bulgaria", "Republic of Macedonia", "Georgia", "Armenia", "Azerbaijan",
+    "Russia"
+
+// AFRICA
+
+"Morocco", "Algeria", "Western Sahara", "Libya", "Tunisia", "Egypt", 
+  "Sudan", "Chad", "Niger", "Mali", "Mauritania", "Eritrea", "Djibouti", "Somaliland",
+  "Ethiopia", "South Sudan", "Central African Republic", "Cameroon", "Nigeria",
+  "Benin", "Togo", "Burkina Faso", "Ghana", "Ivory Coast", "Liberia", "Sierra Leone",
+  "Guinea", "Guinea-Bissau", "The Gambia", "Senegal", "Equatorial Guinea", "Gabon",
+  "Republic of the Congo", "Democratic Republic of the Congo", "Uganda", "Kenya",
+  "Tanzania", "Rwanda", "Burundi", "Zambia", "Angola", "Malawi", "Mozambique", "Madagascar",
+  "Zimbabwe", "Botswana", "Namibia", "eSwatini", "Lesotho", "South Africa", "Seychelles"
+
+  // ASIA
+
+  "Iraq", "Iran", "Jordan", "Kuwait", "Lebanon", "Oman", "Qatar", "Saudi Arabia", "Syria","United Arab Emirates", "Yemen",
+  "Georgia", "Armenia", "Azerbaijan", "Kazakhstan", "Uzbekistan", "Kyrgyzstan", "Turkmenistan", "Tajikistan", "India", "Nepal", "Bhutan", "People's Republic of China",
+  "Russia", "Pakistan", "Afghanistan", "Sri Lanka", "Bangladesh", "Mongolia", "North Korea",
+  "South Korea", "Japan", "Taiwan", "Thailand", "Cambodia", "Vietnam", "Myanmar", "Laos"
+
+  // OCEANIA
+
+  "Australia", "New Zealand", "Papua New Guinea", "Indonesia", "Philippines",
+  "Fiji", "Malaysia", "Brunei"
+
+  // NORTH AMERICA
+
+  "Canada", "United States of America", "Mexico", "The Bahamas", "Cuba", "Jamaica", "Haiti", "Dominican Republic",
+  "Guatemala", "Belize", "El Salvador", "Honduras", "Nicaragua", "Costa Rica",
+  "Panama"
+
+  // SOUTH AMERICA
+  "Colombia", "Venezuela", "Guyana", "Suriname", "France", 
+  "Ecuador", "Peru", "Bolivia", "Brazil", "Paraguay", "Uruguay","Argentina", "Chile"
