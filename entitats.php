@@ -39,8 +39,8 @@
 
                       <div class="btn-group"  role="group">
                           <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModal"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#editaModal"><i class="fa fa-edit"></i> Edita</button>
+                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
                           <button type="button" class="btn btn-primary btn-histo"><i class="fas fa-info-circle"></i> Detalls</button>
                       </div>
                   </div>
@@ -156,6 +156,8 @@
   <?php include 'common/modalout.php'; ?>
 
   <?php include 'modal_entitat_new.php'; ?>
+  <?php include 'modal_entitat_edit.php'; ?>
+  <?php include 'modal_entitat_del.php'; ?>
 
     <!-- dialeg modal HISTO -->
     <div class="modal fade" id="myHistoModal" tabindex="-1" role="dialog" aria-labelledby="myHistoModalLabel" aria-hidden="true">
@@ -240,6 +242,88 @@
         });
 
         table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
+
+        // Editar entitat
+
+        /*** edit **/
+
+        $(".btn-edit").click(function() {
+
+                var esEditable = false;
+
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
+
+                var numSelected = table.rows( { selected: true }).count();
+                if(numSelected==0) {
+                    var txt = $('<b>ERROR: No has seleccionat cap entitat per editar.</b>');
+                    $('#editMessage').html(txt);
+                    //$('#e1').attr
+                }
+                else {
+                    var txt = $('<b></b>');
+                    esEditable = true;
+                    $('#editMessage').html(txt);
+                }
+
+                if(esEditable){
+
+                    $('#e0').attr("value", data[0][0]);
+                    $('#e1').attr("value", data[0][1]);
+                    $('#e2').attr("value", data[0][2]);
+                    $('#e3').attr("value", data[0][3]);
+                    $('#e4').attr("value", data[0][4]);
+                    $('#e5').attr("value", data[0][5]);
+                    $('#e6').attr("value", data[0][6]);
+                    $('#e7').attr("value", data[0][7]);
+                    $('#e8').attr("value", data[0][8]);
+                    $('#e9').attr("value", data[0][9]);
+                    $('#e10').attr("value", data[0][10]);
+                    $('#e11').attr("value", data[0][11]);
+                    $('#e12').attr("value", data[0][12]);
+                    $('#e13').attr("value", data[0][13]);
+                    $('#e14').attr("value", data[0][14]);
+                    $('#e15').attr("value", data[0][15]);
+                    $('#e16').attr("value", data[0][16]);
+
+                }
+
+
+        });
+
+        $('#btnEdit').click(function() {
+            $('form[name="modalFormEdit"]').validator();
+            $('form[name="modalFormEdit"]').submit();
+        });
+
+
+        /*** delete ****/
+
+            $(".btn[data-target='#deleteModal']").click(function() {
+
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
+
+                var numSelected = table.rows( { selected: true }).count();
+                var txt;
+                if(numSelected==0) {
+                  txt = $('<b>ERROR: No has seleccionat cap entitat per eliminar.</b>');}
+                else { 
+                  txt = $("<p><b>Vols esborrar les dades de l'entitat?</b></br/> "+
+                          data[0][2]+", "+data[0][1]+" ?</b></p>");
+                  $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
+                }
+
+                $('#deleteMessage').html(txt);
+
+                
+            });
+
+            $('#btnDelete').click(function() {
+                $('form[name="modalFormDelete"]').submit();
+            });
+
+
 
         // Click botó obrir detalls de l'entitat
 
