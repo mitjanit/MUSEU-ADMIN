@@ -1,6 +1,6 @@
 <?php
-$local=1;
-if($local==1){
+$local=true;
+if($local){
 	$con01 = mysqli_connect("localhost", "root", "mitjanit3", "museu");
 }
 else {
