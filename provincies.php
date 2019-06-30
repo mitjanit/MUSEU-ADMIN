@@ -47,7 +47,6 @@ $nomTaula = "Provincies";
                           <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModal"><i class="fas fa-plus-circle"></i> Alta</button>
                           <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
                           <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                          <button type="button" class="btn btn-primary btn-histo"><i class="fas fa-info-circle"></i> Detalls</button>
                       </div>
                   </div>
                   <div class=" col-md-6">
@@ -204,58 +203,6 @@ $nomTaula = "Provincies";
 
         table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
 
-        // Click botó obrir detalls de l'entitat
-
-        $(".btn-histo").click(function() {
-
-            var table = $('#dtPersones').DataTable();
-            var data=table.rows( { selected: true }).data();
-            var numSelected = table.rows( { selected: true }).count();
-
-            if(numSelected==0) {
-                var txt = $('<b><i class="fas fa-exclamation-circle"></i> ERROR: No has seleccionat cap persona per veure.</b>');
-                $('#editMessageHisto').html(txt);
-                $('#myHistoModal').modal();
-            }
-            else {
-                var identitat=data[0][0];
-                location.href = 'persona.php?id='+identitat;
-            }
-
-        });
-
-        $('#btnHisto').click(function() {
-            $('form[name="modalFormHisto"]').submit();
-        });
-
-
-        // Click botó elimina persona
-
-        $(".btn[data-target='#myDeleteModal']").click(function() {
-
-            var table = $('#dtPersones').DataTable();
-            var data=table.rows( { selected: true }).data();
-            var numSelected = table.rows( { selected: true }).count();
-
-            var txt = $('<b>ERROR: No has seleccionat cap persona per eliminar.</b>');
-            if(numSelected>0) {
-              txt = $("<p><b>Vols esborrar les dades de: <br/>"+data[0][3]+" "+data[0][4]+", "+data[0][5]+" ?</b></p>");
-              var modalBody = $('<div id="modalDeleteContent"></div>');
-              var modalForm = $('<form name="modalFormDelete" action="eliminaPersona.php" method="get"></form>');
-              modalBody.append(txt);
-              modalBody.append(modalForm);
-              modalForm.append('<input type="hidden" name="idp" id="idp" value="'+data[0][0]+'" />');
-              modalBody.append(modalForm);
-              $('#deleteBody').html(modalBody);
-            }
-
-            $('#deleteMessage').html(txt);
-            
-        });
-
-        $('#btnDelete').click(function() {
-            $('form[name="modalFormDelete"]').submit();
-        });
 
 
     });

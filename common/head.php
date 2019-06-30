@@ -32,6 +32,7 @@
       .hide_me {display: none;}
 
       .modal-lg {max-width:80%;}
+      .modal-md {max-width:50%;}
 
       .dataTables_filter {text-align: left !important;}
         

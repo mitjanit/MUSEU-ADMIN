@@ -108,29 +108,9 @@ $nomTaula = "Càrrecs";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
-
-    <!-- dialeg modal DELETE -->
-    <!---->
-    <div class="modal fade" id="myDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myDeleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content deleteModal">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Elimina Persona</h5>
-                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div id="deleteBody" class="modal-body"><p id="deleteMessage"></p></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                    <button type="button" class="btn btn-primary" id="btnDelete">Eliminar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-
-
+  <?php include 'modal_carrec_new.php'; ?>
+  <?php include 'modal_carrec_edit.php'; ?>
+  <?php include 'modal_carrec_del.php'; ?>
 
   <?php include("common/end.php") ?>
 
@@ -195,58 +175,73 @@ $nomTaula = "Càrrecs";
 
         table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
 
-        // Click botó obrir detalls de l'entitat
-
-        $(".btn-histo").click(function() {
-
-            var table = $('#dtPersones').DataTable();
-            var data=table.rows( { selected: true }).data();
-            var numSelected = table.rows( { selected: true }).count();
-
-            if(numSelected==0) {
-                var txt = $('<b><i class="fas fa-exclamation-circle"></i> ERROR: No has seleccionat cap persona per veure.</b>');
-                $('#editMessageHisto').html(txt);
-                $('#myHistoModal').modal();
-            }
-            else {
-                var identitat=data[0][0];
-                location.href = 'persona.php?id='+identitat;
-            }
-
-        });
-
-        $('#btnHisto').click(function() {
-            $('form[name="modalFormHisto"]').submit();
+        // reset dels camps de formulari en tancar un modal
+        $('.modal').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
         });
 
 
-        // Click botó elimina persona
+        // Editar Tipus Activitat
+
+        $(".btn-edit").click(function() {
+
+                var esEditable = false;
+
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
+
+                var numSelected = table.rows( { selected: true }).count();
+                if(numSelected==0) {
+                    var txt = $('<b>ERROR: No has seleccionat cap càrrec per editar.</b>');
+                    $('#editMessage').html(txt);
+                }
+                else {
+                    var txt = $('<b></b>');
+                    esEditable = true;
+                    $('#editMessage').html(txt);
+                }
+
+                if(esEditable){
+
+                    $('#e0').attr("value", data[0][0]);
+                    $('#e1').attr("value", data[0][1]);
+                    $('#e2').attr("value", data[0][2]);
+                }
+
+
+        });
+
+        $('#btnEdit').click(function() {
+            $('form[name="modalFormEdit"]').validator();
+            $('form[name="modalFormEdit"]').submit();
+        });
+
+
+        // Eliminar Tipus Activitat
 
         $(".btn[data-target='#myDeleteModal']").click(function() {
 
-            var table = $('#dtPersones').DataTable();
-            var data=table.rows( { selected: true }).data();
-            var numSelected = table.rows( { selected: true }).count();
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
 
-            var txt = $('<b>ERROR: No has seleccionat cap persona per eliminar.</b>');
-            if(numSelected>0) {
-              txt = $("<p><b>Vols esborrar les dades de: <br/>"+data[0][3]+" "+data[0][4]+", "+data[0][5]+" ?</b></p>");
-              var modalBody = $('<div id="modalDeleteContent"></div>');
-              var modalForm = $('<form name="modalFormDelete" action="eliminaPersona.php" method="get"></form>');
-              modalBody.append(txt);
-              modalBody.append(modalForm);
-              modalForm.append('<input type="hidden" name="idp" id="idp" value="'+data[0][0]+'" />');
-              modalBody.append(modalForm);
-              $('#deleteBody').html(modalBody);
-            }
+                var numSelected = table.rows( { selected: true }).count();
+                var txt;
+                if(numSelected==0) {
+                  txt = $('<b>ERROR: No has seleccionat cap càrrec per eliminar.</b>');}
+                else { 
+                  txt = $("<p><b>Vols esborrar les dades del càrrec?</b></br/> "+
+                          data[0][1]+".</p>");
+                  $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
+                }
 
-            $('#deleteMessage').html(txt);
-            
-        });
+              $('#deleteMessage').html(txt);
 
-        $('#btnDelete').click(function() {
+                
+          });
+
+          $('#btnDelete').click(function() {
             $('form[name="modalFormDelete"]').submit();
-        });
+          });
 
 
     });

@@ -4,7 +4,7 @@
 
 <?php
 
-$nomTaula = "Poblacions";
+$nomTaula = "Accions de l'Usuari";
 
 ?>
 
@@ -30,7 +30,7 @@ $nomTaula = "Poblacions";
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800"><i class="fas fa-th-large"></i> <?php echo $nomTaula; ?></h1>
+          <h1 class="h3 mb-2 text-gray-800"><i class="fas fa-th-large"></i> <?php echo $nomTaula." // ".$_SESSION['username']; ?></h1>
           <p class="mb-4">Gestió de les dades de la taula de <?php echo $nomTaula; ?>.</p>
 
           <!-- DataTales Example -->
@@ -41,17 +41,7 @@ $nomTaula = "Poblacions";
             </div>
             <div class="card-body">
               <div class="row" id="zona-botons">
-                  <div class=" col-md-6">
-
-                      <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModal"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                      </div>
-                  </div>
-
-                  <div class=" col-md-6">
-                  </div>
+                  <div class="col-md-12"></div>
               </div>
 
               <p></p>
@@ -60,43 +50,33 @@ $nomTaula = "Poblacions";
                   <thead>
                     <tr>
                       <th>Id</th>
-                      <th>Nom</th>
-                      <th>Provincia</th>
-                      <th>Comunitat</th>
-                      <th>País</th>
+                      <th>Usuari</th>
+                      <th>Acció</th>
+                      <th>Data</th>
+                      <th>Hora</th>
                     </tr>
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT * FROM poblacions ORDER BY nom ASC";
+                        $query_rsGrups = "SELECT id, user, tipus, date(temps) as dia, time(temps) as hora FROM accions_user WHERE user='".$_SESSION['username']."' ORDER BY dia DESC, hora desc";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
-                            <td>
-                              <?php if($row['provincies_id']!=NULL){
-                                    $query_prov = "SELECT * FROM provincies WHERE id='".$row['provincies_id']."'";
-                                    $rsprov = mysqli_query($con01, $query_prov) or die("Error: ".mysqli_error($con01));
-                                    $rowprov = mysqli_fetch_array($rsprov);
-                                    echo utf8_encode($rowprov['nom']);
-                                    $comId = $rowprov['comunitats_id'];
-                                } 
-                            ?></td>
-                            <td>
-                              <?php if($row['provincies_id']!=NULL){
-                                    $query_com = "SELECT * FROM comunitats WHERE id='".$comId."'";
-                                    $rscom= mysqli_query($con01, $query_com) or die("Error: ".mysqli_error($con01));
-                                    $rowcom = mysqli_fetch_array($rscom);
-                                    echo utf8_encode($rowcom['nom']);
-                                } 
-                            ?></td>
-                            <td>
-                              <?php if($row['provincies_id']!=NULL){
-                                    echo "España";
-                                } 
-                            ?></td>
+                            <td><?php echo $row['user']; ?></td>
+                            <td><?php
+                              switch($row['tipus']){
+                                case "I": $txt="Inserció"; break;
+                                case "U": $txt="Modificació"; break;
+                                case "D": $txt="Eliminació"; break;
+                                default: $txt="Altes"; 
+                              }
+                              echo $txt;
+                              ?>
+                            </td>
+                            <td><?php echo $row['dia']; ?></td>
+                            <td><?php echo $row['hora']; ?></td>
                         </tr>
                         <?php 
                             } 
@@ -134,8 +114,6 @@ $nomTaula = "Poblacions";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
-
-
   <?php include("common/end.php") ?>
 
 
@@ -148,6 +126,9 @@ $nomTaula = "Poblacions";
         var table= $('#dt').DataTable({
             responsive: true,
             select: true,
+            columnDefs: [
+                { "type": "time", "targets": [3, 4] }
+              ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -197,8 +178,7 @@ $nomTaula = "Poblacions";
             }
         });
 
-        table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
-
+        table.buttons().container().appendTo( '#zona-botons .col-md-12:eq(0)' );
 
     });
 
