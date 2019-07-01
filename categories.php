@@ -110,9 +110,9 @@ $nomTaula = "Categories";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
-  <?php include 'modal_categoria_new.php'; ?>
-  <?php include 'modal_categoria_edit.php'; ?>
-  <?php include 'modal_categoria_del.php'; ?>
+  <?php include 'modals/modal_categoria_new.php'; ?>
+  <?php include 'modals/modal_categoria_edit.php'; ?>
+  <?php include 'modals/modal_categoria_del.php'; ?>
 
   <?php include("common/end.php") ?>
 

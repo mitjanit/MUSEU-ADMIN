@@ -155,9 +155,9 @@
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
-  <?php include 'modal_entitat_new.php'; ?>
-  <?php include 'modal_entitat_edit.php'; ?>
-  <?php include 'modal_entitat_del.php'; ?>
+  <?php include 'modals/modal_entitat_new.php'; ?>
+  <?php include 'modals/modal_entitat_edit.php'; ?>
+  <?php include 'modals/modal_entitat_del.php'; ?>
 
     <!-- dialeg modal HISTO -->
     <div class="modal fade" id="myHistoModal" tabindex="-1" role="dialog" aria-labelledby="myHistoModalLabel" aria-hidden="true">

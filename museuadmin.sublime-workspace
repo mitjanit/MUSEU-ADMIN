@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"rela",
+				"relat-jugador-botons"
+			],
+			[
 				"form",
 				"modalFormDelete"
 			],
@@ -510,10 +514,6 @@
 			[
 				"an",
 				"angleTarget"
-			],
-			[
-				"mouse",
-				"mouse\tmousePressed"
 			]
 		]
 	},
@@ -601,6 +601,8 @@
 	],
 	"file_history":
 	[
+		"/C/wamp/www/museu/MUSEU-ADMIN/array.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/persona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/carrecs.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/demarcacions.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modal_demarcacio_del.php",
@@ -625,7 +627,6 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modal_entitat_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/common/notifications.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/logs.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/persona.php",
 		"/C/wamp/www/museu/common/end.php",
 		"/C/wamp/www/museu/demarcacions.php",
 		"/C/wamp/www/museu/carrecs.php",
@@ -727,8 +728,7 @@
 		"/D/GITHUB/MUSEU/museu/src/CountryMap.js",
 		"/D/GITHUB/MUSEU/museu/src/SpainPage.js",
 		"/C/Users/ToniMitjanit/Desktop/canaries.json",
-		"/C/Users/ToniMitjanit/Downloads/map (6).topojson",
-		"/D/GITHUB/MUSEU/museu/public/maps/spain-comunidades.json"
+		"/C/Users/ToniMitjanit/Downloads/map (6).topojson"
 	],
 	"find":
 	{

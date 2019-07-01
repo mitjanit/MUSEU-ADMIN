@@ -109,9 +109,9 @@ $nomTaula = "Demarcacions";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
-  <?php include 'modal_demarcacio_new.php'; ?>
-  <?php include 'modal_demarcacio_edit.php'; ?>
-  <?php include 'modal_demarcacio_del.php'; ?>
+  <?php include 'modals/modal_demarcacio_new.php'; ?>
+  <?php include 'modals/modal_demarcacio_edit.php'; ?>
+  <?php include 'modals/modal_demarcacio_del.php'; ?>
 
   <?php include("common/end.php") ?>
 
