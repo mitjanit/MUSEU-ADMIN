@@ -64,8 +64,8 @@
                       <th class="none">Naixement</th>
                       <th class="none">Mort</th>
                       <th class="none">Detalls Mort</th>
-                      <th class="none">Material</th>
                       <th class="none">Detalls</th>
+                      <th class="none">Material</th>
                       <th class="none">Ficha</th>
                       <th class="none">Fotos</th>
                       <th class="none">Entrevistes</th>
@@ -117,8 +117,8 @@
                             <td><?php echo ($row['data_naixament']); ?></td>
                             <td><?php echo ($row['mort']); ?></td>
                             <td><?php echo utf8_encode($row['mort_detall']); ?></td>
-                            <td><?php echo utf8_encode($row['material']); ?></td>
                             <td><?php echo utf8_encode($row['detalls']); ?></td>
+                            <td><?php echo utf8_encode($row['material']); ?></td>
                             <td><?php echo $row['ficha']; ?></td>
                             <td><?php echo $row['fotos']; ?></td>
                             <td><?php echo $row['entrevistes']; ?></td>
@@ -165,337 +165,12 @@
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
-    <!-- dialeg modal NEW -->
-    <div  class="modal fade" id="myNewModal" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content newModal">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Alta Persona</h5>
-                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div id="newBody" class="modal-body">
-                        <form role="form" name="modalFormNew" action="altaEntitat.php" method="get" data-toggle="validator">
-                            <div class="row mb-4">
-                                <!-- row 0 -->
+  <?php include 'modals/modal_persona_new.php'; ?>
+  <?php include 'modals/modal_persona_edit.php'; ?>
+  
+  <?php $txtDeleteTaula="Persona"; $deleteAction="deletePersona.php"; ?>
+  <?php include 'modals/modal_del.php'; ?>
 
-                                <div class=" col-md-3">
-                                      <label for="nome">Nom Esportiu:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" name="c2" id="nome" placeholder="Nom Esportiu">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-3">
-                                      <label for="nom">Llinatge 1:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="nom" name="c3"placeholder="Nom">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-3">
-                                      <label for="nom">Llinatge 2:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="nom" name="c3"placeholder="Nom">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-3">
-                                      <label for="nom">Nom:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="nom" name="c3"placeholder="Nom">
-                                      </div>
-                                </div>
-
-                            </div>
-                            <!-- end row 0 -->
-
-                            <div class="row mb-4">
-
-                                <div class=" col-md-3">
-                                      <label for="nom">DNI:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="nom" name="c3"placeholder="Nom">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-3">
-                                      <label for="pais">Pais:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="pais" name="c4"placeholder="Pais">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-3">
-                                      <label for="provincia">Provincia:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="provincia" name="c5"placeholder="Provincia">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-3">
-                                      <label for="localitat">Localitat:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="localitat" name="c6"placeholder="Localitat">
-                                      </div>
-                                </div>
-
-                            </div>
-
-                           <div class="row mb-4">
-
-                                <div class=" col-md-3">
-                                      <label for="inici">Naixement:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="year" class="form-control" id="inici" name="c7"placeholder="Any Naixement">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-3">
-                                      <label for="inici">Mort:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="year" class="form-control" id="inici" name="c7"placeholder="Any Mort">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-6">
-                                      <label for="detalls">Detalls Mort:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="detalls" name="c8"placeholder="Detalls">
-                                      </div>
-                                </div>
-
-                                
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col"><hr></div>
-                            </div>
-
-                            <div class="row  mb-4">
-
-                                <div class=" col-md-6">
-                                      <label for="detalls">Detalls:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="detalls" name="c8"placeholder="Detalls">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-6">
-                                      <label for="materials">Materials:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="materials" name="c15" placeholder="Materials">
-                                      </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-4">
-
-                                <div class=" col-md-2">
-                                      <label for="escut">Ficha:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="escut" name="c9" placeholder="Ficha">
-                                      </div>
-                                </div>
-
-
-                                <div class=" col-md-2">
-                                      <label for="escut">Fotos:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="himne" name="c10" placeholder="Fotos">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="cd">Entrevistes:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="cd" name="c11" placeholder="Entrevistes">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="insignia">Reportatges:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="insignia" name="c12" placeholder="Reportatges">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="altre1">Altre 1:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="altre1" name="c13" placeholder="Altre 1">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="altre2">Altre 2:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="altre2" name="c14" placeholder="Altre 2">
-                                      </div>
-                                </div>
-                                
-
-                            </div>
-
-                            <div class="row">
-                                
-                                <div class=" col-md-2">
-                                      <label for="altre2">Altre 3:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="altre2" name="c14" placeholder="Altre 2">
-                                      </div>
-                                </div>
-
-
-                                <div class=" col-md-10">
-                                      <label for="detalls2">Detalls 2:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="detalls2" name="c14" placeholder="Detalls 2">
-                                      </div>
-                                </div>
-
-                            </div>
-
-
-                        </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                    <button type="button" class="btn btn-primary" id="btnNew">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- fi del dialeg modal NEW -->
-
-
-    <!-- dialeg modal DELETE -->
-    <!---->
-    <div class="modal fade" id="myDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myDeleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content deleteModal">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Elimina Persona</h5>
-                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div id="deleteBody" class="modal-body"><p id="deleteMessage"></p></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                    <button type="button" class="btn btn-primary" id="btnDelete">Eliminar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
 
     <!-- dialeg modal HISTO -->
     <div class="modal fade" id="myHistoModal" tabindex="-1" role="dialog" aria-labelledby="myHistoModalLabel" aria-hidden="true">
@@ -581,6 +256,104 @@
         });
 
         table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
+
+
+        // Missatge max-length
+        $('input[maxlength]').maxlength({
+          alwaysShow: false, 
+          warningClass: "form-text text-muted mt-1", 
+          limitReachedClass: "form-text text-muted mt-1", 
+          showMaxLength: true, 
+          showCharsTyped: true, 
+          placement: 'bottom-right-inside', 
+        });
+
+        // reset dels camps de formulari en tancar un modal
+        $('.modal').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
+        });
+
+        // Editar persona
+
+        $(".btn-edit").click(function() {
+
+                var esEditable = false;
+
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
+
+                var numSelected = table.rows( { selected: true }).count();
+                if(numSelected==0) {
+                    var txt = $('<b>ERROR: No has seleccionat cap persona per editar.</b>');
+                    $('#editMessage').html(txt);
+                }
+                else {
+                    var txt = $('<b></b>');
+                    esEditable = true;
+                    $('#editMessage').html(txt);
+                }
+
+                if(esEditable){
+
+                    $('#e0').attr("value", data[0][0]); // Id
+                    $('#e1').attr("value", data[0][2]); // NOM Esportiu
+                    $('#e2').attr("value", data[0][1]); // DNI
+                    $('#e3').attr("value", data[0][3]); // Llinatge 1
+                    $('#e4').attr("value", data[0][4]); // Llinatge 2
+                    $('#e5').attr("value", data[0][5]); // Nom
+
+                    $('#e6').attr("value", data[0][6]); // Localitat
+                    $('#e7').attr("value", data[0][7]); // Provincia
+                    $('#e8').attr("value", data[0][8]); // Pais
+
+                    $('#e9').attr("value", data[0][9]);   // Naixement
+                    $('#e10').attr("value", data[0][10]); // Mort
+                    $('#e11').attr("value", data[0][11]); // Detalls Mort
+                    $('#e12').attr("value", data[0][12]); // Detalls
+                    $('#e13').attr("value", data[0][13]); // Materials
+                    $('#e14').attr("value", data[0][14]);
+                    $('#e15').attr("value", data[0][15]);
+                    $('#e16').attr("value", data[0][16]);
+                    $('#e17').attr("value", data[0][17]);
+                    $('#e18').attr("value", data[0][18]); // Altre 1
+                    $('#e19').attr("value", data[0][19]); // Altre 2
+                    $('#e20').attr("value", data[0][20]); // Altre 3
+                    $('#e21').attr("value", data[0][21]); // Detalls 2
+
+                }
+
+
+        });
+
+        $('#btnEdit').click(function() {
+            $('form[name="modalFormEdit"]').validator();
+            $('form[name="modalFormEdit"]').submit();
+        });
+
+        // Delete Persona
+
+        $(".btn[data-target='#deleteModal']").click(function() {
+
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
+
+                var numSelected = table.rows( { selected: true }).count();
+                var txt;
+                if(numSelected==0) {
+                  txt = $('<b>ERROR: No has seleccionat cap entitat per eliminar.</b>');}
+                else { 
+                  txt = $("<p><b>Vols esborrar les dades de l'entitat?</b></br/> "+
+                          data[0][2]+", "+data[0][1]+" ?</b></p>");
+                  $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
+                }
+
+                $('#deleteMessage').html(txt);
+                
+        });
+
+        $('#btnDelete').click(function() {
+                $('form[name="modalFormDelete"]').submit();
+        });
 
         // Click botó obrir detalls de l'entitat
 

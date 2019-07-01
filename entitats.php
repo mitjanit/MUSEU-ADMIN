@@ -245,8 +245,6 @@
 
         // Editar entitat
 
-        /*** edit **/
-
         $(".btn-edit").click(function() {
 
                 var esEditable = false;
