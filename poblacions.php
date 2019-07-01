@@ -134,6 +134,11 @@ $nomTaula = "Poblacions";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_poblacio_new.php'; ?>
+  <?php include 'modals/modal_poblacio_edit.php'; ?>
+  
+  <?php $txtDeleteTaula="Població"; $deleteAction="deletePoblacio.php"; ?>
+  <?php include 'modals/modal_del.php'; ?>
 
 
   <?php include("common/end.php") ?>
@@ -198,6 +203,82 @@ $nomTaula = "Poblacions";
         });
 
         table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
+
+        // Missatge max-length
+        $('input[maxlength]').maxlength({
+          alwaysShow: false, 
+          warningClass: "form-text text-muted mt-1", 
+          limitReachedClass: "form-text text-muted mt-1", 
+          showMaxLength: true, 
+          showCharsTyped: true, 
+          placement: 'bottom-right-inside', 
+        });
+
+        // reset dels camps de formulari en tancar un modal
+        $('.modal').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
+        });
+
+        // Editar persona
+
+        $(".btn-edit").click(function() {
+
+                var esEditable = false;
+
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
+
+                var numSelected = table.rows( { selected: true }).count();
+                if(numSelected==0) {
+                    var txt = $('<b>ERROR: No has seleccionat cap persona per editar.</b>');
+                    $('#editMessage').html(txt);
+                }
+                else {
+                    var txt = $('<b></b>');
+                    esEditable = true;
+                    $('#editMessage').html(txt);
+                }
+
+                if(esEditable){
+
+                    $('#e0').attr("value", data[0][0]); // Id
+                    $('#e1').attr("value", data[0][1]); // Nom
+                    $('#e2').attr("value", data[0][2]); // Provincia
+
+                }
+
+
+        });
+
+        $('#btnEdit').click(function() {
+            $('form[name="modalFormEdit"]').validator();
+            $('form[name="modalFormEdit"]').submit();
+        });
+
+        // Delete Població
+
+        $(".btn[data-target='#myDeleteModal']").click(function() {
+
+                var table = $('#dt').DataTable();
+                var data=table.rows( { selected: true }).data();
+
+                var numSelected = table.rows( { selected: true }).count();
+                var txt;
+                if(numSelected==0) {
+                  txt = $('<b>ERROR: No has seleccionat cap població per eliminar.</b>');}
+                else { 
+                  txt = $("<p><b>Vols esborrar les dades de la població?</b></br/> "+
+                          data[0][1]+" - "+data[0][2]+" ?</b></p>");
+                  $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
+                }
+
+                $('#deleteMessage').html(txt);
+                
+        });
+
+        $('#btnDelete').click(function() {
+                $('form[name="modalFormDelete"]').submit();
+        });
 
 
     });

@@ -42,12 +42,6 @@ $nomTaula = "Provincies";
             <div class="card-body">
               <div class="row" id="zona-botons">
                   <div class=" col-md-6">
-
-                      <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModal"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                      </div>
                   </div>
                   <div class=" col-md-6">
                   </div>
@@ -117,29 +111,6 @@ $nomTaula = "Provincies";
   <?php include 'common/modalout.php'; ?>
 
 
-    <!-- dialeg modal DELETE -->
-    <!---->
-    <div class="modal fade" id="myDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myDeleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content deleteModal">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Elimina Persona</h5>
-                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div id="deleteBody" class="modal-body"><p id="deleteMessage"></p></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                    <button type="button" class="btn btn-primary" id="btnDelete">Eliminar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
-
-
-
   <?php include("common/end.php") ?>
 
 
@@ -201,7 +172,7 @@ $nomTaula = "Provincies";
             }
         });
 
-        table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
+        table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(0)' );
 
 
 

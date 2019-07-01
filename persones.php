@@ -332,7 +332,7 @@
 
         // Delete Persona
 
-        $(".btn[data-target='#deleteModal']").click(function() {
+        $(".btn[data-target='#myDeleteModal']").click(function() {
 
                 var table = $('#dt').DataTable();
                 var data=table.rows( { selected: true }).data();
@@ -340,10 +340,10 @@
                 var numSelected = table.rows( { selected: true }).count();
                 var txt;
                 if(numSelected==0) {
-                  txt = $('<b>ERROR: No has seleccionat cap entitat per eliminar.</b>');}
+                  txt = $('<b>ERROR: No has seleccionat cap persona per eliminar.</b>');}
                 else { 
-                  txt = $("<p><b>Vols esborrar les dades de l'entitat?</b></br/> "+
-                          data[0][2]+", "+data[0][1]+" ?</b></p>");
+                  txt = $("<p><b>Vols esborrar les dades de la persona?</b></br/> "+
+                          data[0][3]+" "+data[0][4]+", "+data[0][5]+" ?</b></p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
@@ -377,35 +377,6 @@
 
         $('#btnHisto').click(function() {
             $('form[name="modalFormHisto"]').submit();
-        });
-
-
-        // Click botó elimina persona
-
-        $(".btn[data-target='#myDeleteModal']").click(function() {
-
-            var table = $('#dt').DataTable();
-            var data=table.rows( { selected: true }).data();
-            var numSelected = table.rows( { selected: true }).count();
-
-            var txt = $('<b>ERROR: No has seleccionat cap persona per eliminar.</b>');
-            if(numSelected>0) {
-              txt = $("<p><b>Vols esborrar les dades de: <br/>"+data[0][3]+" "+data[0][4]+", "+data[0][5]+" ?</b></p>");
-              var modalBody = $('<div id="modalDeleteContent"></div>');
-              var modalForm = $('<form name="modalFormDelete" action="eliminaPersona.php" method="get"></form>');
-              modalBody.append(txt);
-              modalBody.append(modalForm);
-              modalForm.append('<input type="hidden" name="idp" id="idp" value="'+data[0][0]+'" />');
-              modalBody.append(modalForm);
-              $('#deleteBody').html(modalBody);
-            }
-
-            $('#deleteMessage').html(txt);
-            
-        });
-
-        $('#btnDelete').click(function() {
-            $('form[name="modalFormDelete"]').submit();
         });
 
 

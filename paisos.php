@@ -42,12 +42,6 @@ $nomTaula = "Paisos";
             <div class="card-body">
               <div class="row"  id="zona-botons">
                   <div class=" col-md-6">
-
-                      <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModal"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                      </div>
                   </div>
                   <div class="col-md-6">
                   </div>
@@ -178,7 +172,7 @@ $nomTaula = "Paisos";
             }
         });
 
-        table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
+        table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(0)' );
 
 
     });
