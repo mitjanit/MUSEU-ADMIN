@@ -41,14 +41,17 @@ $nomTaula = "Persona";
 
             </div>
             <div class="card-body overflow-hidden">
+              <!--
               <div class="row">
                   <div class=" col-md-12">
                       <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalJugador"><i class="fas fa-plus-circle"></i> Alta</button>
+                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalJugador"><i class="fa fa-edit"></i> Edita</button>
+                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalJugador"><i class="fas fa-minus-circle"></i> Elimina</button>
                       </div>
                   </div>
               </div>
+              -->
 
                 <div class="table-responsive overflow-hidden">
                   <table class="table table-bordered" id="dtPersona1" width="100%" cellspacing="0">
@@ -78,7 +81,9 @@ $nomTaula = "Persona";
                                           <td><?php echo utf8_encode($row['detalls']); ?></td>
                                       </tr>
                                       <?php
+                                          $nomComplet = utf8_encode($row['ap1'])." ".utf8_encode($row['ap2']).", ".utf8_encode($row['nom']);
                                           }
+
                                       ?>
                                   </tbody>
                   </table>
@@ -183,16 +188,16 @@ $nomTaula = "Persona";
               <!-- Jugador table -->
                 <div class="card shadow mb-2">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectoria Jugador // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectoria Jugador | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body ">
                     <div class="row mb-4" id="jugador-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                                <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalJugador"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalJugador"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalJugador"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -261,15 +266,16 @@ $nomTaula = "Persona";
               <!-- Relatos Jugador table -->
                 <div class="card shadow">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Caixó de Relats Jugador // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Relats Jugador | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body ">
                     <div class="row mb-4" id="relat-jugador-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatJugador"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatoJ"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatoJ"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -317,7 +323,7 @@ $nomTaula = "Persona";
               <!-- Entrenador table -->
                 <div class="card shadow mb-2">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i></i> Trajectòria Entrenador // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i></i> Trajectòria Entrenador | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body">
@@ -398,13 +404,14 @@ $nomTaula = "Persona";
               <!-- Relatos Entrenador table -->
                 <div class="card shadow">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Caixó de Relats Entrenador // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Relats Entrenador | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body ">
                     <div class="row mb-4" id="relat-entrenador-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatEntrenador"><i class="fas fa-plus-circle"></i> Alta</button>
                                 <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
                                 <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
@@ -454,7 +461,7 @@ $nomTaula = "Persona";
               <!-- Arbit table -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectòria Arbit // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectòria Arbit | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body">
@@ -535,13 +542,14 @@ $nomTaula = "Persona";
               <!-- Relatos Arbit table -->
                 <div class="card shadow">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Caixó de Relats Arbit // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Relats Arbit | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body ">
                     <div class="row mb-4" id="relat-arbit-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatArbit"><i class="fas fa-plus-circle"></i> Alta</button>
                                 <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
                                 <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
@@ -591,7 +599,7 @@ $nomTaula = "Persona";
               <!-- Directiu table -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectòria Directiu // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectòria Directiu | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body">
@@ -673,13 +681,14 @@ $nomTaula = "Persona";
               <!-- Relatos Arbit table -->
                 <div class="card shadow">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Caixó de Relats Directiu // <span class="infoPersona"></span>.</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Relats Directiu | <span><?php echo $nomComplet; ?></span>.</h6>
 
                   </div>
                   <div class="card-body ">
                     <div class="row mb-4" id="relat-directiu-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatDirectiu"><i class="fas fa-plus-circle"></i> Alta</button>
                                 <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
                                 <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
@@ -728,7 +737,7 @@ $nomTaula = "Persona";
             <!-- Altre table -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectòria Altres Càrrecs // <span class="infoPersona"></span>.</h6>
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-user"></i> Trajectòria Altres Càrrecs | <span><?php echo $nomComplet; ?></span>.</h6>
 
                 </div>
                 <div class="card-body">
@@ -809,13 +818,14 @@ $nomTaula = "Persona";
             <!-- Relatos Altre table -->
               <div class="card shadow">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Caixó de Relats Altre // <span class="infoPersona"></span>.</h6>
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-comments"></i> Relats Altre Càrrec | <span><?php echo $nomComplet; ?></span>.</h6>
 
                 </div>
                 <div class="card-body ">
                   <div class="row mb-4" id="relat-altre-botons">
                       <div class="col-md-6">
                           <div class="btn-group"  role="group">
+                              <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatAltre"><i class="fas fa-plus-circle"></i> Alta</button>
                               <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
                               <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
                           </div>
@@ -890,6 +900,14 @@ $nomTaula = "Persona";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_trajectoria_jugador_new.php'; ?>
+
+
+  <?php include 'modals/modal_relat_jugador_new.php'; ?>
+  <?php include 'modals/modal_relat_entrenador_new.php'; ?>
+  <?php include 'modals/modal_relat_arbit_new.php'; ?>
+  <?php include 'modals/modal_relat_directiu_new.php'; ?>
+  <?php include 'modals/modal_relat_altre_new.php'; ?>
 
   <?php include("common/end.php") ?>
 
@@ -935,6 +953,21 @@ $nomTaula = "Persona";
             "aoColumnDefs": [
               { "sWidth": "5%", "aTargets": [ 1, 2, 3, 4 ] }
             ]
+        });
+
+        // Missatge max-length
+        $('input[maxlength] , textarea').maxlength({
+          alwaysShow: false, 
+          warningClass: "form-text text-muted mt-1", 
+          limitReachedClass: "form-text text-muted mt-1", 
+          showMaxLength: true, 
+          showCharsTyped: true, 
+          placement: 'bottom-right-inside', 
+        });
+
+        // reset dels camps de formulari en tancar un modal
+        $('.modal').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
         });
 
 

@@ -35,6 +35,7 @@
 
             </div>
             <div class="card-body overflow-hidden">
+              <!--
               <div class="row">
                   <div class=" col-md-12">
                       <div class="btn-group"  role="group">
@@ -44,7 +45,7 @@
                       </div>
                   </div>
               </div>
-
+              -->
                 <div class="table-responsive overflow-hidden">
                   <table class="table table-bordered" id="dtEntitat" width="100%" cellspacing="0">
                                   <thead class="table-primary">
