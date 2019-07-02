@@ -8,8 +8,8 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNew" id="modalFormNew" class="new-relataltre-validation" novalidate action="altaRelatEntrenador.php" method="get">
-                  <input type="hidden" id="role" name="role" value="A" />
+                <form role="form" name="modalFormNew" id="modalFormNew" class="new-relataltre-validation" novalidate action="altaRelat.php" method="get">
+                  <input type="hidden" id="role" name="role" value="O" />
                   <input type="hidden" id="idp" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                       <div class="row mb-4">
