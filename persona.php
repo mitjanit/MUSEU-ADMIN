@@ -899,10 +899,10 @@ $nomTaula = "Persona";
   <?php include 'common/modalout.php'; ?>
 
   <?php include 'modals/modal_trajectoria_jugador_new.php'; ?>
-  <?php include 'modals/modal_trajectoria_entrenador_new.php'; ?>
-  <?php include 'modals/modal_trajectoria_arbit_new.php'; ?>
-  <?php include 'modals/modal_trajectoria_directiu_new.php'; ?>
-  <?php include 'modals/modal_trajectoria_altre_new.php'; ?>
+  <?php //include 'modals/modal_trajectoria_entrenador_new.php'; ?>
+  <?php //include 'modals/modal_trajectoria_arbit_new.php'; ?>
+  <?php //include 'modals/modal_trajectoria_directiu_new.php'; ?>
+  <?php //include 'modals/modal_trajectoria_altre_new.php'; ?>
 
 
   <?php //include 'modals/modal_relat_jugador_new.php'; ?>
