@@ -1,14 +1,14 @@
 <!-- dialeg modal NEW -->
-<div  class="modal fade" id="myNewModalRelatJugador" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
+<div  class="modal fade" id="myEditModalRelatJugador" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-md" role="document">
             <div class="modal-content newModal">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Alta Relat Jugador | <?php echo $nomComplet; ?></h5>
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-edit"></i> Edita Relat Jugador | <?php echo $nomComplet; ?>.</h5>
                   <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNew" id="modalFormNew" class="new-relatjugador-validation" novalidate action="altaRelat.php" method="get">
+                <form role="form" name="modalFormNew" id="modalFormNew" class="edit-relatjugador-validation" novalidate action="altaRelat.php" method="get">
                   <input type="hidden" id="role" name="role" value="J" />
                   <input type="hidden" id="idp" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
@@ -87,7 +87,7 @@
         'use strict';
         window.addEventListener('load', function() {
           // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('new-relatjugador-validation');
+          var forms = document.getElementsByClassName('edit-relatjugador-validation');
           // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {

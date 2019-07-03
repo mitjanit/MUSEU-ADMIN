@@ -274,8 +274,8 @@ $nomTaula = "Persona";
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
                                 <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatJugador"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatoJ"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatoJ"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatJugador"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatJugador"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -330,9 +330,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="entrenador-botons">
                         <div class=" col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                                <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalEntrenador"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalEntrenador"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalEntrenador"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -412,8 +412,8 @@ $nomTaula = "Persona";
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
                                 <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatEntrenador"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatEntrenador"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelaetEntrenador"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -468,9 +468,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="arbit-botons">
                         <div class=" col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                                <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalArbit"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalArbit"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalArbit"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -550,8 +550,8 @@ $nomTaula = "Persona";
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
                                 <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatArbit"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatArbit"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatArbit"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -606,9 +606,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="directiu-botons">
                         <div class=" col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                                <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalDirectiu"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalDirectiu"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalDirectiu"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -689,8 +689,8 @@ $nomTaula = "Persona";
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
                                 <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatDirectiu"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatDirectiu"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatDirectiu"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -744,15 +744,15 @@ $nomTaula = "Persona";
                   <div class="row mb-4" id="altre-botons">
                       <div class=" col-md-6">
                           <div class="btn-group"  role="group">
-                              <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                              <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                              <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                              <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalAltre"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalAltre"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalAltre"><i class="fas fa-minus-circle"></i> Elimina</button>
                           </div>
                       </div>
                       <div class="col-md-6"></div>
                   </div>
 
-                  <!-- row activitats entitat -->
+                  <!-- row -->
                   <div class="row mb-4" >
                     <div class="table-responsive overflow-hidden">
                           <table class="table table-striped table-bordered table-hover display" id="dtAltre" width="100%">
@@ -826,8 +826,8 @@ $nomTaula = "Persona";
                       <div class="col-md-6">
                           <div class="btn-group"  role="group">
                               <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatAltre"><i class="fas fa-plus-circle"></i> Alta</button>
-                              <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                              <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                              <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatAltre"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatAltre"><i class="fas fa-minus-circle"></i> Elimina</button>
                           </div>
                       </div>
                       <div class="col-md-6"></div>
@@ -901,9 +901,14 @@ $nomTaula = "Persona";
   <?php include 'common/modalout.php'; ?>
 
   <?php include 'modals/modal_trajectoria_jugador_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_entrenador_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_arbit_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_directiu_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_altre_new.php'; ?>
 
 
   <?php include 'modals/modal_relat_jugador_new.php'; ?>
+  <?php include 'modals/modal_relat_jugador_edit.php'; ?>
   <?php include 'modals/modal_relat_entrenador_new.php'; ?>
   <?php include 'modals/modal_relat_arbit_new.php'; ?>
   <?php include 'modals/modal_relat_directiu_new.php'; ?>

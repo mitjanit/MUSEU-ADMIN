@@ -59,6 +59,7 @@ $nomTaula = "Càrrecs";
                       <th>Id</th>
                       <th>Nom</th>
                       <th>Descripció</th>
+                      <th>Directiu</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -71,6 +72,7 @@ $nomTaula = "Càrrecs";
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo utf8_encode($row['nom']); ?></td>
                             <td><?php echo utf8_encode($row['descripcio']); ?></td>
+                            <td><?php echo ($row['directiu']=='S'?'Sí':'No'); ?></td>
                         </tr>
                         <?php 
                             } 

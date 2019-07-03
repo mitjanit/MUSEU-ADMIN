@@ -24,7 +24,7 @@
                                         <input readonly type="text" name="id" class="form-control" id="id" placeholder="Identificador"/>
                                       </div>
                                 </div>
-                                <div class=" col-md-8">
+                                <div class=" col-md-4">
                                       <label for="nome">Nom (*):</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
@@ -39,6 +39,23 @@
                                       </div>
                                 </div>
 
+                                <div class=" col-md-4">
+                                      <label for="nom">Directiu (*):</label>
+                                      <div class="input-group">
+                                        <div class="input-group-prepend">
+                                          <div class="input-group-text">
+                                            <i class="fa fa-info-circle"></i>
+                                          </div>
+                                        </div>
+                                        <select class="form-control" id="directiu" name="directiu" required>
+                                          <option value='N'>No</option>
+                                          <option value='S'>Sí</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                          <i class="fas fa-exclamation-circle"></i> Camp obligatori.
+                                        </div>
+                                      </div>
+                                </div>
                                 
 
                             </div>
