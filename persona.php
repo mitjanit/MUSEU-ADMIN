@@ -901,16 +901,16 @@ $nomTaula = "Persona";
   <?php include 'modals/modal_trajectoria_jugador_new.php'; ?>
   <?php include 'modals/modal_trajectoria_entrenador_new.php'; ?>
   <?php include 'modals/modal_trajectoria_arbit_new.php'; ?>
-  <?php //include 'modals/modal_trajectoria_directiu_new.php'; ?>
-  <?php //include 'modals/modal_trajectoria_altre_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_directiu_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_altre_new.php'; ?>
 
 
-  <?php //include 'modals/modal_relat_jugador_new.php'; ?>
-  <?php //include 'modals/modal_relat_jugador_edit.php'; ?>
-  <?php //include 'modals/modal_relat_entrenador_new.php'; ?>
-  <?php //include 'modals/modal_relat_arbit_new.php'; ?>
-  <?php //include 'modals/modal_relat_directiu_new.php'; ?>
-  <?php //include 'modals/modal_relat_altre_new.php'; ?>
+  <?php include 'modals/modal_relat_jugador_new.php'; ?>
+  <?php include 'modals/modal_relat_jugador_edit.php'; ?>
+  <?php include 'modals/modal_relat_entrenador_new.php'; ?>
+  <?php include 'modals/modal_relat_arbit_new.php'; ?>
+  <?php include 'modals/modal_relat_directiu_new.php'; ?>
+  <?php include 'modals/modal_relat_altre_new.php'; ?>
 
   <?php include("common/end.php") ?>
 
