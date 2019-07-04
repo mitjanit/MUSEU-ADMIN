@@ -195,9 +195,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="jugador-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalJugador"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalJugador"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalJugador"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-jugador" data-toggle="modal" data-target="#myNewModalJugador"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-jugador" data-toggle="modal" data-target="#myEditModalJugador"><i class="fa fa-edit-jugador"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-jugador" data-toggle="modal" data-target="#myDeleteModalTrajectoria"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -272,9 +272,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="relat-jugador-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatJugador"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatJugador"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatJugador"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-relatJugador" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-relatJugador" data-toggle="modal" data-target="#myEditModalRelat"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-relatJugador" data-toggle="modal" data-target="#myDeleteModalRelat"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -329,9 +329,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="entrenador-botons">
                         <div class=" col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalEntrenador"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalEntrenador"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalEntrenador"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-entrenador" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-entrenador" data-toggle="modal" data-target="#myEditModalEntrenador"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-entrenador" data-toggle="modal" data-target="#myDeleteModalTrajectoria"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -410,9 +410,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="relat-entrenador-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatEntrenador"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatEntrenador"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelaetEntrenador"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-relatEntrenador" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-relatEntrenador" data-toggle="modal" data-target="#myEditModalRelat"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-relatEntrenador" data-toggle="modal" data-target="#myDeleteModalRelat"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -467,9 +467,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="arbit-botons">
                         <div class=" col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalArbit"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalArbit"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalArbit"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-arbit" data-toggle="modal" data-target="#myNewModalArbit"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-arbit" data-toggle="modal" data-target="#myEditModalArbit"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-arbit" data-toggle="modal" data-target="#myDeleteModalTrajectoria"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -548,9 +548,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="relat-arbit-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatArbit"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatArbit"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatArbit"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-relatArbit" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-relatArbit" data-toggle="modal" data-target="#myEditModalRelat"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-relatArbit" data-toggle="modal" data-target="#myDeleteModalRelat"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -605,9 +605,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="directiu-botons">
                         <div class=" col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalDirectiu"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalDirectiu"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalDirectiu"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-directiu" data-toggle="modal" data-target="#myNewModalDirectiu"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-directiu" data-toggle="modal" data-target="#myEditModalDirectiu"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-directiu" data-toggle="modal" data-target="#myDeleteModalTrajectoria"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -687,9 +687,9 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="relat-directiu-botons">
                         <div class="col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatDirectiu"><i class="fas fa-plus-circle"></i> Alta</button>
-                                <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatDirectiu"><i class="fa fa-edit"></i> Edita</button>
-                                <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatDirectiu"><i class="fas fa-minus-circle"></i> Elimina</button>
+                                <button type="button" class="btn btn-primary btn-new-relatDirectiu" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-edit-relatDirectiu" data-toggle="modal" data-target="#myEditModalRelat"><i class="fa fa-edit"></i> Edita</button>
+                                <button type="button" class="btn btn-primary btn-delete-relatDirectiu" data-toggle="modal" data-target="#myDeleteModalRelat"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -742,9 +742,9 @@ $nomTaula = "Persona";
                   <div class="row mb-4" id="altre-botons">
                       <div class=" col-md-6">
                           <div class="btn-group"  role="group">
-                              <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalAltre"><i class="fas fa-plus-circle"></i> Alta</button>
-                              <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalAltre"><i class="fa fa-edit"></i> Edita</button>
-                              <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalAltre"><i class="fas fa-minus-circle"></i> Elimina</button>
+                              <button type="button" class="btn btn-primary btn-new-altre" data-toggle="modal" data-target="#myNewModalAltre"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit-altre" data-toggle="modal" data-target="#myEditModalAltre"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-altre" data-toggle="modal" data-target="#myDeleteModalTrajectoria"><i class="fas fa-minus-circle"></i> Elimina</button>
                           </div>
                       </div>
                       <div class="col-md-6"></div>
@@ -823,9 +823,9 @@ $nomTaula = "Persona";
                   <div class="row mb-4" id="relat-altre-botons">
                       <div class="col-md-6">
                           <div class="btn-group"  role="group">
-                              <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelatAltre"><i class="fas fa-plus-circle"></i> Alta</button>
-                              <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelatAltre"><i class="fa fa-edit"></i> Edita</button>
-                              <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelatAltre"><i class="fas fa-minus-circle"></i> Elimina</button>
+                              <button type="button" class="btn btn-primary btn-new-relatAltre" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit-relatAltre" data-toggle="modal" data-target="#myEditModalRelat"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-relatAltre" data-toggle="modal" data-target="#myDeleteModalRelat"><i class="fas fa-minus-circle"></i> Elimina</button>
                           </div>
                       </div>
                       <div class="col-md-6"></div>
@@ -895,22 +895,26 @@ $nomTaula = "Persona";
 
   <!-- MODALS -->
 
-  <!-- modal de log out -->
+  <!-- modal de logout -->
   <?php include 'common/modalout.php'; ?>
 
+  <!-- modals trajectories -->
   <?php include 'modals/modal_trajectoria_jugador_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_jugador_edit.php'; ?>
   <?php include 'modals/modal_trajectoria_entrenador_new.php'; ?>
   <?php include 'modals/modal_trajectoria_arbit_new.php'; ?>
   <?php include 'modals/modal_trajectoria_directiu_new.php'; ?>
   <?php include 'modals/modal_trajectoria_altre_new.php'; ?>
 
 
-  <?php include 'modals/modal_relat_jugador_new.php'; ?>
-  <?php include 'modals/modal_relat_jugador_edit.php'; ?>
-  <?php include 'modals/modal_relat_entrenador_new.php'; ?>
-  <?php include 'modals/modal_relat_arbit_new.php'; ?>
-  <?php include 'modals/modal_relat_directiu_new.php'; ?>
-  <?php include 'modals/modal_relat_altre_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_del.php'; ?>
+
+
+  <!-- Modals relats -->
+  <?php include 'modals/modal_relat_new.php'; ?>
+  <?php include 'modals/modal_relat_edit.php'; ?>
+  <?php include 'modals/modal_relat_del.php'; ?>
+
 
   <?php include("common/end.php") ?>
 
@@ -1248,6 +1252,8 @@ $nomTaula = "Persona";
         var tRelatJugador = $('#dtRelatJugador').DataTable({
             responsive: true,
             select: true,
+            autoWidth: false,
+            columnDefs: [ { "width": "10%", "targets": 2 } ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1302,6 +1308,8 @@ $nomTaula = "Persona";
         var tRelatEntrenador = $('#dtRelatEntrenador').DataTable({
             responsive: true,
             select: true,
+            autoWidth: false,
+            columnDefs: [ { "width": "10%", "targets": 2 } ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1356,6 +1364,8 @@ $nomTaula = "Persona";
         var tRelatArbit = $('#dtRelatArbit').DataTable({
             responsive: true,
             select: true,
+            autoWidth: false,
+            columnDefs: [ { "width": "10%", "targets": 2 } ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1410,6 +1420,8 @@ $nomTaula = "Persona";
         var tRelatDirectiu = $('#dtRelatDirectiu').DataTable({
             responsive: true,
             select: true,
+            autoWidth: false,
+            columnDefs: [ { "width": "10%", "targets": 2 } ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1464,7 +1476,8 @@ $nomTaula = "Persona";
         var tRelatAltre = $('#dtRelatAltre').DataTable({
             responsive: true,
             select: true,
-            columnDefs: [ { "width": "5%", "targets": 2 } ],
+            autoWidth: false,
+            columnDefs: [ { "width": "10%", "targets": 2 } ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1519,6 +1532,424 @@ $nomTaula = "Persona";
 
 
     });
+
+    // Begin Modal EDIT Trajectoria
+
+    $(".btn-edit-jugador").click(function() {
+
+      var table = $('#dtJugador').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per editar.</b>');}
+      else { 
+        txt = $("<b></b>");
+        $('#idt').val(data[0][0]);
+        $('#temporadaje').val(data[0][2]);
+        $('#demarcacioje').val(data[0][3]);
+        $('#vinculatje').val(data[0][4]);
+        $('#visitantje').val(data[0][5]);
+        $('#categoriaje').val(data[0][6]);
+        $('#competicioje').val(data[0][7]);
+        $('#pjje').val(data[0][8]);
+        $('#resultatje').val(data[0][9]);
+        $('#pcje').val(data[0][10]);
+        $('#psje').val(data[0][11]);
+        $('#gfje').val(data[0][12]);
+        $('#gcje').val(data[0][13]);
+        $('#xje').val(data[0][14]);
+        $('#classje').val(data[0][15]);
+        $('#detallsje').val(data[0][16]);
+      }
+      $('#editMessageJugador').html(txt);
+      $('.infoTrajectoria').html("Jugador");
+            
+    });
+
+
+    // End Modal EDIT Trajectoria
+
+    
+    // Begin Modal DELETE Trajectoria
+
+    $(".btn-delete-jugador").click(function() {
+
+      var table = $('#dtJugador').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
+                      "<p><b> Jugador: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+        $('#idtrajectoriad').val(data[0][0]);
+      }
+      $('#deleteMessageTrajectoria').html(txt);
+      $('.infoTrajectoria').html("Jugador");
+            
+    });
+
+    $(".btn-delete-entrenador").click(function() {
+
+      var table = $('#dtEntrenador').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
+                      "<p><b> Entrenador: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+        $('#idtrajectoriad').val(data[0][0]);
+      }
+      $('#deleteMessageTrajectoria').html(txt);
+      $('.infoTrajectoria').html("Entrenador");
+            
+    });
+
+    $(".btn-delete-arbit").click(function() {
+
+      var table = $('#dtArbit').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
+                      "<p><b> Arbit: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+        $('#idtrajectoriad').val(data[0][0]);
+      }
+      $('#deleteMessageTrajectoria').html(txt);
+      $('.infoTrajectoria').html("Arbit");
+            
+    });
+
+    $(".btn-delete-directiu").click(function() {
+
+      var table = $('#dtDirectiu').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
+                      "<p><b> Directiu: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+        $('#idtrajectoriad').val(data[0][0]);
+      }
+      $('#deleteMessageTrajectoria').html(txt);
+      $('.infoTrajectoria').html("Directiu");
+            
+    });
+
+    $(".btn-delete-altre").click(function() {
+
+      var table = $('#dtAltre').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
+                      "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+        $('#idtrajectoriad').val(data[0][0]);
+      }
+      $('#deleteMessageTrajectoria').html(txt);
+      $('.infoTrajectoria').html("Altre Càrrec");
+            
+    });
+
+    // End Modal DELETE Trajectoria
+
+
+
+    // Modal NEW Relat 
+    $(".btn-new-relatJugador").click(function() {
+        $('.infoRelat').html("Jugador");
+        $('#role').val("J"); 
+    });
+
+    $(".btn-new-relatEntrenador").click(function() {
+        $('.infoRelat').html("Entrenador");
+        $('#role').val("E"); 
+    });
+
+    $(".btn-new-relatArbit").click(function() {
+        $('.infoRelat').html("Arbit");
+        $('#role').val("A"); 
+    });
+
+    $(".btn-new-relatDirectiu").click(function() {
+        $('.infoRelat').html("Directiu");
+        $('#role').val("D"); 
+    });
+
+    $(".btn-new-relatAltre").click(function() {
+        $('.infoRelat').html("Altre Càrrec");
+        $('#role').val("O"); 
+    });
+
+    // End Modal NEW Relat
+
+    // Modal EDIT Relat 
+    $(".btn-edit-relatJugador").click(function() {
+
+      var esEditable = false;
+
+      var table = $('#dtRelatJugador').DataTable();
+      var data=table.rows( { selected: true }).data();
+
+      var numSelected = table.rows( { selected: true }).count();
+      if(numSelected==0) {
+          var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
+          $('#editMessageRelat').html(txt);
+      }
+      else {
+          var txt = $('<b></b>');
+          esEditable = true;
+          $('#editMessageRelat').html(txt);
+      }
+
+      if(esEditable){
+          $('#ide').attr("value", data[0][0]); // Id Relat
+          $('#temporadae').val(data[0][2]); // Temporada
+          $('#relate').html(data[0][3]); // Relat
+          $('#role').val("J");  // Rol Jugador
+      }
+      
+      $('.infoRelat').html("Jugador");
+
+    });
+
+    $(".btn-edit-relatEntrenador").click(function() {
+
+      var esEditable = false;
+
+      var table = $('#dtRelatEntrenador').DataTable();
+      var data=table.rows( { selected: true }).data();
+
+      var numSelected = table.rows( { selected: true }).count();
+      if(numSelected==0) {
+          var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
+          $('#editMessageRelat').html(txt);
+      }
+      else {
+          var txt = $('<b></b>');
+          esEditable = true;
+          $('#editMessageRelat').html(txt);
+      }
+
+      if(esEditable){
+          $('#ide').attr("value", data[0][0]); // Id Relat
+          $('#temporadae').val(data[0][2]); // Temporada
+          $('#relate').html(data[0][3]); // Relat
+          $('#role').val("E");  // Rol Entrenador
+      }
+      
+      $('.infoRelat').html("Entrenador");
+
+    });
+
+    $(".btn-edit-relatArbit").click(function() {
+
+      var esEditable = false;
+
+      var table = $('#dtRelatArbit').DataTable();
+      var data=table.rows( { selected: true }).data();
+
+      var numSelected = table.rows( { selected: true }).count();
+      if(numSelected==0) {
+          var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
+          $('#editMessageRelat').html(txt);
+      }
+      else {
+          var txt = $('<b></b>');
+          esEditable = true;
+          $('#editMessageRelat').html(txt);
+      }
+
+      if(esEditable){
+          $('#ide').attr("value", data[0][0]); // Id Relat
+          $('#temporadae').val(data[0][2]); // Temporada
+          $('#relate').html(data[0][3]); // Relat
+          $('#role').val("A");  // Rol Arbit
+      }
+      
+      $('.infoRelat').html("Arbit");
+
+    });
+
+    $(".btn-edit-relatDirectiu").click(function() {
+
+      var esEditable = false;
+
+      var table = $('#dtRelatDirectiu').DataTable();
+      var data=table.rows( { selected: true }).data();
+
+      var numSelected = table.rows( { selected: true }).count();
+      if(numSelected==0) {
+          var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
+          $('#editMessageRelat').html(txt);
+      }
+      else {
+          var txt = $('<b></b>');
+          esEditable = true;
+          $('#editMessageRelat').html(txt);
+      }
+
+      if(esEditable){
+          $('#ide').attr("value", data[0][0]); // Id Relat
+          $('#temporadae').val(data[0][2]); // Temporada
+          $('#relate').html(data[0][3]); // Relat
+          $('#role').val("D");  // Rol Directiu
+      }
+      
+      $('.infoRelat').html("Directiu");
+
+    });
+
+    $(".btn-edit-relatAltre").click(function() {
+
+      var esEditable = false;
+
+      var table = $('#dtRelatAltre').DataTable();
+      var data=table.rows( { selected: true }).data();
+
+      var numSelected = table.rows( { selected: true }).count();
+      if(numSelected==0) {
+          var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
+          $('#editMessageRelat').html(txt);
+      }
+      else {
+          var txt = $('<b></b>');
+          esEditable = true;
+          $('#editMessageRelat').html(txt);
+      }
+
+      if(esEditable){
+          $('#ide').attr("value", data[0][0]); // Id Relat
+          $('#temporadae').val(data[0][2]); // Temporada
+          $('#relate').html(data[0][3]); // Relat
+          $('#role').val("O");  // Rol Altre (Otro)
+      }
+      
+      $('.infoRelat').html("Altre Càrrec");
+
+    });
+
+    // End Modal EDIT Relat
+
+    // Begin Modal DELETE Relat
+    $(".btn-delete-relatJugador").click(function() {
+
+      var table = $('#dtRelatJugador').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades del relat?</b></p> "+
+                      "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Comentari: </b>"+data[0][3]+"</p>");
+        $('#idrelatd').val(data[0][0]);
+      }
+      $('#deleteMessageRelat').html(txt);
+      $('.infoRelat').html("Jugador");
+            
+    });
+
+    $(".btn-delete-relatEntrenador").click(function() {
+
+      var table = $('#dtRelatEntrenador').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades del relat?</b></p> "+
+                      "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Comentari: </b>"+data[0][3]+"</p>");
+        $('#idrelatd').val(data[0][0]);
+      }
+      $('#deleteMessageRelat').html(txt);
+      $('.infoRelat').html("Entrenador");
+            
+    });
+
+    $(".btn-delete-relatArbit").click(function() {
+
+      var table = $('#dtRelatArbit').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades del relat?</b></p> "+
+                      "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Comentari: </b>"+data[0][3]+"</p>");
+        $('#idrelatd').val(data[0][0]);
+      }
+      $('#deleteMessageRelat').html(txt);
+      $('.infoRelat').html("Arbit");
+            
+    });
+
+    $(".btn-delete-relatDirectiu").click(function() {
+
+      var table = $('#dtRelatDirectiu').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades del relat?</b></p> "+
+                      "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Comentari: </b>"+data[0][3]+"</p>");
+        $('#idrelatd').val(data[0][0]);
+      }
+      $('#deleteMessageRelat').html(txt);
+      $('.infoRelat').html("Directiu");
+            
+    });
+
+    $(".btn-delete-relatAltre").click(function() {
+
+      var table = $('#dtRelatAltre').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades del relat?</b></p> "+
+                      "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Comentari: </b>"+data[0][3]+"</p>");
+        $('#idrelatd').val(data[0][0]);
+      }
+      $('#deleteMessageRelat').html(txt);
+      $('.infoRelat').html("Altre Càrrec");
+            
+    });
+
+    // End Modal DELETE Relat
 
    </script>
 
