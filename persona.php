@@ -329,7 +329,7 @@ $nomTaula = "Persona";
                     <div class="row mb-4" id="entrenador-botons">
                         <div class=" col-md-6">
                             <div class="btn-group"  role="group">
-                                <button type="button" class="btn btn-primary btn-new-entrenador" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                                <button type="button" class="btn btn-primary btn-new-entrenador" data-toggle="modal" data-target="#myNewModalEntrenador"><i class="fas fa-plus-circle"></i> Alta</button>
                                 <button type="button" class="btn btn-primary btn-edit-entrenador" data-toggle="modal" data-target="#myEditModalEntrenador"><i class="fa fa-edit"></i> Edita</button>
                                 <button type="button" class="btn btn-primary btn-delete-entrenador" data-toggle="modal" data-target="#myDeleteModalTrajectoria"><i class="fas fa-minus-circle"></i> Elimina</button>
                             </div>
