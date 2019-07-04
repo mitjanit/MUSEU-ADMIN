@@ -236,11 +236,56 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo $row['id_demarcacio']; ?></td>
-                                    <td><?php echo $row['id_club']; ?></td>
-                                    <td><?php echo $row['id_visitant']; ?></td>
-                                    <td><?php echo $row['id_categoria']; ?></td>
-                                    <td><?php echo $row['id_competicio']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_demarcacio']!=NULL){
+                                            $query = "SELECT * FROM demarcacions WHERE id='".$row['id_demarcacio']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom'];
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['id_club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_visitant']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['id_visitant']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_categoria']!=NULL){
+                                            $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo utf8_encode($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_competicio']!=NULL){
+                                            $query = "SELECT * FROM competicions WHERE id='".$row['id_competicio']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo utf8_encode($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo $row['pj']; ?></td>
                                     <td><?php echo $row['resultat']; ?></td>
                                     <td><?php echo $row['pg']; ?></td>
@@ -1547,11 +1592,32 @@ $nomTaula = "Persona";
         txt = $("<b></b>");
         $('#idt').val(data[0][0]);
         $('#temporadaje').val(data[0][2]);
-        $('#demarcacioje').val(data[0][3]);
-        $('#vinculatje').val(data[0][4]);
-        $('#visitantje').val(data[0][5]);
-        $('#categoriaje').val(data[0][6]);
-        $('#competicioje').val(data[0][7]);
+        
+        // Demarcació selected option
+        $('#demarcacioje option').filter(function(){
+            return $(this).text()==data[0][3];
+        }).prop('selected', true);
+
+        // Vinculat selected option
+        $('#vinculatje option').filter(function(){
+            return $(this).text()==data[0][4];
+        }).prop('selected', true);
+
+        // Visitant selected option
+        $('#visitantje option').filter(function(){
+            return $(this).text()==data[0][5];
+        }).prop('selected', true);
+
+        // Categoria selected option
+        $('#categoriaje option').filter(function(){
+            return $(this).text()==data[0][6];
+        }).prop('selected', true);
+
+        // Competició selected option
+        $('#competicioje option').filter(function(){
+            return $(this).text()==data[0][7];
+        }).prop('selected', true);
+
         $('#pjje').val(data[0][8]);
         $('#resultatje').val(data[0][9]);
         $('#pcje').val(data[0][10]);
