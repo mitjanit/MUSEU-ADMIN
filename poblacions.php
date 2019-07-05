@@ -96,7 +96,6 @@ $nomTaula = "Poblacions";
                                   else {
                                     echo "Estranger";
                                   }
-                                } 
                             ?></td>
                             <td>
                               <?php 
