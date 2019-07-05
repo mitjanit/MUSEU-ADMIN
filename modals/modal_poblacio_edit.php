@@ -56,7 +56,6 @@
                                               echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
                                             }
                                           ?>
-                                          <option value="NULL">*** Estranger ***</option>
                                         </select>
                                         <div class="invalid-feedback">
                                           <i class="fas fa-exclamation-circle"></i> Camp obligatori.

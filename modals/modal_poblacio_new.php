@@ -47,7 +47,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <select class="form-control" id="provincia" name="provincia">
+                                        <select class="form-control" id="provincia" name="provincia" required>
                                           <option value=""></option>
                                           <?php
                                             $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
@@ -57,6 +57,9 @@
                                             }
                                           ?>
                                         </select>
+                                        <div class="invalid-feedback">
+                                          <i class="fas fa-exclamation-circle"></i> Camp obligatori.
+                                        </div>
                                       </div>
                                 </div>
 
