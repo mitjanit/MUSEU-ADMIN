@@ -273,6 +273,39 @@
           $(this).find('form').trigger('reset');
         });
 
+
+        // Alta persona
+
+        $('#pais').change(function() {
+          var pais = $("#pais option:selected").text();
+          if(pais!="Spain"){
+            $('#provincia option').filter(function(){
+                return $(this).text()=="No Aplicable";
+            }).prop('selected', true);
+            $('#provincia').attr('readonly', true); 
+            $("#poblacio").empty();
+            loadLocalitats(55, "#poblacio"); // Mostrar localitats extrangeres
+          }
+          else {
+            $('#poblacio option').filter(function(){
+                return $(this).val()=="";
+            }).prop('selected', true);
+            $('#provincia').attr('readonly', false);
+          }
+
+        });
+
+        $('#provincia').change(function() {
+          var provincia = $("#provincia option:selected").text();
+          var idProvincia = $("#provincia option:selected").val();
+          $("#poblacio").empty();
+          if(provincia!=""){
+            
+            loadLocalitats(idProvincia, "#poblacio");
+          }
+
+        });
+
         // Editar persona
 
         $(".btn-edit").click(function() {
