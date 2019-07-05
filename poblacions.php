@@ -144,6 +144,8 @@ $nomTaula = "Poblacions";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_ok.php'; ?>
+
   <?php include 'modals/modal_poblacio_new.php'; ?>
   <?php include 'modals/modal_poblacio_edit.php'; ?>
   

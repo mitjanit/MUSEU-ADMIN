@@ -110,6 +110,8 @@ $nomTaula = "Càrrecs";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_ok.php'; ?>
+
   <?php include 'modals/modal_carrec_new.php'; ?>
   <?php include 'modals/modal_carrec_edit.php'; ?>
   <?php include 'modals/modal_carrec_del.php'; ?>

@@ -409,6 +409,8 @@
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_ok.php'; ?>
+
     <!-- dialeg modal NEW -->
     <div  class="modal fade" id="myNewModal" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">

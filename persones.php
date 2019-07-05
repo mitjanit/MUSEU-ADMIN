@@ -165,6 +165,8 @@
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_ok.php'; ?>
+
   <?php include 'modals/modal_persona_new.php'; ?>
   <?php include 'modals/modal_persona_edit.php'; ?>
   
@@ -471,6 +473,14 @@
         $('#btnHisto').click(function() {
             $('form[name="modalFormHisto"]').submit();
         });
+
+
+        <?php 
+
+          if(isset($_REQUEST['msgOk'])){
+            echo "$('#myOkModal').modal();";
+          }
+        ?>
 
 
     });

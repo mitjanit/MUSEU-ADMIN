@@ -943,6 +943,8 @@ $nomTaula = "Persona";
   <!-- modal de logout -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_ok.php'; ?>
+
   <!-- modals trajectories -->
   <?php include 'modals/modal_trajectoria_jugador_new.php'; ?>
   <?php include 'modals/modal_trajectoria_jugador_edit.php'; ?>

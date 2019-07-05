@@ -155,6 +155,8 @@
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
+  <?php include 'modals/modal_ok.php'; ?>
+
   <?php include 'modals/modal_entitat_new.php'; ?>
   <?php include 'modals/modal_entitat_edit.php'; ?>
   <?php include 'modals/modal_entitat_del.php'; ?>

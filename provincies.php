@@ -110,7 +110,7 @@ $nomTaula = "Provincies";
   <!-- modal de log out -->
   <?php include 'common/modalout.php'; ?>
 
-
+  
   <?php include("common/end.php") ?>
 
 
