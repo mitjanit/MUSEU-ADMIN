@@ -91,7 +91,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <select class="form-control" id="e4" name="provincia" readonly>
+                                        <select class="form-control" id="e4" name="provincia">
                                           <option value=""></option>
                                           <?php
                                             $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
