@@ -76,7 +76,8 @@ $nomTaula = "Poblacions";
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo utf8_encode($row['nom']); ?></td>
                             <td>
-                              <?php if($row['provincies_id']!=NULL){
+                              <?php 
+                                if($row['provincies_id']!=NULL){
                                     $query_prov = "SELECT * FROM provincies WHERE id='".$row['provincies_id']."'";
                                     $rsprov = mysqli_query($con01, $query_prov) or die("Error: ".mysqli_error($con01));
                                     $rowprov = mysqli_fetch_array($rsprov);
@@ -85,18 +86,28 @@ $nomTaula = "Poblacions";
                                 } 
                             ?></td>
                             <td>
-                              <?php if($row['provincies_id']!=NULL){
+                              <?php 
+                                  if($row['provincies_id']!=55){
                                     $query_com = "SELECT * FROM comunitats WHERE id='".$comId."'";
                                     $rscom= mysqli_query($con01, $query_com) or die("Error: ".mysqli_error($con01));
                                     $rowcom = mysqli_fetch_array($rscom);
                                     echo utf8_encode($rowcom['nom']);
+                                  }
+                                  else {
+                                    echo "Estranger";
+                                  }
                                 } 
                             ?></td>
                             <td>
-                              <?php if($row['provincies_id']!=NULL){
+                              <?php 
+                                if($row['provincies_id']!=55){
                                     echo "España";
                                 } 
-                            ?></td>
+                                else {
+                                  echo "Estranger";
+                                }
+                              ?>
+                            </td>
                         </tr>
                         <?php 
                             } 
