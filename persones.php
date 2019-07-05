@@ -368,12 +368,14 @@
               for (l in localitats) {
                 var id = localitats[l].id;
                 var nom = localitats[l].nom;
-                var item = $("<option/>", {value:id, text:nom});
-                $("#e8").append(item);
+                var id_prov = localitats[l].provincies_id;
+                if(id_prov==idProv){
+                  var item = $("<option/>", {value:id, text:nom});
+                  $("#e8").append(item);
+                }
               }
             }
           };
-          //xhttp.open("GET", "localitats.php?provincia="+idProv, true);
           xhttp.open("GET", "http://34.90.92.235/api/poblacions", true);
           xhttp.send();
         }
