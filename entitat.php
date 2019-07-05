@@ -197,16 +197,16 @@
                               <td><?php echo $row['id']; ?></td>
                               <td><?php echo $row['id_entitat']; ?></td>
                               <td><?php echo $row['temporada']; ?></td>
-                              <td><?php echo utf8_encode($row['document']); ?></td>
-                              <td><?php echo utf8_encode($row['continguts']); ?></td>
+                              <td><?php echo ($row['document']); ?></td>
+                              <td><?php echo ($row['continguts']); ?></td>
                               <td><?php echo $row['foto']; ?></td>
                               <td><?php echo $row['entrevista']; ?></td>
                               <td><?php echo $row['reportatge']; ?></td>
                               <td><?php echo $row['cartell']; ?></td>
                               <td><?php echo $row['llibre']; ?></td>
                               <td><?php echo $row['video']; ?></td>
-                              <td><?php echo utf8_encode($row['altre']); ?></td>
-                              <td><?php echo utf8_encode($row['detalls']); ?></td>
+                              <td><?php echo ($row['altre']); ?></td>
+                              <td><?php echo ($row['detalls']); ?></td>
                             </tr>
                             <?php
                                 }
@@ -305,7 +305,7 @@
                               <td><?php echo $row['gc']; ?></td>
                               <td><?php echo $row['punts']; ?></td>
                               <td><?php echo $row['classificacio']; ?></td>
-                              <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                              <td><?php echo ($row['detalls2']); ?></td>
                           </tr>
                           <?php
                               }
