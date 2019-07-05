@@ -275,10 +275,28 @@
                               <td><?php echo $row['id']; ?></td>
                               <td><?php echo $row['id_entitat']; ?></td>
                               <td><?php echo $row['temporada']; ?></td>
-                              <td><?php echo $row['id_competicio']; ?></td>
-                              <td><?php echo $row['id_categoria']; ?></td>
-                              <td><?php echo utf8_encode($row['tecnic']); ?></td>
-                              <td><?php echo utf8_encode($row['detalls1']); ?></td>
+                              <td>
+                                <?php 
+                                  if($row['id_competicio']!=NULL){
+                                    $query = "SELECT * FROM competicions WHERE id='".$row['id_competicio']."'";
+                                     $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                    $row2 = mysqli_fetch_array($rs2);
+                                    echo ($row2['nom']);
+                                  } 
+                                ?>
+                              </td>
+                              <td>
+                                <?php 
+                                  if($row['id_categoria']!=NULL){
+                                    $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
+                                     $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                    $row2 = mysqli_fetch_array($rs2);
+                                    echo ($row2['nom']);
+                                  } 
+                                ?>
+                              </td>
+                              <td><?php echo ($row['tecnic']); ?></td>
+                              <td><?php echo ($row['detalls1']); ?></td>
                               <td><?php echo $row['pj']; ?></td>
                               <td><?php echo $row['pg']; ?></td>
                               <td><?php echo $row['pe']; ?></td>
@@ -356,19 +374,28 @@
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo $row['id_entitat']; ?></td>
                                 <td><?php echo $row['temporada']; ?></td>
-                                <td><?php echo $row['tipus_act']; ?></td>
+                                <td>
+                                  <?php 
+                                    if($row['tipus_act']!=NULL){
+                                      $query = "SELECT * FROM temps_activitats WHERE id='".$row['tipus_act']."'";
+                                       $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                      $row2 = mysqli_fetch_array($rs2);
+                                      echo ($row2['nom']);
+                                    } 
+                                  ?>
+                                </td>
                                 <td><?php echo $row['actuacions']; ?></td>
-                                <td><?php echo utf8_encode($row['detalls1']); ?></td>
-                                <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                                <td><?php echo ($row['detalls1']); ?></td>
+                                <td><?php echo ($row['detalls2']); ?></td>
                                 <td><?php echo $row['fotos']; ?></td>
                                 <td><?php echo $row['entrevistes']; ?></td>
                                 <td><?php echo $row['croniques']; ?></td>
                                 <td><?php echo $row['cartell']; ?></td>
                                 <td><?php echo $row['programa']; ?></td>
                                 <td><?php echo $row['video']; ?></td>
-                                <td><?php echo utf8_encode($row['altre1']); ?></td>
-                                <td><?php echo utf8_encode($row['altre2']); ?></td>
-                                <td><?php echo utf8_encode($row['detalls3']); ?></td>
+                                <td><?php echo ($row['altre1']); ?></td>
+                                <td><?php echo ($row['altre2']); ?></td>
+                                <td><?php echo ($row['detalls3']); ?></td>
                             </tr>
                             <?php
                                 }
