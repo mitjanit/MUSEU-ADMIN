@@ -259,7 +259,6 @@
             $('#poblacio option').filter(function(){
                 return $(this).val()=="";
             }).prop('selected', true);
-            $('#provincia').attr('readonly', false);
           }
 
         });
@@ -269,7 +268,6 @@
           var idProvincia = $("#provincia option:selected").val();
           $("#poblacio").empty();
           if(provincia!=""){
-            
             loadLocalitats(idProvincia, "#poblacio");
           }
 
