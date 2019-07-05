@@ -307,6 +307,57 @@
             $('form[name="modalFormEdit"]').submit();
         });
 
+        $('#e3').change(function() {
+          var pais = $("#e3 option:selected").text();
+          if(pais!="Spain"){
+            $('#e4 option').filter(function(){
+                return $(this).text()=="No Aplicable";
+            }).prop('selected', true);
+            $('#e4').attr('readonly', true); 
+            $("#e5").empty();
+            loadLocalitats(55, "#e5"); // Mostrar localitats extrangeres (idProv=) // Estranger
+          }
+          else {
+            $('#e4 option').filter(function(){
+                return $(this).val()=="";
+            }).prop('selected', true);
+            $('#e5').attr('readonly', false);
+          }
+
+        });
+
+        function loadLocalitats(idProv, selectID) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var localitats = JSON.parse(this.responseText);
+              var item0 = $("<option/>", {value:"0", text:"Selecciona"});
+              $(selectID).append(item0);
+              for (l in localitats) {
+                var id = localitats[l].id;
+                var nom = localitats[l].nom;
+                var id_prov = localitats[l].provincies_id;
+                if(id_prov==idProv){
+                  var item = $("<option/>", {value:id, text:nom});
+                  $(selectID).append(item);
+                }
+              }
+            }
+          };
+          xhttp.open("GET", "http://34.90.92.235/api/poblacions", true);
+          xhttp.send();
+        }
+
+        $('#e4').change(function() {
+          var provincia = $("#e4 option:selected").text();
+          var idProvincia = $("#e4 option:selected").val();
+          $("#e5").empty();
+          if(provincia!=""){
+            loadLocalitats(idProvincia, "#e5");
+          }
+
+        });
+
 
         /*** delete ****/
 
