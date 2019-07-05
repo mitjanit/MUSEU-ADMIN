@@ -10,7 +10,7 @@
                   </button>
                 </div>
                 <form role="form" name="modalFormDeleteRelat" id="modalFormDeleteRelat" action="eliminaTrajectoria.php" method="get">
-                    <input type="text" name="idtrajectoriad" id="idtrajectoriad" />
+                    <input type="hidden" name="idtrajectoriad" id="idtrajectoriad" />
                     <div id="deleteBodyTrajectoria" class="modal-body">
                         <p id="deleteMessageTrajectoria"></p>
                     </div>
