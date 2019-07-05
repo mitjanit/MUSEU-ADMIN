@@ -366,8 +366,8 @@
               var item0 = $("<option/>", {value:"0", text:"Selecciona"});
               $("#e8").append(item0);
               for (l in localitats) {
-                var id = localitats[c].id;
-                var nom = localitats[c].nom;
+                var id = localitats[l].id;
+                var nom = localitats[l].nom;
                 var item = $("<option/>", {value:id, text:nom});
                 $("#e8").append(item);
               }
