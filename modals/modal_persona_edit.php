@@ -148,7 +148,7 @@
                                                 echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
                                               }
                                             ?>
-                                            <option value="No Aplicable">No Aplicable</option>
+                                            <!--<option value="No Aplicable">No Aplicable</option>-->
                                           </select>
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
