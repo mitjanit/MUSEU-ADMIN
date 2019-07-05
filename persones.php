@@ -302,9 +302,20 @@
                     $('#e4').attr("value", data[0][4]); // Llinatge 2
                     $('#e5').attr("value", data[0][5]); // Nom
 
-                    $('#e6').attr("value", data[0][6]); // Localitat
-                    $('#e7').attr("value", data[0][7]); // Provincia
-                    $('#e8').attr("value", data[0][8]); // Pais
+                    // Localitat select
+                    $('#e8 option').filter(function(){
+                        return $(this).text()==data[0][6];
+                    }).prop('selected', true);
+
+                    // Provincia select
+                    $('#e7 option').filter(function(){
+                        return $(this).text()==data[0][7];
+                    }).prop('selected', true);
+
+                    // Pais select
+                    $('#e6 option').filter(function(){
+                        return $(this).text()==data[0][8];
+                    }).prop('selected', true);
 
                     $('#e9').attr("value", data[0][9]);   // Naixement
                     $('#e10').attr("value", data[0][10]); // Mort
@@ -328,6 +339,56 @@
         $('#btnEdit').click(function() {
             $('form[name="modalFormEdit"]').validator();
             $('form[name="modalFormEdit"]').submit();
+        });
+
+        $('#e6').change(function() {
+          var pais = $("#e6 option:selected").text();
+          if(pais!="Spain"){
+            $('#e7 option').filter(function(){
+                return $(this).text()=="No Aplicable";
+            }).prop('selected', true);
+            $('#e7').attr('readonly', true); 
+          }
+          else {
+            $('#e7 option').filter(function(){
+                return $(this).val()=="";
+            }).prop('selected', true);
+            $('#e7').attr('readonly', false);
+          }
+
+        });
+
+        function loadLocalitats(idProv) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var localitats = JSON.parse(this.responseText);
+              var item0 = $("<option/>", {value:"0", text:"Selecciona"});
+              $("#e8").append(item0);
+              for (l in localitats) {
+                var id = localitats[c].id;
+                var nom = localitats[c].nom;
+                var item = $("<option/>", {value:id, text:nom});
+                $("#e8").append(item);
+              }
+            }
+          };
+          //xhttp.open("GET", "localitats.php?provincia="+idProv, true);
+          xhttp.open("GET", "http://34.90.92.235/api/poblacions", true);
+          xhttp.send();
+        }
+
+        $('#e7').change(function() {
+          var provincia = $("#e7 option:selected").text();
+          var idProvincia = $("#e7 option:selected").val();
+          if(provincia!="No Aplicable" && provincia!=""){
+            $("#e8").empty();
+            loadLocalitats(idProvincia);
+          }
+          else {
+            $("#e8").empty();
+          }
+
         });
 
         // Delete Persona

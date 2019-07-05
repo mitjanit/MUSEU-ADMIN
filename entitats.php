@@ -269,9 +269,22 @@
                     $('#e0').attr("value", data[0][0]);
                     $('#e1').attr("value", data[0][1]);
                     $('#e2').attr("value", data[0][2]);
-                    $('#e3').attr("value", data[0][3]);
-                    $('#e4').attr("value", data[0][4]);
-                    $('#e5').attr("value", data[0][5]);
+
+                    // Pais select
+                    $('#e3 option').filter(function(){
+                        return $(this).text()==data[0][5];
+                    }).prop('selected', true);
+
+                    // Provincia select
+                    $('#e4 option').filter(function(){
+                        return $(this).text()==data[0][4];
+                    }).prop('selected', true);
+
+                    // Localitat select
+                    $('#e5 option').filter(function(){
+                        return $(this).text()==data[0][3];
+                    }).prop('selected', true);
+                    
                     $('#e6').attr("value", data[0][6]);
                     $('#e7').attr("value", data[0][7]);
                     $('#e8').attr("value", data[0][8]);
