@@ -248,6 +248,14 @@ $nomTaula = "Categories";
           });
 
 
+          <?php 
+
+            if(isset($_REQUEST['msgOk'])){
+              echo "$('#myOkModal').modal();";
+            }
+          ?>
+
+
     });
 
    </script>

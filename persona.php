@@ -2019,6 +2019,14 @@ $nomTaula = "Persona";
 
     // End Modal DELETE Relat
 
+
+    <?php 
+
+      if(isset($_REQUEST['msgOk'])){
+        echo "$('#myOkModal').modal();";
+      }
+    ?>
+
    </script>
 
 </body>

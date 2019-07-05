@@ -259,6 +259,14 @@ $nomTaula = "Competicions";
           });
 
 
+          <?php 
+
+            if(isset($_REQUEST['msgOk'])){
+              echo "$('#myOkModal').modal();";
+            }
+          ?>
+
+
     });
 
    </script>
