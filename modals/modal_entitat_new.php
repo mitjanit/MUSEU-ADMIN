@@ -84,7 +84,7 @@
                                 </div>
 
                                 <div class=" col-md-4">
-                                      <label for="provincia">Provincia:</label>
+                                      <label for="provincia">Provincia :</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
                                           <div class="input-group-text">
@@ -106,7 +106,7 @@
                                 </div>
 
                                 <div class=" col-md-4">
-                                      <label for="poblacio">Població:</label>
+                                      <label for="poblacio">Població :</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
                                           <div class="input-group-text">
