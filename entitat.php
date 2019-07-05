@@ -159,9 +159,9 @@
               <div class="row mb-4" id="docs-botons">
                   <div class=" col-md-6">
                       <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                          <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                          <button type="button" class="btn btn-primary btn-new-docs" data-toggle="modal" data-target="#myNewModalDocs"><i class="fas fa-plus-circle"></i> Alta</button>
+                          <button type="button" class="btn btn-primary btn-edit-docs" data-toggle="modal" data-target="#myEditModalDocs"><i class="fa fa-edit"></i> Edita</button>
+                          <button type="button" class="btn btn-primary btn-delete-docs" data-toggle="modal" data-target="#myDeleteModalDocs"><i class="fas fa-minus-circle"></i> Elimina</button>
                       </div>
                   </div>
                   <div class="col-md-6"></div>
@@ -230,9 +230,9 @@
               <div class="row mb-4" id="comps-botons">
                   <div class=" col-md-6">
                       <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                          <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                          <button type="button" class="btn btn-primary btn-new-comps" data-toggle="modal" data-target="#myNewModalComps"><i class="fas fa-plus-circle"></i> Alta</button>
+                          <button type="button" class="btn btn-primary btn-edit-comps" data-toggle="modal" data-target="#myEditModalComps"><i class="fa fa-edit"></i> Edita</button>
+                          <button type="button" class="btn btn-primary btn-delete-comps" data-toggle="modal" data-target="#myDeleteModalComps"><i class="fas fa-minus-circle"></i> Elimina</button>
                       </div>
                   </div>
                   <div class="col-md-6"></div>
@@ -330,9 +330,9 @@
               <div class="row mb-4" id="acts-botons">
                   <div class=" col-md-6">
                       <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
-                          <button type="button" class="btn btn-primary btn-histo" data-toggle="modal" data-target="#myHistoModal"><i class="fa fa-book"></i> Detalls</button>
+                          <button type="button" class="btn btn-primary btn-new-acts" data-toggle="modal" data-target="#myNewModalActs"><i class="fas fa-plus-circle"></i> Alta</button>
+                          <button type="button" class="btn btn-primary btn-edit-acts" data-toggle="modal" data-target="#myEditModalActs"><i class="fa fa-edit"></i> Edita</button>
+                          <button type="button" class="btn btn-primary btn-delete-acts" data-toggle="modal" data-target="#myDeleteModalActs"><i class="fas fa-minus-circle"></i> Elimina</button>
                       </div>
                   </div>
                   <div class="col-md-6"></div>
