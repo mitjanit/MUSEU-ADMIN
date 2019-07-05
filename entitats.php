@@ -313,7 +313,7 @@
             $('#e4 option').filter(function(){
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
-            $('#e4').attr('readonly', true); 
+            $('#e4').prop("readOnly", true);
             $("#e5").empty();
             loadLocalitats(55, "#e5"); // Mostrar localitats extrangeres (idProv=) // Estranger
           }
@@ -321,7 +321,7 @@
             $('#e4 option').filter(function(){
                 return $(this).val()=="";
             }).prop('selected', true);
-            $('#e5').attr('readonly', false);
+            $('#e5').prop("readOnly", false);
           }
 
         });
