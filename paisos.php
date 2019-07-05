@@ -69,8 +69,8 @@ $nomTaula = "Paisos";
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
-                            <td><?php echo utf8_encode($row['continent']); ?></td>
+                            <td><?php echo ($row['nom']); ?></td>
+                            <td><?php echo ($row['continent']); ?></td>
                             <td><?php echo $row['continent_id']; ?></td>
                         </tr>
                         <?php 

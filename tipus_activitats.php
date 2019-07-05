@@ -71,8 +71,8 @@ $nomTaula = "Tipus Activitats";
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
-                            <td><?php echo utf8_encode($row['descripcio']); ?></td>
+                            <td><?php echo ($row['nom']); ?></td>
+                            <td><?php echo ($row['descripcio']); ?></td>
                         </tr>
                         <?php 
                             } 

@@ -69,8 +69,8 @@ $nomTaula = "Comunitats";
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
-                            <td><?php echo utf8_encode($row['pais']); ?></td>
+                            <td><?php echo ($row['nom']); ?></td>
+                            <td><?php echo ($row['pais']); ?></td>
                             <td><?php echo $row['pais_id']; ?></td>
                         </tr>
                         <?php 

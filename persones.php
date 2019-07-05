@@ -85,10 +85,10 @@
                         <tr>
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo $row['dni']; ?></td>
-                            <td><?php echo utf8_encode($row['nom_esportiu']); ?></td>
-                            <td><?php echo utf8_encode($row['ap1']); ?></td>
-                            <td><?php echo utf8_encode($row['ap2']); ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
+                            <td><?php echo ($row['nom_esportiu']); ?></td>
+                            <td><?php echo ($row['ap1']); ?></td>
+                            <td><?php echo ($row['ap2']); ?></td>
+                            <td><?php echo ($row['nom']); ?></td>
                             <td><?php 
                                 if($row['poblacions_id']!=NULL){
                                     $query_pob = "SELECT * FROM poblacions WHERE id='".$row['poblacions_id']."'";
@@ -102,7 +102,7 @@
                                     $query_prov = "SELECT * FROM provincies WHERE id='".$row['provincia_id']."'";
                                     $rsprov = mysqli_query($con01, $query_prov) or die("Error: ".mysqli_error($con01));
                                     $rowprov = mysqli_fetch_array($rsprov);
-                                    echo utf8_encode($rowprov['nom']);
+                                    echo ($rowprov['nom']);
                                 } 
                             ?>
                             </td>
@@ -110,15 +110,15 @@
                                 $query_pais = "SELECT * FROM paisos WHERE id='".$row['paisos_id']."'";
                                     $rspais = mysqli_query($con01, $query_pais) or die("Error: ".mysqli_error($con01));
                                     $rowpais = mysqli_fetch_array($rspais);
-                                    echo utf8_encode($rowpais['nom']); 
+                                    echo ($rowpais['nom']); 
                                   }
                             ?> 
                             </td>
                             <td><?php echo ($row['data_naixament']); ?></td>
                             <td><?php echo ($row['mort']); ?></td>
-                            <td><?php echo utf8_encode($row['mort_detall']); ?></td>
-                            <td><?php echo utf8_encode($row['detalls']); ?></td>
-                            <td><?php echo utf8_encode($row['material']); ?></td>
+                            <td><?php echo ($row['mort_detall']); ?></td>
+                            <td><?php echo ($row['detalls']); ?></td>
+                            <td><?php echo ($row['material']); ?></td>
                             <td><?php echo $row['ficha']; ?></td>
                             <td><?php echo $row['fotos']; ?></td>
                             <td><?php echo $row['entrevistes']; ?></td>
@@ -126,7 +126,7 @@
                             <td><?php echo $row['dada1']; ?></td>
                             <td><?php echo $row['dada2']; ?></td>
                             <td><?php echo $row['dada3']; ?></td>
-                            <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                            <td><?php echo ($row['detalls2']); ?></td>
                         </tr>
                         <?php 
 

@@ -79,8 +79,8 @@
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo utf8_encode($row['nom_esportiu']); ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
+                            <td><?php echo ($row['nom_esportiu']); ?></td>
+                            <td><?php echo ($row['nom']); ?></td>
                             <td><?php 
 
                                 if($row['poblacions_id']!=NULL){
@@ -94,7 +94,7 @@
                                     $query_prov = "SELECT * FROM provincies WHERE id='".$row['provincia_id']."'";
                                     $rsprov = mysqli_query($con01, $query_prov) or die("Error: ".mysqli_error($con01));
                                     $rowprov = mysqli_fetch_array($rsprov);
-                                    echo utf8_encode($rowprov['nom']);
+                                    echo ($rowprov['nom']);
                                 } 
                             ?></td>
                             <td>
@@ -103,11 +103,11 @@
                                 $query_pais = "SELECT * FROM paisos WHERE id='".$row['paisos_id']."'";
                                     $rspais = mysqli_query($con01, $query_pais) or die("Error: ".mysqli_error($con01));
                                     $rowpais = mysqli_fetch_array($rspais);
-                                    echo utf8_encode($rowpais['nom']); 
+                                    echo ($rowpais['nom']); 
                             ?>
                             </td>
-                            <td><?php echo utf8_encode($row['inici']); ?></td>
-                            <td><?php echo utf8_encode($row['inici_detall']); ?></td>
+                            <td><?php echo ($row['inici']); ?></td>
+                            <td><?php echo ($row['inici_detall']); ?></td>
                             <td><?php echo $row['escut']; ?></td>
                             <td><?php echo $row['himne']; ?></td>
                             <td><?php echo $row['cd']; ?></td>
@@ -115,8 +115,8 @@
                             <td><?php echo $row['camiseta']; ?></td>
                             <td><?php echo $row['bufanda']; ?></td>
                             <td><?php echo $row['bandera']; ?></td>
-                            <td><?php echo utf8_encode($row['altre']); ?></td>
-                            <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                            <td><?php echo ($row['altre']); ?></td>
+                            <td><?php echo ($row['detalls2']); ?></td>
                         </tr>
                         <?php 
 

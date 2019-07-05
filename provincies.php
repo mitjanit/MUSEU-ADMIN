@@ -70,8 +70,8 @@ $nomTaula = "Provincies";
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
-                            <td><?php echo utf8_encode($row['comunitat']); ?></td>
+                            <td><?php echo ($row['nom']); ?></td>
+                            <td><?php echo ($row['comunitat']); ?></td>
                             <td><?php echo $row['id_comunitat']; ?></td>
                         </tr>
                         <?php 

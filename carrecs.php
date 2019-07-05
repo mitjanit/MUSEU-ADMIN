@@ -70,8 +70,8 @@ $nomTaula = "Càrrecs";
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo utf8_encode($row['nom']); ?></td>
-                            <td><?php echo utf8_encode($row['descripcio']); ?></td>
+                            <td><?php echo ($row['nom']); ?></td>
+                            <td><?php echo ($row['descripcio']); ?></td>
                             <td><?php echo ($row['directiu']=='S'?'Sí':'No'); ?></td>
                         </tr>
                         <?php 
