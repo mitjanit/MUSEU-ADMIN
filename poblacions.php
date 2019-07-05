@@ -253,7 +253,10 @@ $nomTaula = "Poblacions";
 
                     $('#e0').attr("value", data[0][0]); // Id
                     $('#e1').attr("value", data[0][1]); // Nom
-                    $('#e2').attr("value", data[0][2]); // Provincia
+                    // Provincia
+                    $('#e2 option').filter(function(){
+                        return $(this).text()==data[0][2];
+                    }).prop('selected', true);
 
                 }
 
