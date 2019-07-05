@@ -73,7 +73,7 @@
                                             $queryPaisos = "SELECT * FROM paisos ORDER BY nom ASC";
                                             $rs = mysqli_query($con01, $queryPaisos) or die("Error: ".mysqli_error($con01));
                                             while ($row = mysqli_fetch_array($rs)){
-                                              echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                              echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                             }
                                           ?>
                                         </select>
@@ -97,7 +97,7 @@
                                             $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
                                             $rs = mysqli_query($con01, $queryProv) or die("Error: ".mysqli_error($con01));
                                             while ($row = mysqli_fetch_array($rs)){
-                                              echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                              echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                             }
                                           ?>
                                           <option value="No Aplicable">No Aplicable</option>
@@ -119,7 +119,7 @@
                                             $queryPob = "SELECT * FROM poblacions ORDER BY nom ASC";
                                             $rs = mysqli_query($con01, $queryPob) or die("Error: ".mysqli_error($con01));
                                             while ($row = mysqli_fetch_array($rs)){
-                                              echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                              echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                             }
                                           ?>
                                         </select>
