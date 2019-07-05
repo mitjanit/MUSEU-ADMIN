@@ -74,14 +74,14 @@ $nomTaula = "Persona";
                                       ?>
                                       <tr>
                                           <td><?php echo $row['id']; ?></td>
-                                          <td><?php echo utf8_encode($row['nom_esportiu']); ?></td>
-                                          <td><?php echo utf8_encode($row['ap1']); ?></td>
-                                          <td><?php echo utf8_encode($row['ap2']); ?></td>
-                                          <td><?php echo utf8_encode($row['nom']); ?></td>
-                                          <td><?php echo utf8_encode($row['detalls']); ?></td>
+                                          <td><?php echo ($row['nom_esportiu']); ?></td>
+                                          <td><?php echo ($row['ap1']); ?></td>
+                                          <td><?php echo ($row['ap2']); ?></td>
+                                          <td><?php echo ($row['nom']); ?></td>
+                                          <td><?php echo ($row['detalls']); ?></td>
                                       </tr>
                                       <?php
-                                          $nomComplet = utf8_encode($row['ap1'])." ".utf8_encode($row['ap2']).", ".utf8_encode($row['nom']);
+                                          $nomComplet = ($row['ap1'])." ".($row['ap2']).", ".($row['nom']);
                                           }
 
                                       ?>
@@ -113,7 +113,7 @@ $nomTaula = "Persona";
                                           <td><?php echo $row['paisos_id']; ?></td>
                                           <td><?php echo $row['data_naixament']; ?></td>
                                           <td><?php echo $row['mort']; ?></td>
-                                          <td><?php echo utf8_encode($row['mort_detall']); ?></td>
+                                          <td><?php echo ($row['mort_detall']); ?></td>
                                       </tr>
                                       <?php
                                           }
@@ -150,7 +150,7 @@ $nomTaula = "Persona";
                                           <td><?php echo $row['dada1']; ?></td>
                                           <td><?php echo $row['dada2']; ?></td>
                                           <td><?php echo $row['dada3']; ?></td>
-                                          <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                                          <td><?php echo ($row['detalls2']); ?></td>
                                       </tr>
                                       <?php
                                           }
@@ -272,7 +272,7 @@ $nomTaula = "Persona";
                                             $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
                                             $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                             $rowd = mysqli_fetch_array($rsd);
-                                            echo utf8_encode($rowd['nom']);
+                                            echo ($rowd['nom']);
                                         }
                                       ?>
                                     </td>
@@ -282,7 +282,7 @@ $nomTaula = "Persona";
                                             $query = "SELECT * FROM competicions WHERE id='".$row['id_competicio']."'";
                                             $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                             $rowd = mysqli_fetch_array($rsd);
-                                            echo utf8_encode($rowd['nom']);
+                                            echo ($rowd['nom']);
                                         }
                                       ?>
                                     </td>
@@ -294,7 +294,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['gc']; ?></td>
                                     <td><?php echo $row['pp']; ?></td>
                                     <td><?php echo $row['classificacio']; ?></td>
-                                    <td><?php echo utf8_encode($row['detalls1']); ?></td>
+                                    <td><?php echo ($row['detalls1']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -346,7 +346,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo utf8_encode($row['comentari']); ?></td>
+                                    <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -422,7 +422,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id_visitant']; ?></td>
                                     <td><?php echo $row['id_categoria']; ?></td>
                                     <td><?php echo $row['id_competicio']; ?></td>
-                                    <td><?php echo utf8_encode($row['detalls1']); ?></td>
+                                    <td><?php echo ($row['detalls1']); ?></td>
                                     <td><?php echo $row['pj']; ?></td>
                                     <td><?php echo $row['resultat']; ?></td>
                                     <td><?php echo $row['pg']; ?></td>
@@ -431,7 +431,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['gf']; ?></td>
                                     <td><?php echo $row['gc']; ?></td>
                                     <td><?php echo $row['classificacio']; ?></td>
-                                    <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                                    <td><?php echo ($row['detalls2']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -484,7 +484,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo utf8_encode($row['comentari']); ?></td>
+                                    <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -560,7 +560,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['actuacio']; ?></td>
                                     <td><?php echo $row['id_categoria']; ?></td>
                                     <td><?php echo $row['id_competicio']; ?></td>
-                                    <td><?php echo utf8_encode($row['detalls1']); ?></td>
+                                    <td><?php echo ($row['detalls1']); ?></td>
                                     <td><?php echo $row['pj']; ?></td>
                                     <td><?php echo $row['resultat']; ?></td>
                                     <td><?php echo $row['pg']; ?></td>
@@ -569,7 +569,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['gf']; ?></td>
                                     <td><?php echo $row['gc']; ?></td>
                                     <td><?php echo $row['classificacio']; ?></td>
-                                    <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                                    <td><?php echo ($row['detalls2']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -622,7 +622,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo utf8_encode($row['comentari']); ?></td>
+                                    <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -699,7 +699,7 @@ $nomTaula = "Persona";
                                       <td><?php echo $row['id_carrec']; ?></td>
                                       <td><?php echo $row['id_categoria']; ?></td>
                                       <td><?php echo $row['num_equips']; ?></td>
-                                      <td><?php echo utf8_encode($row['detalls1']); ?></td>
+                                      <td><?php echo ($row['detalls1']); ?></td>
                                       <td><?php echo $row['pj']; ?></td>
                                       <td><?php echo $row['resultat']; ?></td>
                                       <td><?php echo $row['pg']; ?></td>
@@ -708,7 +708,7 @@ $nomTaula = "Persona";
                                       <td><?php echo $row['gf']; ?></td>
                                       <td><?php echo $row['gc']; ?></td>
                                       <td><?php echo $row['classificacio']; ?></td>
-                                      <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                                      <td><?php echo ($row['detalls2']); ?></td>
                                     </tr>
                                     <?php
                                         }
@@ -760,7 +760,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo utf8_encode($row['comentari']); ?></td>
+                                    <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -835,7 +835,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id_carrec']; ?></td>
                                     <td><?php echo $row['id_categoria']; ?></td>
                                     <td><?php echo $row['num_equips']; ?></td>
-                                    <td><?php echo utf8_encode($row['detalls1']); ?></td>
+                                    <td><?php echo ($row['detalls1']); ?></td>
                                     <td><?php echo $row['pj']; ?></td>
                                     <td><?php echo $row['resultat']; ?></td>
                                     <td><?php echo $row['pg']; ?></td>
@@ -844,7 +844,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['gf']; ?></td>
                                     <td><?php echo $row['gc']; ?></td>
                                     <td><?php echo $row['classificacio']; ?></td>
-                                    <td><?php echo utf8_encode($row['detalls2']); ?></td>
+                                    <td><?php echo ($row['detalls2']); ?></td>
                                   </tr>
                                   <?php
                                       }
@@ -897,7 +897,7 @@ $nomTaula = "Persona";
                                   <td><?php echo $row['id']; ?></td>
                                   <td><?php echo $row['id_persona']; ?></td>
                                   <td><?php echo $row['temporada']; ?></td>
-                                  <td><?php echo utf8_encode($row['comentari']); ?></td>
+                                  <td><?php echo ($row['comentari']); ?></td>
                                 </tr>
                                 <?php
                                     }
