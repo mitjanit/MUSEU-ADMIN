@@ -251,7 +251,6 @@
             $('#provincia option').filter(function(){
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
-            $('#provincia').attr('readonly', true); 
             $("#poblacio").empty();
             loadLocalitats(55, "#poblacio"); // Mostrar localitats extrangeres
           }
