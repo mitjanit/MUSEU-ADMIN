@@ -348,6 +348,8 @@
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
             $('#e7').attr('readonly', true); 
+            $("#e8").empty();
+            loadLocalitats(, "#e8"); // Mostrar localitats extrangeres (idProv=) // Estranger
           }
           else {
             $('#e7 option').filter(function(){

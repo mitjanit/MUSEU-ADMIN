@@ -140,15 +140,6 @@
                                             </div>
                                           </div>
                                           <select class="form-control" id="e7" name="provincia" required>
-                                            <option value=""></option>
-                                            <?php
-                                              $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
-                                              $rs = mysqli_query($con01, $queryProv) or die("Error: ".mysqli_error($con01));
-                                              while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
-                                              }
-                                            ?>
-                                            <option value="No Aplicable">No Aplicable</option>
                                           </select>
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
@@ -164,16 +155,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="e8" name="poblacio" required>
-                                            <option value=""></option>
-                                            <?php
-                                              $queryPob = "SELECT * FROM poblacions ORDER BY nom ASC";
-                                              $rs = mysqli_query($con01, $queryPob) or die("Error: ".mysqli_error($con01));
-                                              while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
-                                              }
-                                            ?>
-                                          </select>
+                                          <select class="form-control" id="e8" name="poblacio" required></select>
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
