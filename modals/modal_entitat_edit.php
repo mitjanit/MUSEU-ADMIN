@@ -91,7 +91,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <select class="form-control" id="e4" name="provincia">
+                                        <select class="form-control" id="e4" name="provincia" readonly>
                                           <option value=""></option>
                                           <?php
                                             $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
@@ -100,7 +100,7 @@
                                               echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
                                             }
                                           ?>
-                                          <option value="No Aplicable">No Aplicable</option>
+                                          <!--<option value="No Aplicable">No Aplicable</option>-->
                                         </select>
                                       </div>
                                 </div>
