@@ -87,7 +87,7 @@ $nomTaula = "Poblacions";
                             ?></td>
                             <td>
                               <?php 
-                                  if($row['provincies_id']!=55){
+                                  if($row['provincies_id']!="55"){
                                     $query_com = "SELECT * FROM comunitats WHERE id='".$comId."'";
                                     $rscom= mysqli_query($con01, $query_com) or die("Error: ".mysqli_error($con01));
                                     $rowcom = mysqli_fetch_array($rscom);
@@ -100,7 +100,7 @@ $nomTaula = "Poblacions";
                             ?></td>
                             <td>
                               <?php 
-                                if($row['provincies_id']!=55){
+                                if($row['provincies_id']!="55"){
                                     echo "España";
                                 } 
                                 else {
