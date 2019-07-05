@@ -243,6 +243,38 @@
 
         table.buttons().container().appendTo( '#zona-botons .col-md-6:eq(1)' );
 
+        // Edita persona
+
+        $('#pais').change(function() {
+          var pais = $("#pais option:selected").text();
+          if(pais!="Spain"){
+            $('#provincia option').filter(function(){
+                return $(this).text()=="No Aplicable";
+            }).prop('selected', true);
+            $('#provincia').attr('readonly', true); 
+            $("#poblacio").empty();
+            loadLocalitats(55, "#poblacio"); // Mostrar localitats extrangeres
+          }
+          else {
+            $('#poblacio option').filter(function(){
+                return $(this).val()=="";
+            }).prop('selected', true);
+            $('#provincia').attr('readonly', false);
+          }
+
+        });
+
+        $('#provincia').change(function() {
+          var provincia = $("#provincia option:selected").text();
+          var idProvincia = $("#provincia option:selected").val();
+          $("#poblacio").empty();
+          if(provincia!=""){
+            
+            loadLocalitats(idProvincia, "#poblacio");
+          }
+
+        });
+
         // Editar entitat
 
         $(".btn-edit").click(function() {
@@ -423,32 +455,6 @@
         // reset dels camps de formulari en tancar un modal
         $('.modal').on('hidden.bs.modal', function () {
           $(this).find('form').trigger('reset');
-        });
-
-        $('#pais').change(function(){
-          let nomPais = $("#pais option:selected").text();
-          if(nomPais!="Spain"){
-            $('#provincia').prop('disabled', 'disabled');
-            $('#provincia').val("No Aplicable");
-            $('#poblacio').prop('disabled', 'disabled');
-            $('#poblacio').val("");
-          }
-          else {
-            $('#provincia').prop('disabled', false);
-            $('#poblacio').prop('disabled', false);
-          }
-        });
-
-        $('#provincia').change(function(){
-          let codiProvincia = $("#provincia option:selected").val();
-          alert($("#provincia option:selected").text());
-          if(codiProvincia==""){
-            $('#poblacio').prop('disabled', 'disabled');
-            $('#poblacio').val("");
-          }
-          else {
-            $('#poblacio').prop('disabled', false);
-          }
         });
 
 
