@@ -358,20 +358,20 @@
 
         });
 
-        function loadLocalitats(idProv) {
+        function loadLocalitats(idProv, selectID) {
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
               var localitats = JSON.parse(this.responseText);
               var item0 = $("<option/>", {value:"0", text:"Selecciona"});
-              $("#e8").append(item0);
+              $(selectID).append(item0);
               for (l in localitats) {
                 var id = localitats[l].id;
                 var nom = localitats[l].nom;
                 var id_prov = localitats[l].provincies_id;
                 if(id_prov==idProv){
                   var item = $("<option/>", {value:id, text:nom});
-                  $("#e8").append(item);
+                  $(selectID).append(item);
                 }
               }
             }
@@ -385,7 +385,7 @@
           var idProvincia = $("#e7 option:selected").val();
           if(provincia!="No Aplicable" && provincia!=""){
             $("#e8").empty();
-            loadLocalitats(idProvincia);
+            loadLocalitats(idProvincia, "#e8");
           }
           else {
             $("#e8").empty();
