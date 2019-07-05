@@ -149,266 +149,291 @@
             </div>
         </div>
 
-        <!-- Documents table -->
-          <div class="card shadow mb-4  ">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-file"></i> Documents de l'Entitat // <span id="entitatDocs"></span>.</h6>
+        <!-- Tabs (Jugador, Entrenador, Arbit, Directiu i Altres) -->
+        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="docs-tab" data-toggle="tab" href="#docs" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-file"></i> Documents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="comps-tab" data-toggle="tab" href="#comps" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-trophy"></i> Competicions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="acts-tab" data-toggle="tab" href="#acts" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-calendar"></i> Activitats</a>
+          </li>
+        </ul>
 
-            </div>
-            <div class="card-body ">
-              <div class="row mb-4" id="docs-botons">
-                  <div class=" col-md-6">
-                      <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-new-docs" data-toggle="modal" data-target="#myNewModalDocs"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit-docs" data-toggle="modal" data-target="#myEditModalDocs"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete-docs" data-toggle="modal" data-target="#myDeleteModalDocs"><i class="fas fa-minus-circle"></i> Elimina</button>
-                      </div>
-                  </div>
-                  <div class="col-md-6"></div>
-              </div>
-              <div class="table-responsive overflow-hidden">
-                  <table class="table table-striped table-bordered table-hover display" id="dtDocsEntitat" width="100%">
-                      <thead>
-                          <tr>
-                              <th class="none">Id Doc</th>
-                              <th class="none">Id Entitat</th>
-                              <th>Temporada</th>
-                              <th>Document</th>
-                              <th>Continguts</th>
-                              <th>Foto</th>
-                              <th>Entre</th>
-                              <th>Repor</th>
-                              <th>Cartel</th>
-                              <th>Llibre</th>
-                              <th>Video</th>
-                              <th>Altre</th>
-                              <th class="none">Detalls</th>
-                              
-                          </tr>
-                      </thead>
-                      <tbody><?php
-                                $sql ="SELECT * FROM document_entitat
-                                      WHERE id_entitat='".$_REQUEST['id']."'
-                                      ORDER BY temporada ASC";
-                                $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
-                                while ($row = mysqli_fetch_array($rs)){
-                            ?>
-                            <tr>
-                              <td><?php echo $row['id']; ?></td>
-                              <td><?php echo $row['id_entitat']; ?></td>
-                              <td><?php echo $row['temporada']; ?></td>
-                              <td><?php echo ($row['document']); ?></td>
-                              <td><?php echo ($row['continguts']); ?></td>
-                              <td><?php echo $row['foto']; ?></td>
-                              <td><?php echo $row['entrevista']; ?></td>
-                              <td><?php echo $row['reportatge']; ?></td>
-                              <td><?php echo $row['cartell']; ?></td>
-                              <td><?php echo $row['llibre']; ?></td>
-                              <td><?php echo $row['video']; ?></td>
-                              <td><?php echo ($row['altre']); ?></td>
-                              <td><?php echo ($row['detalls']); ?></td>
-                            </tr>
-                            <?php
-                                }
-                            ?>
-                    </tbody>
-                  </table>
-                  <!-- /.table-responsive -->
-            </div>
-            <!-- /.row -->
-            
-            </div>
-        </div>
+        <!-- tab contents -->
+        <div class="tab-content" id="myTabContent">
+          
+          <div class="tab-pane fade show active" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+            <!-- Documents table -->
+              <div class="card shadow mb-4  ">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-file"></i> Documents de l'Entitat // <span id="entitatDocs"></span>.</h6>
 
-        <!-- Competicions table -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-trophy"></i> Competicions de l'Entitat // <span id="entitatComps"></span>.</h6>
-
-            </div>
-            <div class="card-body">
-              <div class="row mb-4" id="comps-botons">
-                  <div class=" col-md-6">
-                      <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-new-comps" data-toggle="modal" data-target="#myNewModalComps"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit-comps" data-toggle="modal" data-target="#myEditModalComps"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete-comps" data-toggle="modal" data-target="#myDeleteModalComps"><i class="fas fa-minus-circle"></i> Elimina</button>
-                      </div>
-                  </div>
-                  <div class="col-md-6"></div>
-              </div>
-
-              <!-- row competicions entitat -->
-            <div class="row mb-4" >
-              <div class="table-responsive overflow-hidden">
-                  <table width="100%" class="table table-striped table-bordered table-hover display" id="dtCompsEntitat">
-                      <thead>
-                          <tr>
-                              <th class="none">Id Comp</th>
-                              <th class="none">Id Entitat</th>
-                              <th>Temporada</th>
-                              <th>Competició</th>
-                              <th>Categoria</th>
-                              <th>Tècnic</th>
-                              <th>Detalls</th>
-                              <th>PJ</th>
-                              <th>PG</th>
-                              <th>PE</th>
-                              <th>PP</th>
-                              <th>GF</th>
-                              <th>GC</th>
-                              <th>Pts</th>
-                              <th>Clasif.</th>
-                              <th class="none">Detalls 2</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <?php
-                              $sql ="SELECT *
-                                      FROM competicio_entitat
-                                      WHERE id_entitat='".$_REQUEST['id']."'
-                                      ORDER BY temporada ASC";
-                              $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
-                              while ($row = mysqli_fetch_array($rs)){
-                          ?>
-                          <tr>
-                              <td><?php echo $row['id']; ?></td>
-                              <td><?php echo $row['id_entitat']; ?></td>
-                              <td><?php echo $row['temporada']; ?></td>
-                              <td>
-                                <?php 
-                                  if($row['id_competicio']!=NULL){
-                                    $query = "SELECT * FROM competicions WHERE id='".$row['id_competicio']."'";
-                                     $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
-                                    $row2 = mysqli_fetch_array($rs2);
-                                    echo ($row2['nom']);
-                                  } 
-                                ?>
-                              </td>
-                              <td>
-                                <?php 
-                                  if($row['id_categoria']!=NULL){
-                                    $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
-                                     $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
-                                    $row2 = mysqli_fetch_array($rs2);
-                                    echo ($row2['nom']);
-                                  } 
-                                ?>
-                              </td>
-                              <td><?php echo ($row['tecnic']); ?></td>
-                              <td><?php echo ($row['detalls1']); ?></td>
-                              <td><?php echo $row['pj']; ?></td>
-                              <td><?php echo $row['pg']; ?></td>
-                              <td><?php echo $row['pe']; ?></td>
-                              <td><?php echo $row['pp']; ?></td>
-                              <td><?php echo $row['gf']; ?></td>
-                              <td><?php echo $row['gc']; ?></td>
-                              <td><?php echo $row['punts']; ?></td>
-                              <td><?php echo $row['classificacio']; ?></td>
-                              <td><?php echo ($row['detalls2']); ?></td>
-                          </tr>
-                          <?php
-                              }
-                          ?>
-                      </tbody>
-                  </table>
-                  <!-- /.table-responsive -->
-              </div>
-            </div>
-            <!-- /.row -->
-            
-            </div>
-        </div>
-
-        <!-- Activitats table -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-calendar"></i> Activitats de l'Entitat // <span id="entitatActs"></span>.</h6>
-
-            </div>
-            <div class="card-body">
-              <div class="row mb-4" id="acts-botons">
-                  <div class=" col-md-6">
-                      <div class="btn-group"  role="group">
-                          <button type="button" class="btn btn-primary btn-new-acts" data-toggle="modal" data-target="#myNewModalActs"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit-acts" data-toggle="modal" data-target="#myEditModalActs"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete-acts" data-toggle="modal" data-target="#myDeleteModalActs"><i class="fas fa-minus-circle"></i> Elimina</button>
-                      </div>
-                  </div>
-                  <div class="col-md-6"></div>
-              </div>
-
-              <!-- row activitats entitat -->
-              <div class="row mb-4" >
-                <div class="table-responsive overflow-hidden">
-                    <table width="100%" class="table table-striped table-bordered table-hover display" id="dtActsEntitat">
-                        <thead>
-                            <tr>
-                                <th class="none">Id Act</th>
-                                <th class="none">Id Entitat</th>
-                                <th>Temporada</th>
-                                <th>Tipus Act</th>
-                                <th>Actuacions</th>
-                                <th>Detalls 1</th>
-                                <th class="none">Detalls 2</th>
-                                <th>Fotos</th>
-                                <th>Entrev</th>
-                                <th>Report</th>
-                                <th>Cartel</th>
-                                <th>Prog</th>
-                                <th>Video</th>
-                                <th class="none">Altre 1</th>
-                                <th class="none">Altre 2</th>
-                                <th class="none">Detalls 3</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                $sql ="SELECT * FROM activitats_entitat
-                                        WHERE id_entitat='".$_REQUEST['id']."'
-                                        ORDER BY temporada ASC";
-                                $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
-                                while ($row = mysqli_fetch_array($rs)){
-                            ?>
-                            <tr>
-                                <td><?php echo $row['id']; ?></td>
-                                <td><?php echo $row['id_entitat']; ?></td>
-                                <td><?php echo $row['temporada']; ?></td>
-                                <td>
-                                  <?php 
-                                    if($row['tipus_act']!=NULL){
-                                      $query = "SELECT * FROM temps_activitats WHERE id='".$row['tipus_act']."'";
-                                       $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
-                                      $row2 = mysqli_fetch_array($rs2);
-                                      echo ($row2['nom']);
-                                    } 
-                                  ?>
-                                </td>
-                                <td><?php echo $row['actuacions']; ?></td>
-                                <td><?php echo ($row['detalls1']); ?></td>
-                                <td><?php echo ($row['detalls2']); ?></td>
-                                <td><?php echo $row['fotos']; ?></td>
-                                <td><?php echo $row['entrevistes']; ?></td>
-                                <td><?php echo $row['croniques']; ?></td>
-                                <td><?php echo $row['cartell']; ?></td>
-                                <td><?php echo $row['programa']; ?></td>
-                                <td><?php echo $row['video']; ?></td>
-                                <td><?php echo ($row['altre1']); ?></td>
-                                <td><?php echo ($row['altre2']); ?></td>
-                                <td><?php echo ($row['detalls3']); ?></td>
-                            </tr>
-                            <?php
-                                }
-                            ?>
-                        </tbody>
-                    </table>
-                    <!-- /.table-responsive -->
-                  <!-- /.col -->
                 </div>
-              <!-- /.row -->
-              </div>
+                <div class="card-body ">
+                  <div class="row mb-4" id="docs-botons">
+                      <div class=" col-md-6">
+                          <div class="btn-group"  role="group">
+                              <button type="button" class="btn btn-primary btn-new-docs" data-toggle="modal" data-target="#myNewModalDocs"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit-docs" data-toggle="modal" data-target="#myEditModalDocs"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-docs" data-toggle="modal" data-target="#myDeleteModalDocs"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          </div>
+                      </div>
+                      <div class="col-md-6"></div>
+                  </div>
+                  <div class="table-responsive overflow-hidden">
+                      <table class="table table-striped table-bordered table-hover display" id="dtDocsEntitat" width="100%">
+                          <thead>
+                              <tr>
+                                  <th class="none">Id Doc</th>
+                                  <th class="none">Id Entitat</th>
+                                  <th>Temporada</th>
+                                  <th>Document</th>
+                                  <th>Continguts</th>
+                                  <th>Foto</th>
+                                  <th>Entre</th>
+                                  <th>Repor</th>
+                                  <th>Cartel</th>
+                                  <th>Llibre</th>
+                                  <th>Video</th>
+                                  <th>Altre</th>
+                                  <th class="none">Detalls</th>
+                                  
+                              </tr>
+                          </thead>
+                          <tbody><?php
+                                    $sql ="SELECT * FROM document_entitat
+                                          WHERE id_entitat='".$_REQUEST['id']."'
+                                          ORDER BY temporada ASC";
+                                    $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
+                                    while ($row = mysqli_fetch_array($rs)){
+                                ?>
+                                <tr>
+                                  <td><?php echo $row['id']; ?></td>
+                                  <td><?php echo $row['id_entitat']; ?></td>
+                                  <td><?php echo $row['temporada']; ?></td>
+                                  <td><?php echo ($row['document']); ?></td>
+                                  <td><?php echo ($row['continguts']); ?></td>
+                                  <td><?php echo $row['foto']; ?></td>
+                                  <td><?php echo $row['entrevista']; ?></td>
+                                  <td><?php echo $row['reportatge']; ?></td>
+                                  <td><?php echo $row['cartell']; ?></td>
+                                  <td><?php echo $row['llibre']; ?></td>
+                                  <td><?php echo $row['video']; ?></td>
+                                  <td><?php echo ($row['altre']); ?></td>
+                                  <td><?php echo ($row['detalls']); ?></td>
+                                </tr>
+                                <?php
+                                    }
+                                ?>
+                        </tbody>
+                      </table>
+                      <!-- /.table-responsive -->
+                </div>
+                <!-- /.row -->
+                
+                </div>
+            </div>
           </div>
+                
+          <div class="tab-pane fade" id="comps" role="tabpanel" aria-labelledby="comps-tab">
+            <!-- Competicions table -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-trophy"></i> Competicions de l'Entitat // <span id="entitatComps"></span>.</h6>
+
+                </div>
+                <div class="card-body">
+                  <div class="row mb-4" id="comps-botons">
+                      <div class=" col-md-6">
+                          <div class="btn-group"  role="group">
+                              <button type="button" class="btn btn-primary btn-new-comps" data-toggle="modal" data-target="#myNewModalComps"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit-comps" data-toggle="modal" data-target="#myEditModalComps"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-comps" data-toggle="modal" data-target="#myDeleteModalComps"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          </div>
+                      </div>
+                      <div class="col-md-6"></div>
+                  </div>
+
+                  <!-- row competicions entitat -->
+                <div class="row mb-4" >
+                  <div class="table-responsive overflow-hidden">
+                      <table width="100%" class="table table-striped table-bordered table-hover display" id="dtCompsEntitat">
+                          <thead>
+                              <tr>
+                                  <th class="none">Id Comp</th>
+                                  <th class="none">Id Entitat</th>
+                                  <th>Temporada</th>
+                                  <th>Competició</th>
+                                  <th>Categoria</th>
+                                  <th>Tècnic</th>
+                                  <th>Detalls</th>
+                                  <th>PJ</th>
+                                  <th>PG</th>
+                                  <th>PE</th>
+                                  <th>PP</th>
+                                  <th>GF</th>
+                                  <th>GC</th>
+                                  <th>Pts</th>
+                                  <th>Clasif.</th>
+                                  <th class="none">Detalls 2</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <?php
+                                  $sql ="SELECT *
+                                          FROM competicio_entitat
+                                          WHERE id_entitat='".$_REQUEST['id']."'
+                                          ORDER BY temporada ASC";
+                                  $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
+                                  while ($row = mysqli_fetch_array($rs)){
+                              ?>
+                              <tr>
+                                  <td><?php echo $row['id']; ?></td>
+                                  <td><?php echo $row['id_entitat']; ?></td>
+                                  <td><?php echo $row['temporada']; ?></td>
+                                  <td>
+                                    <?php 
+                                      if($row['id_competicio']!=NULL){
+                                        $query = "SELECT * FROM competicions WHERE id='".$row['id_competicio']."'";
+                                         $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                        $row2 = mysqli_fetch_array($rs2);
+                                        echo ($row2['nom']);
+                                      } 
+                                    ?>
+                                  </td>
+                                  <td>
+                                    <?php 
+                                      if($row['id_categoria']!=NULL){
+                                        $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
+                                         $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                        $row2 = mysqli_fetch_array($rs2);
+                                        echo ($row2['nom']);
+                                      } 
+                                    ?>
+                                  </td>
+                                  <td><?php echo ($row['tecnic']); ?></td>
+                                  <td><?php echo ($row['detalls1']); ?></td>
+                                  <td><?php echo $row['pj']; ?></td>
+                                  <td><?php echo $row['pg']; ?></td>
+                                  <td><?php echo $row['pe']; ?></td>
+                                  <td><?php echo $row['pp']; ?></td>
+                                  <td><?php echo $row['gf']; ?></td>
+                                  <td><?php echo $row['gc']; ?></td>
+                                  <td><?php echo $row['punts']; ?></td>
+                                  <td><?php echo $row['classificacio']; ?></td>
+                                  <td><?php echo ($row['detalls2']); ?></td>
+                              </tr>
+                              <?php
+                                  }
+                              ?>
+                          </tbody>
+                      </table>
+                      <!-- /.table-responsive -->
+                  </div>
+                </div>
+                <!-- /.row -->
+                
+                </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="acts" role="tabpanel" aria-labelledby="acts-tab">
+            <!-- Activitats table -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-calendar"></i> Activitats de l'Entitat // <span id="entitatActs"></span>.</h6>
+
+                </div>
+                <div class="card-body">
+                  <div class="row mb-4" id="acts-botons">
+                      <div class=" col-md-6">
+                          <div class="btn-group"  role="group">
+                              <button type="button" class="btn btn-primary btn-new-acts" data-toggle="modal" data-target="#myNewModalActs"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit-acts" data-toggle="modal" data-target="#myEditModalActs"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-acts" data-toggle="modal" data-target="#myDeleteModalActs"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          </div>
+                      </div>
+                      <div class="col-md-6"></div>
+                  </div>
+
+                  <!-- row activitats entitat -->
+                  <div class="row mb-4" >
+                    <div class="table-responsive overflow-hidden">
+                        <table width="100%" class="table table-striped table-bordered table-hover display" id="dtActsEntitat">
+                            <thead>
+                                <tr>
+                                    <th class="none">Id Act</th>
+                                    <th class="none">Id Entitat</th>
+                                    <th>Temporada</th>
+                                    <th>Tipus Act</th>
+                                    <th>Actuacions</th>
+                                    <th>Detalls 1</th>
+                                    <th class="none">Detalls 2</th>
+                                    <th>Fotos</th>
+                                    <th>Entrev</th>
+                                    <th>Report</th>
+                                    <th>Cartel</th>
+                                    <th>Prog</th>
+                                    <th>Video</th>
+                                    <th class="none">Altre 1</th>
+                                    <th class="none">Altre 2</th>
+                                    <th class="none">Detalls 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    $sql ="SELECT * FROM activitats_entitat
+                                            WHERE id_entitat='".$_REQUEST['id']."'
+                                            ORDER BY temporada ASC";
+                                    $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
+                                    while ($row = mysqli_fetch_array($rs)){
+                                ?>
+                                <tr>
+                                    <td><?php echo $row['id']; ?></td>
+                                    <td><?php echo $row['id_entitat']; ?></td>
+                                    <td><?php echo $row['temporada']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['tipus_act']!=NULL){
+                                          $query = "SELECT * FROM temps_activitats WHERE id='".$row['tipus_act']."'";
+                                           $rs2 = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                          $row2 = mysqli_fetch_array($rs2);
+                                          echo ($row2['nom']);
+                                        } 
+                                      ?>
+                                    </td>
+                                    <td><?php echo $row['actuacions']; ?></td>
+                                    <td><?php echo ($row['detalls1']); ?></td>
+                                    <td><?php echo ($row['detalls2']); ?></td>
+                                    <td><?php echo $row['fotos']; ?></td>
+                                    <td><?php echo $row['entrevistes']; ?></td>
+                                    <td><?php echo $row['croniques']; ?></td>
+                                    <td><?php echo $row['cartell']; ?></td>
+                                    <td><?php echo $row['programa']; ?></td>
+                                    <td><?php echo $row['video']; ?></td>
+                                    <td><?php echo ($row['altre1']); ?></td>
+                                    <td><?php echo ($row['altre2']); ?></td>
+                                    <td><?php echo ($row['detalls3']); ?></td>
+                                </tr>
+                                <?php
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
+                      <!-- /.col -->
+                    </div>
+                  <!-- /.row -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!-- end tab contents -->
 
         </div>
         <!-- /.container-fluid -->
