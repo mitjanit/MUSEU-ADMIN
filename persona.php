@@ -1719,7 +1719,7 @@ $nomTaula = "Persona";
         txt = $('<b>ERROR: No has seleccionat cap trajectòria per editar.</b>');}
       else { 
         txt = $("<b></b>");
-        $('#idt').val(data[0][0]);
+        $('#idje').val(data[0][0]);
         $('#temporadaje').val(data[0][2]);
         
         // Demarcació selected option
