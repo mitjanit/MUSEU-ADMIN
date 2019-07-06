@@ -221,7 +221,7 @@ $nomTaula = "Persona";
                                     <th>PS</th>
                                     <th>GF</th>
                                     <th>GC</th>
-                                    <th>??</th>
+                                    <!--<th>??</th>-->
                                     <th>Classif.</th>
                                     <th>Detalls</th>
                                 </tr>
@@ -296,7 +296,7 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['pe']; ?></td>
                                     <td><?php echo $row['gf']; ?></td>
                                     <td><?php echo $row['gc']; ?></td>
-                                    <td><?php echo $row['pp']; ?></td>
+                                    <!--<td><?php //echo $row['pp']; ?></td>-->
                                     <td><?php echo $row['classificacio']; ?></td>
                                     <td><?php echo ($row['detalls1']); ?></td>
                                   </tr>

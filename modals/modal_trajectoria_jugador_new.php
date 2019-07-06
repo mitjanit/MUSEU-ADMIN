@@ -275,7 +275,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="cd" name="c11" placeholder="Entrevistes">
+                                          <input type="number" min="0" value="0" class="form-control" id="x1jn" name="x1" />
                                         </div>
                                   </div>
                                   -->
