@@ -1737,23 +1737,26 @@ $nomTaula = "Persona";
             return $(this).text()==data[0][5];
         }).prop('selected', true);
 
+        //Entrenador
+        $('#entrenadorje').val(data[0][6]);
+
         // Categoria selected option
         $('#categoriaje option').filter(function(){
-            return $(this).text()==data[0][6];
+            return $(this).text()==data[0][7];
         }).prop('selected', true);
 
         // Competició selected option
         $('#competicioje option').filter(function(){
-            return $(this).text()==data[0][7];
+            return $(this).text()==data[0][8];
         }).prop('selected', true);
 
-        $('#pjje').val(data[0][8]);
-        $('#resultatje').val(data[0][9]);
-        $('#pcje').val(data[0][10]);
-        $('#psje').val(data[0][11]);
-        $('#gfje').val(data[0][12]);
-        $('#gcje').val(data[0][13]);
-        $('#xje').val(data[0][14]);
+        $('#pjje').val(data[0][9]);
+        $('#resultatje').val(data[0][10]);
+        $('#pcje').val(data[0][11]);
+        $('#psje').val(data[0][12]);
+        $('#gfje').val(data[0][13]);
+        $('#gcje').val(data[0][14]);
+        //$('#x1je').val(data[0][14]);
         $('#classje').val(data[0][15]);
         $('#detallsje').val(data[0][16]);
       }
