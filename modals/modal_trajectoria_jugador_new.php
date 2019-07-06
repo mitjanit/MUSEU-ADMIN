@@ -20,7 +20,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input readonly type="text" name="id" class="form-control" id="id" placeholder="Identificador" />
+                                          <input readonly type="text" name="id" class="form-control" id="idjn" placeholder="Identificador" />
                                         </div>
                                   </div>
                                   <div class=" col-md-3">
@@ -31,7 +31,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" name="temporada" id="temporada" required maxlength="4" />
+                                          <input type="text" class="form-control" name="temporadajn" id="temporada" required maxlength="4" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -46,7 +46,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="demarcacio" name="demarcacio" required>
+                                          <select class="form-control" id="demarcaciojn" name="demarcacio" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM demarcacions ORDER BY nom ASC";
@@ -70,7 +70,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="vinculat" name="vinculat" required>
+                                          <select class="form-control" id="vinculatjn" name="vinculat" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
@@ -91,14 +91,14 @@
                                   <!-- row 0 -->
 
                                   <div class=" col-md-3">
-                                        <label for="nom">Equip Visitant (*):</label>
+                                        <label for="nom">Equip Visitant :</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="visitant" name="visitant" required>
+                                          <select class="form-control" id="visitantjn" name="visitant">
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
@@ -122,7 +122,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="entrenador" name="entrenador" required maxlength="30" />
+                                          <input type="text" class="form-control" id="entrenadorjn" name="entrenador" required maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -137,7 +137,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="categoria" name="categoria" required>
+                                          <select class="form-control" id="categoriajn" name="categoria" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM categories ORDER BY nom ASC";
@@ -161,7 +161,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="competicio" name="competicio" required>
+                                          <select class="form-control" id="competiciojn" name="competicio" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM competicions ORDER BY nom ASC";
@@ -196,7 +196,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="pj" name="pj" />
+                                        <input type="number" min="0" value="0" class="form-control" id="pjjn" name="pj" />
                                       </div>
                                   </div>
 
@@ -209,7 +209,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="resultat" name="resultat" />
+                                          <input type="text" class="form-control" id="resultatjn" name="resultatjn" />
                                         </div>
                                   </div>
 
@@ -221,7 +221,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="cd" name="c11" placeholder="Entrevistes">
+                                          <input type="number" min="0" value="0" class="form-control" id="pcjn" name="pc" />
                                         </div>
                                   </div>
 
@@ -233,7 +233,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="insignia" name="c12" placeholder="Reportatges">
+                                          <input type="number" min="0" value="0" class="form-control" id="psjn" name="ps" />
                                         </div>
                                   </div>                                 
 
@@ -243,30 +243,30 @@
                               <div class="row mb-4">
 
                                   <div class=" col-md-3">
-                                        <label for="escut">Gols a Favor (GF):</label>
+                                        <label for="gf">Gols a Favor (GF):</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="escut" name="c9" placeholder="Ficha">
+                                          <input type="number" min="0" value="0" class="form-control" id="gfjn" name="gf" />
                                         </div>
                                   </div>
 
 
                                   <div class=" col-md-3">
-                                        <label for="escut">Gols en Contra (GC):</label>
+                                        <label for="gc">Gols en Contra (GC):</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="himne" name="c10" placeholder="Fotos">
+                                          <input type="number" min="0" value="0" class="form-control" id="gcjn" name="gc" />
                                         </div>
                                   </div>
-
+                                  <!--
                                   <div class=" col-md-3">
                                         <label for="cd">??:</label>
                                         <div class="input-group">
@@ -278,16 +278,16 @@
                                           <input type="number" min="0" value="0" class="form-control" id="cd" name="c11" placeholder="Entrevistes">
                                         </div>
                                   </div>
-
+                                  -->
                                   <div class=" col-md-3">
-                                        <label for="insignia">Classificació:</label>
+                                        <label for="classif">Classificació:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="insignia" name="c12" placeholder="Reportatges">
+                                          <input type="text" class="form-control" id="classifjn" name="classif" />
                                         </div>
                                   </div>                                 
 
