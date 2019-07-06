@@ -1,14 +1,14 @@
 <!-- dialeg modal NEW -->
-<div  class="modal fade" id="myNewModalEntrenador" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
+<div  class="modal fade" id="myEditModalEntrenador" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content newModal">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Alta Trajectòria Entrenador | <?php echo $nomComplet; ?></h5>
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Edita Trajectòria Entrenador | <?php echo $nomComplet; ?></h5>
                   <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNew" id="modalFormNew" class="new-entrenador-validation" novalidate action="altaTrajectoriaJugador.php" method="get">
+                <form role="form" name="modalFormEdit" id="modalFormEdit" class="new-entrenador-validation" novalidate action="editaTrajectoria.php" method="get">
                   <div id="newBody" class="modal-body">
                               <div class="row mb-4">
                                   <!-- row 0 -->
@@ -20,7 +20,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input readonly type="text" name="id" class="form-control" id="iden" placeholder="Identificador" />
+                                          <input readonly type="text" name="id" class="form-control" id="idee" placeholder="Identificador" />
                                         </div>
                                   </div>
                                   <div class=" col-md-3">
@@ -31,7 +31,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" name="temporada" id="temporadaen" required maxlength="4" />
+                                          <input type="text" class="form-control" name="temporada" id="temporadaee" required maxlength="4" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -46,7 +46,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="vinculaten" name="vinculat" required>
+                                          <select class="form-control" id="vinculatee" name="vinculat" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
@@ -70,7 +70,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="visitanten" name="visitant">
+                                          <select class="form-control" id="visitantee" name="visitant">
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
@@ -98,7 +98,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="presidenten" name="president" maxlength="30" />
+                                          <input type="text" class="form-control" id="presidentee" name="president" maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -113,7 +113,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="categoriaen" name="categoria" required>
+                                          <select class="form-control" id="categoriaee" name="categoria" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM categories ORDER BY nom ASC";
@@ -137,7 +137,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="competicioen" name="competicio" required>
+                                          <select class="form-control" id="competicioee" name="competicio" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM competicions ORDER BY nom ASC";
@@ -187,7 +187,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="pjen" name="pj" />
+                                        <input type="number" min="0" value="0" class="form-control" id="pjee" name="pj" />
                                       </div>
                                   </div>
 
@@ -200,7 +200,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="resultaten" name="resultat" />
+                                          <input type="text" class="form-control" id="resultatee" name="resultat" />
                                         </div>
                                   </div>
 
@@ -212,7 +212,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="gfen" name="gf" />
+                                          <input type="number" min="0" value="0" class="form-control" id="gfee" name="gf" />
                                         </div>
                                   </div>
 
@@ -225,7 +225,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="gcen" name="gc" />
+                                          <input type="number" min="0" value="0" class="form-control" id="gcee" name="gc" />
                                         </div>
                                   </div>
 
@@ -246,7 +246,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="pgen" name="pg" />
+                                          <input type="number" min="0" value="0" class="form-control" id="pgee" name="pg" />
                                         </div>
                                   </div>
 
@@ -258,7 +258,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="peen" name="pe" />
+                                          <input type="number" min="0" value="0" class="form-control" id="peee" name="pe" />
                                         </div>
                                   </div>      
 
@@ -270,7 +270,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="ppen" name="pp" />
+                                          <input type="number" min="0" value="0" class="form-control" id="ppee" name="pp" />
                                         </div>
                                   </div>  
 
@@ -282,7 +282,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="classifen" name="classif" />
+                                          <input type="text" class="form-control" id="classifee" name="classif" />
                                         </div>
                                   </div>                                 
 
@@ -298,7 +298,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detalls2en" name="detalls2" maxlength="100" />
+                                          <input type="text" class="form-control" id="detalls2ee" name="detalls2" maxlength="100" />
                                         </div>
                                   </div>
 

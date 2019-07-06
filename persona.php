@@ -1765,6 +1765,62 @@ $nomTaula = "Persona";
             
     });
 
+    $(".btn-edit-entrenador").click(function() {
+
+      var table = $('#dtEntrenador').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per editar.</b>');}
+      else { 
+        txt = $("<b></b>");
+        $('#idee').val(data[0][0]);
+        $('#temporadaee').val(data[0][2]);
+        
+        // Demarcació selected option
+        $('#demarcacioje option').filter(function(){
+            return $(this).text()==data[0][3];
+        }).prop('selected', true);
+
+        // Vinculat selected option
+        $('#vinculatje option').filter(function(){
+            return $(this).text()==data[0][4];
+        }).prop('selected', true);
+
+        // Visitant selected option
+        $('#visitantje option').filter(function(){
+            return $(this).text()==data[0][5];
+        }).prop('selected', true);
+
+        //Entrenador
+        $('#entrenadorje').val(data[0][6]);
+
+        // Categoria selected option
+        $('#categoriaje option').filter(function(){
+            return $(this).text()==data[0][7];
+        }).prop('selected', true);
+
+        // Competició selected option
+        $('#competicioje option').filter(function(){
+            return $(this).text()==data[0][8];
+        }).prop('selected', true);
+
+        $('#pjje').val(data[0][9]);
+        $('#resultatje').val(data[0][10]);
+        $('#pcje').val(data[0][11]);
+        $('#psje').val(data[0][12]);
+        $('#gfje').val(data[0][13]);
+        $('#gcje').val(data[0][14]);
+        //$('#x1je').val(data[0][14]);
+        $('#classje').val(data[0][15]);
+        $('#detallsje').val(data[0][16]);
+      }
+      $('#editMessageJugador').html(txt);
+      $('.infoTrajectoria').html("Jugador");
+            
+    });
+
 
     // End Modal EDIT Trajectoria
 
