@@ -22,7 +22,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input readonly type="text" name="idt" class="form-control" id="idt" placeholder="Identificador" />
+                                          <input readonly type="text" name="idt" class="form-control" id="idje" />
                                         </div>
                                   </div>
                                   <div class=" col-md-3">
@@ -65,7 +65,7 @@
                                   </div>
 
                                   <div class=" col-md-3">
-                                        <label for="nom">Vinculat a:</label>
+                                        <label for="nom">Vinculat a (*):</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -93,14 +93,14 @@
                                   <!-- row 0 -->
 
                                   <div class=" col-md-3">
-                                        <label for="visitant">Equip Visitant (*):</label>
+                                        <label for="visitant">Equip Visitant :</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="visitantje" name="visitant" required>
+                                          <select class="form-control" id="visitantje" name="visitant">
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
@@ -268,7 +268,7 @@
                                           <input type="number" min="0" value="0" class="form-control" id="gcje" name="gc" />
                                         </div>
                                   </div>
-
+                                  <!--
                                   <div class=" col-md-3">
                                         <label for="cd">??:</label>
                                         <div class="input-group">
@@ -280,7 +280,7 @@
                                           <input type="number" min="0" value="0" class="form-control" id="xje" name="x" />
                                         </div>
                                   </div>
-
+                                  -->
                                   <div class=" col-md-3">
                                         <label for="insignia">Classificació:</label>
                                         <div class="input-group">
@@ -289,7 +289,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="classje" name="class" />
+                                          <input type="text" class="form-control" id="classje" name="class" />
                                         </div>
                                   </div>                                 
 
@@ -305,7 +305,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detallsje" name="detallsje" maxlength="100" />
+                                          <input type="text" class="form-control" id="detallsje" name="detalls" maxlength="100" />
                                         </div>
                                   </div>
 

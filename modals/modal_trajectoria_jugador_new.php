@@ -63,7 +63,7 @@
                                   </div>
 
                                   <div class=" col-md-3">
-                                        <label for="nom">Vinculat a:</label>
+                                        <label for="nom">Vinculat a (*):</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
