@@ -52,7 +52,7 @@
                                               $query = "SELECT * FROM demarcacions ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                               }
                                             ?>
                                           </select>
@@ -76,7 +76,7 @@
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom_esportiu'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom_esportiu'])."</option>";
                                               }
                                             ?>
                                           </select>
@@ -104,7 +104,7 @@
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom_esportiu'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom_esportiu'])."</option>";
                                               }
                                             ?>
                                           </select>
@@ -143,7 +143,7 @@
                                               $query = "SELECT * FROM categories ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                               }
                                             ?>
                                           </select>
@@ -167,7 +167,7 @@
                                               $query = "SELECT * FROM competicions ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                               }
                                             ?>
                                           </select>
