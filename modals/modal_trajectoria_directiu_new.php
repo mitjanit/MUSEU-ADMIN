@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNew" id="modalFormNew" class="new-entrenador-validation" novalidate action="altaTrajectoriaJugador.php" method="get">
+                <form role="form" name="modalFormNewDirectiu" id="modalFormNewDirectiu" class="new-directiu-validation" novalidate action="altaTrajectoriaDirectiu.php" method="get">
                   <div id="newBody" class="modal-body">
                               <div class="row mb-4">
                                   <!-- row 0 -->
@@ -20,7 +20,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input readonly type="text" name="id" class="form-control" id="id" placeholder="Identificador" />
+                                          <input readonly type="text" name="id" class="form-control" id="iddn" placeholder="Identificador" />
                                         </div>
                                   </div>
                                   <div class=" col-md-3">
@@ -31,7 +31,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" name="temporada" id="temporada" required maxlength="4" />
+                                          <input type="text" class="form-control" name="temporada" id="temporadadn" required maxlength="4" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -46,13 +46,13 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="vinculat" name="vinculat" required>
+                                          <select class="form-control" id="vinculatdn" name="vinculat" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom_esportiu'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom_esportiu'])."</option>";
                                               }
                                             ?>
                                           </select>
@@ -70,13 +70,13 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="carrec" name="carrec" required>
+                                          <select class="form-control" id="carrecdn" name="carrec" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM carrecs WHERE directiu='S' ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                               }
                                             ?>
                                           </select>
@@ -98,7 +98,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="representant" name="representant" required maxlength="30" />
+                                          <input type="text" class="form-control" id="representantdn" name="representant" required maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -113,13 +113,13 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="categoria" name="categoria" required>
+                                          <select class="form-control" id="categoriadn" name="categoria" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM categories ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                               }
                                             ?>
                                           </select>
@@ -137,7 +137,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="president" name="president" required maxlength="30" />
+                                          <input type="text" class="form-control" id="nequipsdn" name="nequips" required maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -147,6 +147,22 @@
 
                               </div>
                               <!-- end row 0 -->
+
+                              <div class="row mb-4">
+                                  
+                                  <div class=" col-md-12">
+                                        <label for="detalls1">Detalls 1:</label>
+                                        <div class="input-group">
+                                          <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                              <i class="fa fa-info-circle"></i>
+                                            </div>
+                                          </div>
+                                          <input type="text" class="form-control" id="detalls1dn" name="detalls1" maxlength="100" />
+                                        </div>
+                                  </div>
+
+                              </div> 
 
                               <div class="row">
                                   <div class="col"><hr></div>
@@ -162,7 +178,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="pj" name="pj" />
+                                        <input type="number" min="0" value="0" class="form-control" id="pjdn" name="pj" />
                                       </div>
                                   </div>
 
@@ -175,32 +191,32 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="resultat" name="resultat" />
+                                          <input type="text" class="form-control" id="resultatdn" name="resultat" />
                                         </div>
                                   </div>
 
                                   <div class=" col-md-3">
-                                        <label for="escut">Gols a Favor (GF):</label>
+                                        <label for="gf">Gols a Favor (GF):</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="escut" name="c9" placeholder="Ficha">
+                                          <input type="number" min="0" value="0" class="form-control" id="gfdn" name="gf" />
                                         </div>
                                   </div>
 
 
                                   <div class=" col-md-3">
-                                        <label for="escut">Gols en Contra (GC):</label>
+                                        <label for="gc">Gols en Contra (GC):</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="himne" name="c10" placeholder="Fotos">
+                                          <input type="number" min="0" value="0" class="form-control" id="gcdn" name="gc" />
                                         </div>
                                   </div>
 
@@ -221,7 +237,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="cd" name="c11" placeholder="Entrevistes">
+                                          <input type="number" min="0" value="0" class="form-control" id="pgdn" name="pg" />
                                         </div>
                                   </div>
 
@@ -233,7 +249,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="insignia" name="c12" placeholder="Reportatges">
+                                          <input type="number" min="0" value="0" class="form-control" id="pedn" name="pe" />
                                         </div>
                                   </div>      
 
@@ -245,7 +261,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="insignia" name="c12" placeholder="Reportatges">
+                                          <input type="number" min="0" value="0" class="form-control" id="ppdn" name="pp" />
                                         </div>
                                   </div>  
 
@@ -257,7 +273,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="eclassificacio" name="eclassificacio" />
+                                          <input type="text" class="form-control" id="classifdn" name="classif" />
                                         </div>
                                   </div>                                 
 
@@ -273,7 +289,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detalls2" name="detalls2" maxlength="100" />
+                                          <input type="text" class="form-control" id="detalls2dn" name="detalls2" maxlength="100" />
                                         </div>
                                   </div>
 
@@ -296,7 +312,7 @@
         'use strict';
         window.addEventListener('load', function() {
           // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('new-entrenador-validation');
+          var forms = document.getElementsByClassName('new-directiu-validation');
           // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {

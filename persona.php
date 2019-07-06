@@ -582,8 +582,8 @@ $nomTaula = "Persona";
                                     <th>Sup</th>
                                     <th>Inf</th>
                                     <th>J.Lin</th>
-                                    <th>??</th>
-                                    <th>??</th>
+                                    <!--<th>??</th>
+                                    <th>??</th>-->
                                     <th>Classif.</th>
                                     <th class="none">Detalls2</th>
                                 </tr>
@@ -637,8 +637,10 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['pg']; ?></td>
                                     <td><?php echo $row['pe']; ?></td>
                                     <td><?php echo $row['pp']; ?></td>
-                                    <td><?php echo $row['gf']; ?></td>
-                                    <td><?php echo $row['gc']; ?></td>
+                                    <!--
+                                    <td><?php //echo $row['gf']; ?></td>
+                                    <td><?php //echo $row['gc']; ?></td>
+                                    -->
                                     <td><?php echo $row['classificacio']; ?></td>
                                     <td><?php echo ($row['detalls2']); ?></td>
                                   </tr>
@@ -907,6 +909,7 @@ $nomTaula = "Persona";
                                     <th>Club</th>
                                     <th>Càrrec</th>
                                     <th>Categoria</th>
+                                    <th class="none">Representant</th>
                                     <th>N.Equips</th>
                                     <th class="none">Detalls</th>
                                     <th>PJ</th>
@@ -961,6 +964,7 @@ $nomTaula = "Persona";
                                         }
                                       ?>
                                     </td>
+                                    <td><?php echo $row['entrenador']; ?></td>
                                     <td><?php echo $row['num_equips']; ?></td>
                                     <td><?php echo ($row['detalls1']); ?></td>
                                     <td><?php echo $row['pj']; ?></td>
@@ -1078,8 +1082,11 @@ $nomTaula = "Persona";
   <?php include 'modals/modal_trajectoria_entrenador_new.php'; ?>
   <?php include 'modals/modal_trajectoria_entrenador_edit.php'; ?>
   <?php include 'modals/modal_trajectoria_arbit_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_arbit_edit.php'; ?>
   <?php include 'modals/modal_trajectoria_directiu_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_directiu_edit.php'; ?>
   <?php include 'modals/modal_trajectoria_altre_new.php'; ?>
+  <?php include 'modals/modal_trajectoria_altre_edit.php'; ?>
 
 
   <?php include 'modals/modal_trajectoria_del.php'; ?>
@@ -1779,46 +1786,198 @@ $nomTaula = "Persona";
         $('#idee').val(data[0][0]);
         $('#temporadaee').val(data[0][2]);
         
-        // Demarcació selected option
-        $('#demarcacioje option').filter(function(){
+        // Vinculat selected option
+        $('#vinculatee option').filter(function(){
             return $(this).text()==data[0][3];
         }).prop('selected', true);
 
-        // Vinculat selected option
-        $('#vinculatje option').filter(function(){
+        // Visitant selected option
+        $('#visitantee option').filter(function(){
             return $(this).text()==data[0][4];
         }).prop('selected', true);
 
-        // Visitant selected option
-        $('#visitantje option').filter(function(){
-            return $(this).text()==data[0][5];
-        }).prop('selected', true);
-
-        //Entrenador
-        $('#entrenadorje').val(data[0][6]);
+        //Entrenador-President
+        $('#presidentee').val(data[0][5]);
 
         // Categoria selected option
-        $('#categoriaje option').filter(function(){
-            return $(this).text()==data[0][7];
+        $('#categoriaee option').filter(function(){
+            return $(this).text()==data[0][6];
         }).prop('selected', true);
 
         // Competició selected option
-        $('#competicioje option').filter(function(){
-            return $(this).text()==data[0][8];
+        $('#competicioee option').filter(function(){
+            return $(this).text()==data[0][7];
         }).prop('selected', true);
 
-        $('#pjje').val(data[0][9]);
-        $('#resultatje').val(data[0][10]);
-        $('#pcje').val(data[0][11]);
-        $('#psje').val(data[0][12]);
-        $('#gfje').val(data[0][13]);
-        $('#gcje').val(data[0][14]);
+        $('#detalls1ee').val(data[0][8]);
+
+        $('#pjee').val(data[0][9]);
+        $('#resultatee').val(data[0][10]);
+        $('#pgee').val(data[0][11]);
+        $('#peee').val(data[0][12]);
+        $('#ppee').val(data[0][13]);
+        $('#gfee').val(data[0][14]);
+        $('#gcee').val(data[0][15]);
         //$('#x1je').val(data[0][14]);
-        $('#classje').val(data[0][15]);
-        $('#detallsje').val(data[0][16]);
+        $('#classifee').val(data[0][16]);
+        $('#detalls2ee').val(data[0][17]);
       }
-      $('#editMessageJugador').html(txt);
-      $('.infoTrajectoria').html("Jugador");
+      $('#editMessageEntrenador').html(txt);
+      $('.infoTrajectoria').html("Entrenador");
+            
+    });
+
+    $(".btn-edit-arbit").click(function() {
+
+      var table = $('#dtArbit').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per editar.</b>');}
+      else { 
+        txt = $("<b></b>");
+        $('#idae').val(data[0][0]);
+        $('#temporadaae').val(data[0][2]);
+        
+        // Vinculat selected option
+        $('#vinculatae option').filter(function(){
+            return $(this).text()==data[0][3];
+        }).prop('selected', true);
+
+        //Actuació
+        $('#actuacioae').val(data[0][4]);
+
+        // Categoria selected option
+        $('#categoriaae option').filter(function(){
+            return $(this).text()==data[0][5];
+        }).prop('selected', true);
+
+        //Entrenador-President-Representant
+        $('#representantae').val(data[0][6]);
+
+        // Competició selected option
+        $('#competicioae option').filter(function(){
+            return $(this).text()==data[0][7];
+        }).prop('selected', true);
+
+        // Detalls 1
+        $('#detalls1ae').val(data[0][8]);
+
+        $('#actae').val(data[0][9]);
+        $('#categae').val(data[0][10]);
+        $('#supae').val(data[0][11]);
+        $('#infae').val(data[0][12]);
+        $('#jlineaae').val(data[0][13]);
+        $('#classifae').val(data[0][14]);
+        $('#detalls2ae').val(data[0][15]);
+      }
+      $('#editMessageArbit').html(txt);
+      $('.infoTrajectoria').html("Arbit");
+            
+    });
+
+    $(".btn-edit-directiu").click(function() {
+
+      var table = $('#dtDirectiu').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per editar.</b>');}
+      else { 
+        txt = $("<b></b>");
+        $('#idde').val(data[0][0]);
+        $('#temporadade').val(data[0][2]);
+        
+        // Vinculat selected option
+        $('#vinculatde option').filter(function(){
+            return $(this).text()==data[0][3];
+        }).prop('selected', true);
+
+        // Carrec selected option
+        $('#carrecde option').filter(function(){
+            return $(this).text()==data[0][4];
+        }).prop('selected', true);
+
+        // Categoria selected option
+        $('#categoriade option').filter(function(){
+            return $(this).text()==data[0][5];
+        }).prop('selected', true);
+
+        //Entrenador-President-Representant
+        $('#representantde').val(data[0][6]);
+
+        //Num Equips
+        $('#nequipsde').val(data[0][7]);
+
+        // Detalls 1
+        $('#detalls1de').val(data[0][8]);
+
+        $('#pjde').val(data[0][9]);
+        $('#resultatde').val(data[0][10]);
+        $('#pgde').val(data[0][11]);
+        $('#pede').val(data[0][12]);
+        $('#ppde').val(data[0][13]);
+        $('#gfde').val(data[0][14]);
+        $('#gcde').val(data[0][15]);
+        $('#classifde').val(data[0][16]);
+        $('#detalls2de').val(data[0][17]);
+      }
+      $('#editMessageDirectiu').html(txt);
+      $('.infoTrajectoria').html("Directiu");
+            
+    });
+
+    $(".btn-edit-altre").click(function() {
+
+      var table = $('#dtAltre').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap trajectòria per editar.</b>');}
+      else { 
+        txt = $("<b></b>");
+        $('#idoe').val(data[0][0]);
+        $('#temporadaoe').val(data[0][2]);
+        
+        // Vinculat selected option
+        $('#vinculatoe option').filter(function(){
+            return $(this).text()==data[0][3];
+        }).prop('selected', true);
+
+        // Carrec selected option
+        $('#carrecoe option').filter(function(){
+            return $(this).text()==data[0][4];
+        }).prop('selected', true);
+
+        // Categoria selected option
+        $('#categoriaoe option').filter(function(){
+            return $(this).text()==data[0][5];
+        }).prop('selected', true);
+
+        //Entrenador-President-Representant
+        $('#representantoe').val(data[0][6]);
+
+        //Num Equips
+        $('#nequipsoe').val(data[0][7]);
+
+        // Detalls 1
+        $('#detalls1oe').val(data[0][8]);
+
+        $('#pjoe').val(data[0][9]);
+        $('#resultatoe').val(data[0][10]);
+        $('#pgoe').val(data[0][11]);
+        $('#peoe').val(data[0][12]);
+        $('#ppoe').val(data[0][13]);
+        $('#gfoe').val(data[0][14]);
+        $('#gcoe').val(data[0][15]);
+        $('#classifoe').val(data[0][16]);
+        $('#detalls2oe').val(data[0][17]);
+      }
+      $('#editMessageAltre').html(txt);
+      $('.infoTrajectoria').html("Altre Càrrec");
             
     });
 

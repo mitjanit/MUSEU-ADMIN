@@ -8,8 +8,9 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEdit" id="modalFormEdit" class="new-entrenador-validation" novalidate action="editaTrajectoria.php" method="get">
+                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edit-entrenador-validation" novalidate action="editaTrajectoria.php" method="get">
                   <div id="newBody" class="modal-body">
+                      <p id="editMessageEntrenador"></p>
                               <div class="row mb-4">
                                   <!-- row 0 -->
                                   <div class=" col-md-3">
@@ -171,6 +172,22 @@
                                   -->
 
                               </div>
+
+                              <div class="row mb-4">
+                                  
+                                  <div class=" col-md-12">
+                                        <label for="detalls1">Detalls 1:</label>
+                                        <div class="input-group">
+                                          <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                              <i class="fa fa-info-circle"></i>
+                                            </div>
+                                          </div>
+                                          <input type="text" class="form-control" id="detalls1ee" name="detalls1" maxlength="100" />
+                                        </div>
+                                  </div>
+
+                              </div> 
                               <!-- end row 0 -->
 
                               <div class="row">
@@ -321,7 +338,7 @@
         'use strict';
         window.addEventListener('load', function() {
           // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('new-entrenador-validation');
+          var forms = document.getElementsByClassName('edit-entrenador-validation');
           // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
