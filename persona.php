@@ -212,6 +212,7 @@ $nomTaula = "Persona";
                                     <th>Demarcació</th>
                                     <th>Club</th>
                                     <th>Visitant</th>
+                                    <th>Entrenador</th>
                                     <th>Categoria</th>
                                     <th>Competició</th>
                                     <th>PJ</th>
@@ -265,6 +266,9 @@ $nomTaula = "Persona";
                                             echo $rowd['nom_esportiu'];
                                         }
                                       ?>
+                                    </td>
+                                    <td>
+                                      <?php echo $row['entrenador']; ?>
                                     </td>
                                     <td>
                                       <?php 
@@ -393,6 +397,7 @@ $nomTaula = "Persona";
                                     <th>Temporada</th>
                                     <th>Club</th>
                                     <th>Visitant</th>
+                                    <th>President</th>
                                     <th>Categoria</th>
                                     <th>Competició</th>
                                     <th class="none">Detalls</th>
@@ -418,10 +423,47 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo $row['id_club']; ?></td>
-                                    <td><?php echo $row['id_visitant']; ?></td>
-                                    <td><?php echo $row['id_categoria']; ?></td>
-                                    <td><?php echo $row['id_competicio']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['id_club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_visitant']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['id_visitant']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
+                                    <td><?php echo $row['entrenador']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_categoria']!=NULL){
+                                            $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo ($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_competicio']!=NULL){
+                                            $query = "SELECT * FROM competicions WHERE id='".$row['id_competicio']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo ($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo ($row['detalls1']); ?></td>
                                     <td><?php echo $row['pj']; ?></td>
                                     <td><?php echo $row['resultat']; ?></td>
@@ -532,6 +574,7 @@ $nomTaula = "Persona";
                                     <th>Club</th>
                                     <th>Actuació</th>
                                     <th>Categoria</th>
+                                    <th>Representant</th>
                                     <th>Competició</th>
                                     <th class="none">Detalls</th>
                                     <th>Act</th>
@@ -556,10 +599,38 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo $row['id_club']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['id_club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo $row['actuacio']; ?></td>
-                                    <td><?php echo $row['id_categoria']; ?></td>
-                                    <td><?php echo $row['id_competicio']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_categoria']!=NULL){
+                                            $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo ($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
+                                    <td><?php echo $row['entrenador']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_competicio']!=NULL){
+                                            $query = "SELECT * FROM competicions WHERE id='".$row['id_competicio']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo ($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo ($row['detalls1']); ?></td>
                                     <td><?php echo $row['pj']; ?></td>
                                     <td><?php echo $row['resultat']; ?></td>
@@ -671,6 +742,7 @@ $nomTaula = "Persona";
                                       <th>Club</th>
                                       <th>Càrrec</th>
                                       <th>Categoria</th>
+                                      <th>Representant</th>
                                       <th>N.Equips</th>
                                       <th class="none">Detalls</th>
                                       <th>PJ</th>
@@ -695,9 +767,37 @@ $nomTaula = "Persona";
                                       <td><?php echo $row['id']; ?></td>
                                       <td><?php echo $row['id_persona']; ?></td>
                                       <td><?php echo $row['temporada']; ?></td>
-                                      <td><?php echo $row['id_club']; ?></td>
-                                      <td><?php echo $row['id_carrec']; ?></td>
-                                      <td><?php echo $row['id_categoria']; ?></td>
+                                      <td>
+                                        <?php 
+                                          if($row['id_club']!=NULL){
+                                              $query = "SELECT * FROM clubs WHERE id='".$row['id_club']."'";
+                                              $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                              $rowd = mysqli_fetch_array($rsd);
+                                              echo $rowd['nom_esportiu'];
+                                          }
+                                        ?>
+                                      </td>
+                                      <td>
+                                        <?php 
+                                          if($row['id_carrec']!=NULL){
+                                              $query = "SELECT * FROM carrecs WHERE id='".$row['id_carrec']."'";
+                                              $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                              $rowd = mysqli_fetch_array($rsd);
+                                              echo ($rowd['nom']);
+                                          }
+                                        ?>
+                                      </td>
+                                      <td>
+                                        <?php 
+                                          if($row['id_categoria']!=NULL){
+                                              $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
+                                              $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                              $rowd = mysqli_fetch_array($rsd);
+                                              echo ($rowd['nom']);
+                                          }
+                                        ?>
+                                      </td>
+                                      <td><?php echo $row['entrenador']; ?></td>
                                       <td><?php echo $row['num_equips']; ?></td>
                                       <td><?php echo ($row['detalls1']); ?></td>
                                       <td><?php echo $row['pj']; ?></td>
@@ -831,9 +931,36 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
-                                    <td><?php echo $row['id_club']; ?></td>
-                                    <td><?php echo $row['id_carrec']; ?></td>
-                                    <td><?php echo $row['id_categoria']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['id_club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_carrec']!=NULL){
+                                            $query = "SELECT * FROM carrecs WHERE id='".$row['id_carrec']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo ($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
+                                    <td>
+                                      <?php 
+                                        if($row['id_categoria']!=NULL){
+                                            $query = "SELECT * FROM categories WHERE id='".$row['id_categoria']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo ($rowd['nom']);
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo $row['num_equips']; ?></td>
                                     <td><?php echo ($row['detalls1']); ?></td>
                                     <td><?php echo $row['pj']; ?></td>
