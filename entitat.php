@@ -192,13 +192,16 @@
                                   <th>Temporada</th>
                                   <th>Document</th>
                                   <th>Continguts</th>
+                                  <th>Premsa</th>
+                                  <th class="none">Altres</th>
                                   <th>Foto</th>
                                   <th>Entre</th>
                                   <th>Repor</th>
                                   <th>Cartel</th>
                                   <th>Llibre</th>
                                   <th>Video</th>
-                                  <th>Altre</th>
+                                  <th class="none">Altre 1</th>
+                                  <th class="none">Altre 2</th>
                                   <th class="none">Detalls</th>
                                   
                               </tr>
@@ -216,13 +219,16 @@
                                   <td><?php echo $row['temporada']; ?></td>
                                   <td><?php echo ($row['document']); ?></td>
                                   <td><?php echo ($row['continguts']); ?></td>
+                                  <td><?php echo ($row['premsa']); ?></td>
+                                  <td><?php echo ($row['altres']); ?></td>
                                   <td><?php echo $row['foto']; ?></td>
                                   <td><?php echo $row['entrevista']; ?></td>
                                   <td><?php echo $row['reportatge']; ?></td>
                                   <td><?php echo $row['cartell']; ?></td>
                                   <td><?php echo $row['llibre']; ?></td>
                                   <td><?php echo $row['video']; ?></td>
-                                  <td><?php echo ($row['altre']); ?></td>
+                                  <td><?php echo ($row['altre1']); ?></td>
+                                  <td><?php echo ($row['altre2']); ?></td>
                                   <td><?php echo ($row['detalls']); ?></td>
                                 </tr>
                                 <?php
@@ -757,7 +763,7 @@
         var tdocs = $('#dtDocsEntitat').DataTable({
             responsive: true,
             select: true,
-            aoColumnDefs: [ { "sWidth": "5%", "aTargets": [5, 6, 7, 8, 9, 10] } ],
+            aoColumnDefs: [ { "sWidth": "5%", "aTargets": [2, 6, 7, 8, 9, 10, 11, 12] } ],
             buttons: [
                 {
                     extend:    'copyHtml5',
