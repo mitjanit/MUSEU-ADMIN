@@ -24,6 +24,7 @@ mysqli_query($con01, $sql) or die(mysqli_error());
 
 
 // LOGs
+
 $user = $_SESSION['username'];
 $table = "Competicions";
 $sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user."','U','".$table."', CURRENT_TIMESTAMP)";
