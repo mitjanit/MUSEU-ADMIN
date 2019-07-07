@@ -2,9 +2,9 @@
 
 require_once('connexions/connexio01.php');
 
-$provincia = 52;  //Eivissa
+$provincia = 7;  //Mallorca
 
-$arr = ["Eivissa","Sant Antoni de Portmany","Sant Joan de Labritja", "Sant Josep de sa Talaia","Santa Eulària des Riu"];
+$arr = ["Alaró","Alcúdia","Algaida","Andratx","Ariany","Artà","Banyalbufar","Binissalem","Búger","Bunyola","Calvià","Campanet", "Campos", "Capdepera", "Consell", "Costitx", "Deià", "Escorca", "Esporles", "Estellencs", "Felanitx	Mallorca", "Fornalutx", "Inca", "Lloret de Vistalegre", "Lloseta", "Llubí", "Llucmajor", "Manacor", "Mancor de la Vall", "Maria de la Salut", "Marratxí", "Montuïri", "Muro", "Palma", "Petra", "Sa Pobla", "Pollença", "Porreres", "Puigpunyent", "Ses Salines", "Sant Joan", "Sant Llorenç des Cardassar", "Santa Eugènia", "Santa Margalida", "Santa Maria del Camí", "Santanyí", "Selva", "Sencelles", "Sineu", "Sóller", "Son Servera","Valldemossa","Vilafranca de Bonany"];
 
 
 foreach ($arr as $value) {
