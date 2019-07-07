@@ -8,7 +8,7 @@ $nom = (addslashes($_REQUEST['nom']));
 $descripcio = (addslashes($_REQUEST['descripcio']));
 
 $sql ="UPDATE competicions SET nom='".$nom."' , descripcio='".$descripcio."' WHERE id='".$id."'";
-echo $sql."<br/>";
+//echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 
 
