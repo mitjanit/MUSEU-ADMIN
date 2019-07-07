@@ -52,13 +52,14 @@ $nomTaula = "Accions de l'Usuari";
                       <th>Id</th>
                       <th>Usuari</th>
                       <th>Acció</th>
+                      <th>Taula</th>
                       <th>Data</th>
                       <th>Hora</th>
                     </tr>
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT id, user, tipus, date(temps) as dia, time(temps) as hora FROM accions_user WHERE user='".$_SESSION['username']."' ORDER BY dia DESC, hora desc";
+                        $query_rsGrups = "SELECT id, user, tipus, taula, date(temps) as dia, time(temps) as hora FROM accions_user WHERE user='".$_SESSION['username']."' ORDER BY dia DESC, hora desc";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>
@@ -70,11 +71,12 @@ $nomTaula = "Accions de l'Usuari";
                                 case "I": $txt="Inserció"; break;
                                 case "U": $txt="Modificació"; break;
                                 case "D": $txt="Eliminació"; break;
-                                default: $txt="Altes"; 
+                                default: $txt="Altres"; 
                               }
                               echo $txt;
                               ?>
                             </td>
+                            <td><?php echo $row['taula']; ?></td>
                             <td><?php echo $row['dia']; ?></td>
                             <td><?php echo $row['hora']; ?></td>
                         </tr>

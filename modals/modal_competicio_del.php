@@ -9,7 +9,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormDelete" id="modalFormDelete" action="deleteEntitat.php" method="get">
+                <form role="form" name="modalFormDelete" id="modalFormDelete" action="db/deleteCompeticio.php" method="get">
                         <div id="deleteBody" class="modal-body">
                             <p id="deleteMessage"></p>
                         </div>

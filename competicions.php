@@ -245,7 +245,8 @@ $nomTaula = "Competicions";
                   txt = $('<b>ERROR: No has seleccionat cap competició per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades de la competició?</b></br/> "+
-                          data[0][1]+".</p>");
+                          "<p><b> Competició: </b>"+data[0][1]+".</p>"+
+                          "<p><b> Descripció: </b>"+data[0][2]+".</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
