@@ -234,7 +234,8 @@ $nomTaula = "Categories";
                   txt = $('<b>ERROR: No has seleccionat cap categoria per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades de la categoria?</b></br/> "+
-                          data[0][1]+".</p>");
+                          "<p><b> Categoria: </b>"+data[0][1]+".</p>"+
+                          "<p><b> Descripció: </b>"+data[0][2]+".</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 

@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="editaCategoria.php" method="get">
+                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="db/editaCarrec.php" method="get">
                 <div id="newBody" class="modal-body">
                     <p id="editMessage"></p>
                             <div class="row mb-4">
@@ -47,7 +47,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <select class="form-control" id="directiu" name="directiu" required>
+                                        <select class="form-control" id="e2" name="directiu" required>
                                           <option value='N'>No</option>
                                           <option value='S'>Sí</option>
                                         </select>
@@ -72,7 +72,7 @@
                                           <i class="fa fa-info-circle"></i>
                                         </div>
                                       </div>
-                                      <input type="text" maxlength="50" class="form-control" id="e2" name="descripcio" />
+                                      <input type="text" maxlength="50" class="form-control" id="e3" name="descripcio" />
                                     </div>
                               </div>
 

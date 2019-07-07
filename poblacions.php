@@ -149,7 +149,7 @@ $nomTaula = "Poblacions";
   <?php include 'modals/modal_poblacio_new.php'; ?>
   <?php include 'modals/modal_poblacio_edit.php'; ?>
   
-  <?php $txtDeleteTaula="Població"; $deleteAction="deletePoblacio.php"; ?>
+  <?php $txtDeleteTaula="Població"; $deleteAction="db/deletePoblacio.php"; ?>
   <?php include 'modals/modal_del.php'; ?>
 
 
@@ -283,7 +283,8 @@ $nomTaula = "Poblacions";
                   txt = $('<b>ERROR: No has seleccionat cap població per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades de la població?</b></br/> "+
-                          data[0][1]+" - "+data[0][2]+" ?</b></p>");
+                          "<p><b>Població: </b>"+data[0][1]+"</p>"+
+                          "<p><b>Província: </b>"+data[0][2]+"</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 

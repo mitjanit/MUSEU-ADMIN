@@ -236,7 +236,8 @@ $nomTaula = "Tipus Activitats";
                   txt = $('<b>ERROR: No has seleccionat cap tipus activitat per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades del tipus d'activitat?</b></br/> "+
-                          data[0][1]+".</p>");
+                          "<p><b> Activitat: </b>"+data[0][1]+".</p>"+
+                          "<p><b> Descripció: </b>"+data[0][2]+".</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 

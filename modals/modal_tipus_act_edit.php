@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="editaTipusAct.php" method="get">
+                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="db/editaTipusActivitat.php" method="get">
                 <div id="newBody" class="modal-body">
                     <p id="editMessage"></p>
                             <div class="row mb-4">

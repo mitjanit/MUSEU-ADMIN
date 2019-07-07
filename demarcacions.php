@@ -233,7 +233,8 @@ $nomTaula = "Demarcacions";
                   txt = $('<b>ERROR: No has seleccionat cap demarcació per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades de la demaració?</b></br/> "+
-                          data[0][1]+".</p>");
+                          "<p><b> Demarcació: </b>"+data[0][1]+".</p>"+
+                          "<p><b> Descripció: </b>"+data[0][2]+".</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
