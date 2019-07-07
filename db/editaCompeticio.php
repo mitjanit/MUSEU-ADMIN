@@ -1,4 +1,15 @@
-<?php //include("../common/mysessions.php"); ?>
+<?php include("../common/mysessions.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Admin - Museu Futbol Menorquí</title>
+</head>
+<body>
 <?php require_once('../connexions/connexio01.php'); ?>
 <?php 
 
@@ -22,21 +33,6 @@ mysqli_query($con01, $sqlLog) or die(mysqli_error());
 //exit();
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Admin - Museu Futbol Menorquí</title>
-</head>
-<body>
-	<p>meam</p>
 <script>
 window.location.replace("../competicions.php?msgOk");
 </script>
