@@ -69,8 +69,9 @@
                                       ?>
                                       <tr>
                                           <td><?php echo $row['id']; ?></td>
-                                          <td><?php echo utf8_encode($row['nom_esportiu']); ?></td>
-                                          <td><?php echo utf8_encode($row['nom']); ?></td>
+                                          <td><?php echo ($row['nom_esportiu']); 
+                                          $nomComplet=$row['nom_esportiu']; ?></td>
+                                          <td><?php echo ($row['nom']); ?></td>
                                           <td><?php 
 
                                               if($row['poblacions_id']!=NULL){
@@ -86,7 +87,7 @@
                                                   $query_prov = "SELECT * FROM provincies WHERE id='".$row['provincia_id']."'";
                                                   $rsprov = mysqli_query($con01, $query_prov) or die("Error: ".mysqli_error($con01));
                                                   $rowprov = mysqli_fetch_array($rsprov);
-                                                  echo utf8_encode($rowprov['nom']);
+                                                  echo ($rowprov['nom']);
                                               } 
                                           ?></td>
                                           <td>
@@ -95,12 +96,12 @@
                                               $query_pais = "SELECT * FROM paisos WHERE id='".$row['paisos_id']."'";
                                                   $rspais = mysqli_query($con01, $query_pais) or die("Error: ".mysqli_error($con01));
                                                   $rowpais = mysqli_fetch_array($rspais);
-                                                  echo utf8_encode($rowpais['nom']); 
+                                                  echo ($rowpais['nom']); 
                                           ?>
                                               
                                           </td>
-                                          <td><?php echo utf8_encode($row['inici']); ?></td>
-                                          <td><?php echo utf8_encode($row['inici_detall']); ?></td>
+                                          <td><?php echo ($row['inici']); ?></td>
+                                          <td><?php echo ($row['inici_detall']); ?></td>
                                       </tr>
                                       <?php
                                           }
@@ -469,259 +470,17 @@
 
   <?php include 'modals/modal_ok.php'; ?>
 
-    <!-- dialeg modal NEW -->
-    <div  class="modal fade" id="myNewModal" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content newModal">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Alta Entitat</h5>
-                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div id="newBody" class="modal-body">
-                        <form role="form" name="modalFormNew" action="altaEntitat.php" method="get" data-toggle="validator">
-                            <div class="row mb-4">
-                                <!-- row 0 -->
-                                <div class=" col-md-4">
-                                      <label for="reg">Registre:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" name="c1" class="form-control" id="reg" placeholder="Registre">
-                                      </div>
-                                </div>
-                                <div class=" col-md-4">
-                                      <label for="nome">Nom Esportiu:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" name="c2" id="nome" placeholder="Nom Esportiu">
-                                      </div>
-                                </div>
+  <?php include 'modals/modal_entitat_comp_new.php'; ?>
+  <?php include 'modals/modal_entitat_comp_edit.php'; ?>
+  <?php include 'modals/modal_entitat_comp_del.php'; ?>
 
-                                <div class=" col-md-4">
-                                      <label for="nom">Nom:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="nom" name="c3"placeholder="Nom">
-                                      </div>
-                                </div>
+  <?php include 'modals/modal_entitat_doc_new.php'; ?>
+  <?php include 'modals/modal_entitat_doc_edit.php'; ?>
+  <?php include 'modals/modal_entitat_doc_del.php'; ?>
 
-                            </div>
-                            <!-- end row 0 -->
-
-                            <div class="row mb-4">
-
-                                <div class=" col-md-4">
-                                      <label for="pais">Pais:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="pais" name="c4"placeholder="Pais">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-4">
-                                      <label for="provincia">Provincia:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="provincia" name="c5"placeholder="Provincia">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-4">
-                                      <label for="localitat">Localitat:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="localitat" name="c6"placeholder="Localitat">
-                                      </div>
-                                </div>
-
-                            </div>
-
-                           <div class="row mb-4">
-
-                                <div class=" col-md-4">
-                                      <label for="inici">Any Inici:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="year" class="form-control" id="inici" name="c7"placeholder="Any Inici">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-8">
-                                      <label for="detalls">Detalls:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="detalls" name="c8"placeholder="Detalls">
-                                      </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col"><hr></div>
-                            </div>
-
-                            <div class="row mb-4">
-
-                                <div class=" col-md-2">
-                                      <label for="escut">Escut:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="escut" name="c9" placeholder="Escut">
-                                      </div>
-                                </div>
-
-
-                                <div class=" col-md-2">
-                                      <label for="escut">Himne:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="himne" name="c10" placeholder="Himne">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="cd">CD:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="cd" name="c11" placeholder="CD">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="insignia">Insignia:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="insignia" name="c12" placeholder="CD">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="camiseta">Camiseta:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="camiseta" name="c13" placeholder="CD">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="bufanda">Bufanda:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="bufanda" name="c14" placeholder="Bufanda">
-                                      </div>
-                                </div>
-                                
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class=" col-md-2">
-                                      <label for="bandera">Bandera:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="number" min="0" value="0" class="form-control" id="bandera" name="c15" placeholder="Bandera">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-2">
-                                      <label for="altre">Altre:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="altre" name="c14" placeholder="Altre">
-                                      </div>
-                                </div>
-
-                                <div class=" col-md-8">
-                                      <label for="detalls2">Detalls:</label>
-                                      <div class="input-group">
-                                        <div class="input-group-prepend">
-                                          <div class="input-group-text">
-                                            <i class="fa fa-info-circle"></i>
-                                          </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="detalls2" name="c14" placeholder="Detalls">
-                                      </div>
-                                </div>
-
-                            </div>
-
-
-                        </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                    <button type="button" class="btn btn-primary" id="btnNew">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- fi del dialeg modal NEW -->
+  <?php include 'modals/modal_entitat_act_new.php'; ?>
+  <?php include 'modals/modal_entitat_act_edit.php'; ?>
+  <?php include 'modals/modal_entitat_act_del.php'; ?>
 
 
   <?php include("common/end.php") ?>
@@ -924,6 +683,236 @@
 
         tActs.buttons().container().appendTo( '#acts-botons .col-md-6:eq(1)' );
 
+
+        // Missatge max-length
+        $('input[maxlength] , textarea').maxlength({
+          alwaysShow: false, 
+          warningClass: "form-text text-muted mt-1", 
+          limitReachedClass: "form-text text-muted mt-1", 
+          showMaxLength: true, 
+          showCharsTyped: true, 
+          placement: 'bottom-right-inside', 
+        });
+
+        // reset dels camps de formulari en tancar un modal
+        $('.modal').on('hidden.bs.modal', function () {
+          $(this).find('form').trigger('reset');
+        });
+
+
+        // Modal EDIT Comps
+
+        $(".btn-edit-comps").click(function() {
+
+          var table = $('#dtCompsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+          var numSelected = table.rows( { selected: true }).count();
+          var txt;
+          if(numSelected==0) {
+            txt = $('<b>ERROR: No has seleccionat cap competició per editar.</b>');}
+          else { 
+            txt = $("<b></b>");
+            
+            $('#idcee').val(data[0][0]);
+            $('#temporadacee').val(data[0][2]);
+            
+            // Competició selected option
+            $('#competiciocee option').filter(function(){
+                return $(this).text()==data[0][3];
+            }).prop('selected', true);
+
+            // Categoria selected option
+            $('#categoriacee option').filter(function(){
+                return $(this).text()==data[0][4];
+            }).prop('selected', true);
+
+            //Entrenador
+            $('#entrenadorcee').val(data[0][5]);
+
+            //Detalls 1
+            $('#detalls1cee').val(data[0][6]);
+
+            
+            $('#pjcee').val(data[0][7]);
+            $('#pgcee').val(data[0][8]);
+            $('#pecee').val(data[0][9]);
+            $('#ppcee').val(data[0][10]);
+            $('#gfcee').val(data[0][11]);
+            $('#gccee').val(data[0][12]);
+            $('#puntscee').val(data[0][13]);
+            $('#classifcee').val(data[0][14]);
+            $('#detalls2cee').val(data[0][15]);
+
+            
+          }
+          $('#editMessageComps').html(txt);
+                
+        });
+
+        $('#btnEditComps').click(function() {
+            $('form[name="modalFormEditCompEntitat"]').validator();
+            $('form[name="modalFormEditCompEntitat"]').submit();
+        });
+
+        // Modal DELETE Comps Entitat
+
+        $(".btn-delete-comps").click(function() {
+
+          var table = $('#dtCompsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+          var numSelected = table.rows( { selected: true }).count();
+          var txt;
+          if(numSelected==0) {
+            txt = $('<b>ERROR: No has seleccionat cap competició per eliminar.</b>');}
+          else { 
+            txt = $("<p><b>Vols esborrar les dades de la competició?</b></p> "+
+                          "<p><b> Entitat: </b><?php echo $nomComplet;?>"+"</p>"+
+                          "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+            $('#idcompd').val(data[0][0]);
+          }
+          $('#deleteMessageComps').html(txt);
+                
+        });
+
+        $('#btnDeleteComp').click(function() {
+                $('form[name="modalFormDeleteComps"]').submit();
+        });
+
+
+        // Modal EDIT Docs
+
+        $(".btn-edit-docs").click(function() {
+
+          var table = $('#dtDocsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+          var numSelected = table.rows( { selected: true }).count();
+          var txt;
+          if(numSelected==0) {
+            txt = $('<b>ERROR: No has seleccionat cap document per editar.</b>');}
+          else { 
+            txt = $("<b></b>");
+            
+            $('#iddee').val(data[0][0]);
+            $('#temporadadee').val(data[0][2]);
+            $('#documentdee').val(data[0][3]);
+            $('#contingutdee').val(data[0][4]);
+            $('#premsadee').val(data[0][5]);
+            $('#altresdee').val(data[0][6]);
+            $('#fotodee').val(data[0][7]);
+            $('#entrevistadee').val(data[0][8]);
+            $('#reportatgedee').val(data[0][9]);
+            $('#cartelldee').val(data[0][10]);
+            $('#llibredee').val(data[0][11]);
+            $('#videodee').val(data[0][12]);
+            $('#altre1dee').val(data[0][13]);
+            $('#altre2dee').val(data[0][14]);
+            $('#detallsdee').val(data[0][15]);
+
+            
+          }
+          $('#editMessageDocs').html(txt);
+                
+        });
+
+        $('#btnEditDocs').click(function() {
+            $('form[name="modalFormEditDocEntitat"]').validator();
+            $('form[name="modalFormEditDocEntitat"]').submit();
+        });
+
+        // Modal DELETE Docs Entitat
+
+        $(".btn-delete-docs").click(function() {
+
+          var table = $('#dtDocsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+          var numSelected = table.rows( { selected: true }).count();
+          var txt;
+          if(numSelected==0) {
+            txt = $('<b>ERROR: No has seleccionat cap document per eliminar.</b>');}
+          else { 
+            txt = $("<p><b>Vols esborrar les dades del document?</b></p> "+
+                          "<p><b> Entitat: </b><?php echo $nomComplet;?>"+"</p>"+
+                          "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                          "<p><b> Document: </b>"+data[0][3]+"</p>");
+            $('#iddocd').val(data[0][0]);
+          }
+          $('#deleteMessageDocs').html(txt);
+                
+        });
+
+        $('#btnDeleteDoc').click(function() {
+                $('form[name="modalFormDeleteDocs"]').submit();
+        });
+
+
+        // Modal EDIT Acts
+
+        $(".btn-edit-acts").click(function() {
+
+          var table = $('#dtActsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+          var numSelected = table.rows( { selected: true }).count();
+          var txt;
+          if(numSelected==0) {
+            txt = $('<b>ERROR: No has seleccionat cap activitat per editar.</b>');}
+          else { 
+            txt = $("<b></b>");
+            
+            $('#idaee').val(data[0][0]);
+            $('#temporadaaee').val(data[0][2]);
+            // Tipus Activitat selected option
+            $('#tipusaee option').filter(function(){
+                return $(this).text()==data[0][3];
+            }).prop('selected', true);
+            $('#actuacioaee').val(data[0][4]);
+            $('#detalls1aee').val(data[0][5]);
+            $('#detalls2aee').val(data[0][6]);
+            $('#fotoaee').val(data[0][7]);
+            $('#entrevistaaee').val(data[0][8]);
+            $('#reportatgeaee').val(data[0][9]);
+            $('#cartellaee').val(data[0][10]);
+            $('#llibreaee').val(data[0][11]);
+            $('#videoaee').val(data[0][12]);
+            $('#altre1aee').val(data[0][13]);
+            $('#altre2aee').val(data[0][14]);
+            $('#detalls3aee').val(data[0][15]);
+
+            
+          }
+          $('#editMessageActs').html(txt);
+                
+        });
+
+        $('#btnEditActs').click(function() {
+            $('form[name="modalFormEditActEntitat"]').validator();
+            $('form[name="modalFormEditActEntitat"]').submit();
+        });
+
+
+        // Modal DELETE Acts Entitat
+
+        $(".btn-delete-acts").click(function() {
+
+          var table = $('#dtActsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+          var numSelected = table.rows( { selected: true }).count();
+          var txt;
+          if(numSelected==0) {
+            txt = $('<b>ERROR: No has seleccionat cap activitat per eliminar.</b>');}
+          else { 
+            txt = $("<p><b>Vols esborrar les dades de l'activitat?</b></p> "+
+                          "<p><b> Entitat: </b><?php echo $nomComplet;?>"+"</p>"+
+                          "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                          "<p><b> Activitat: </b>"+data[0][3]+"</p>");
+            $('#idactd').val(data[0][0]);
+          }
+          $('#deleteMessageActs').html(txt);
+                
+        });
+
+        $('#btnDeleteAct').click(function() {
+                $('form[name="modalFormDeleteActs"]').submit();
+        });
 
 
         <?php 
