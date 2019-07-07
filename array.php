@@ -2,15 +2,14 @@
 
 require_once('connexions/connexio01.php');
 
-$oceania = 6;
+$provincia = 52;  //Eivissa
 
-$arr = ["Australia", "New Zealand", "Papua New Guinea", "Indonesia", "Philippines",
-  "Fiji", "Malaysia", "Brunei"];
+$arr = ["Eivissa","Sant Antoni de Portmany","Sant Joan de Labritja", "Sant Josep de sa Talaia","Santa Eulària des Riu"];
 
 
 foreach ($arr as $value) {
     echo "<p>".$value."</p>";
-    $sql ="INSERT INTO paisos (nom, continents_id) VALUES ('".$value."','".$oceania."')";
+    $sql ="INSERT INTO poblacions (nom, provincies_id) VALUES ('".$value."','".$provincia."')";
     echo $sql."<br/>";
     mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
 }
