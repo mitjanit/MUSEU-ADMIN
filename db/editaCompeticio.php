@@ -1,4 +1,4 @@
-<?php include("../common/mysessions.php"); ?>
+<?php //include("../common/mysessions.php"); ?>
 <?php require_once('../connexions/connexio01.php'); ?>
 <?php 
 
