@@ -22,3 +22,6 @@ header("Location: ../competicions.php?msgOk",TRUE, 302);
 exit;
 
 ?>
+<script>
+window.location.replace("../competicions.php?msgOk");
+</script>
