@@ -19,7 +19,7 @@ $sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user
 mysqli_query($con01, $sqlLog) or die(mysqli_error());
 
 header("Location: ../competicions.php?msgOk",TRUE, 302);
-exit();
+//exit();
 
 ?>
 <html>
