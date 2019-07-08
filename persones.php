@@ -437,8 +437,8 @@
                 if(numSelected==0) {
                   txt = $('<b>ERROR: No has seleccionat cap persona per eliminar.</b>');}
                 else { 
-                  txt = $("<p><b>Vols esborrar les dades de la persona?</b></br/> "+
-                          data[0][3]+" "+data[0][4]+", "+data[0][5]+" ?</b></p>");
+                  txt = $("<p><b>Vols esborrar les dades de la persona?</b></p>"+
+                          "<p><b> Persona: </b>"+data[0][3]+" "+data[0][4]+", "+data[0][5]+" ?</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
