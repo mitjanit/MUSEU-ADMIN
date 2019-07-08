@@ -223,7 +223,8 @@ $nomTaula = "Persona";
                                     <th>GC</th>
                                     <!--<th>??</th>-->
                                     <th>Classif.</th>
-                                    <th>Detalls</th>
+                                    <th class="none">Detalls 1</th>
+                                    <th class="none">Detalls 2</th>
                                 </tr>
                             </thead>
                             <tbody><?php
@@ -299,6 +300,7 @@ $nomTaula = "Persona";
                                     <!--<td><?php //echo $row['pp']; ?></td>-->
                                     <td><?php echo $row['classificacio']; ?></td>
                                     <td><?php echo ($row['detalls1']); ?></td>
+                                    <td><?php echo ($row['detalls2']); ?></td>
                                   </tr>
                                   <?php
                                       }
