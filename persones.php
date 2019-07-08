@@ -280,7 +280,7 @@
 
         $('#pais').change(function() {
           var pais = $("#pais option:selected").text();
-          if(pais!="Spain"){
+          if(pais!="España"){
             $('#provincia option').filter(function(){
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
@@ -375,7 +375,7 @@
 
         $('#e6').change(function() {
           var pais = $("#e6 option:selected").text();
-          if(pais!="Spain"){
+          if(pais!="España"){
             $('#e7 option').filter(function(){
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
