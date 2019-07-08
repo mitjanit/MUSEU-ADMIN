@@ -14,7 +14,7 @@
                   <div id="newBody" class="modal-body">
                       <div class="row mb-4">
                           <!-- row 0 -->
-                          <div class=" col-md-3">
+                          <div class=" col-md-2">
                               <label for="registre">Identificador:</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -22,11 +22,11 @@
                                           <i class="fa fa-info-circle"></i>
                                         </div>
                                     </div>
-                                    <input readonly type="text" name="id" class="form-control" id="id" placeholder="Identificador" />
+                                    <input readonly type="text" name="id" class="form-control" id="id" placeholder="Id" />
                                 </div>
                           </div>
 
-                          <div class=" col-md-6">
+                          <div class=" col-md-4">
                             <label for="jugador"><span class="infoRelat"></span>:</label>
                               <div class="input-group">
                                 <div class="input-group-prepend">
