@@ -1,6 +1,6 @@
 <!-- dialeg modal NEW -->
 <div  class="modal fade" id="myNewModalRelat" tabindex="-1" role="dialog" aria-labelledby="myNewModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-md" role="document">
+  <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content newModal">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Alta Relat <span class="infoRelat"></span></h5>
