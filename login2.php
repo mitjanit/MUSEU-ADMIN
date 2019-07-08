@@ -21,7 +21,8 @@ if(mysqli_num_rows($rs)>=1){
   if(mysqli_num_rows($rs2)>=1){
   	// Usuari, role i password correctes
     $_SESSION['usuari'] = $row['username'];
-  	$_SESSION['username'] = $row['username'];
+    $_SESSION['username'] = $row['username'];
+  	$_SESSION['role'] = $row['role'];
   	header("Location: index.php",TRUE, 302);
   	exit;
   }
