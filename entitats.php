@@ -249,7 +249,7 @@
 
         $('#pais').change(function() {
           var pais = $("#pais option:selected").text();
-          if(pais!="Spain"){
+          if(pais!="España"){
             $('#provincia option').filter(function(){
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
@@ -340,7 +340,7 @@
 
         $('#e3').change(function() {
           var pais = $("#e3 option:selected").text();
-          if(pais!="Spain"){
+          if(pais!="España"){
             $('#e4 option').filter(function(){
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
@@ -401,7 +401,9 @@
                   txt = $('<b>ERROR: No has seleccionat cap entitat per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades de l'entitat?</b></br/> "+
-                          data[0][2]+", "+data[0][1]+" ?</b></p>");
+                          "<p> <b> Entitat : </b>"+data[0][2]+" | "+data[0][1]+".</p>"+
+                          "<p> <b> Població : </b>"+data[0][3]+".</p>"+
+                          "<p> <b> Any: </b>"+ data[0][]+".</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
