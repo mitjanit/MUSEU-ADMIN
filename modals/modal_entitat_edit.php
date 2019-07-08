@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="editaEntitat.php" method="get">
+                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="db/editaEntitat.php" method="get">
                 <div id="newBody" class="modal-body">
                        <p id="editMessage"></p>
                             <div class="row mb-4">
@@ -21,7 +21,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input readonly type="text" name="registre" class="form-control" id="e0" />
+                                        <input readonly type="text" name="id" class="form-control" id="e0" />
                                       </div>
                                 </div>
                                 <div class=" col-md-4">
@@ -106,7 +106,7 @@
                                             $rs = mysqli_query($con01, $queryProv) or die("Error: ".mysqli_error($con01));
                                             while ($row = mysqli_fetch_array($rs)){
                                               if($row['nom']!="Menorca" && $row['nom']!="Mallorca" && $row['nom']!="Eivissa"){
-                                                echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                               }
                                             }
                                           ?>
@@ -129,7 +129,7 @@
                                             $queryPob = "SELECT * FROM poblacions ORDER BY nom ASC";
                                             $rs = mysqli_query($con01, $queryPob) or die("Error: ".mysqli_error($con01));
                                             while ($row = mysqli_fetch_array($rs)){
-                                              echo "<option value='".$row['id']."'>".utf8_encode($row['nom'])."</option>";
+                                              echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                             }
                                           ?>
                                         </select>
