@@ -14,6 +14,7 @@ $detallsinici = (addslashes($_REQUEST['detalls']));
 
 $escut = $_REQUEST['escut'];
 $himne = $_REQUEST['himne'];
+$insignia = $_REQUEST['insignia'];
 $cd = $_REQUEST['cd'];
 $camiseta = $_REQUEST['camiseta'];
 $bufanda = $_REQUEST['bufanda'];
@@ -39,7 +40,7 @@ $sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user
 echo $sqlLog."<br/>";
 mysqli_query($con01, $sqlLog) or die(mysqli_error());
 
-header("Location: ../persones.php?msgOk",TRUE, 302);
+header("Location: ../entitats.php?msgOk",TRUE, 302);
 exit;
 
 ?>
