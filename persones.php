@@ -170,7 +170,7 @@
   <?php include 'modals/modal_persona_new.php'; ?>
   <?php include 'modals/modal_persona_edit.php'; ?>
   
-  <?php $txtDeleteTaula="Persona"; $deleteAction="deletePersona.php"; ?>
+  <?php $txtDeleteTaula="Persona"; $deleteAction="db/deletePersona.php"; ?>
   <?php include 'modals/modal_del.php'; ?>
 
 
