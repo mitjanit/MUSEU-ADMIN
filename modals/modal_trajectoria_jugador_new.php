@@ -186,7 +186,7 @@
                               <div class="row mb-4">
                                   
                                   <div class=" col-md-12">
-                                        <label for="detalls2">Detalls:</label>
+                                        <label for="detalls2">Detalls 1:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -314,7 +314,7 @@
                               <div class="row mb-4">
                                   
                                   <div class=" col-md-12">
-                                        <label for="detalls2">Detalls:</label>
+                                        <label for="detalls2">Detalls 2:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
