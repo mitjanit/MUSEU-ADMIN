@@ -27,7 +27,7 @@ $detalls2 = (addslashes($_REQUEST['detalls2']));
 INSERT INTO `museu`.`clubs` (`id`, `nom`, `poblacions_id`, `paisos_id`, `provincia_id`, `inici`, `inici_detall`, `nom_esportiu`, `escut`, `himne`, `cd`, `insignia`, `camiseta`, `bufanda`, `bandera`, `altre`, `detalls2`) VALUES (NULL, 'nom', '1', '1', '10', '1900', 'detall inici', 'nom esportiu', '1', '2', '3', '4', '5', '6', '7', 'altre ', 'detalls 2');
 */
 
-$sql ="INSERT INTO clubs (nom, poblacions_id, paisos_id, provincia_id, inici, inici_detall, nom_esportiu, escut, himne, cd, insignia, camiseta, bufanda, bandera, altre, detalls2) VALUES ('".$nom."', '".$poble."', '".$pais."', '".$provincia."', '".$inici."', '".$detallsinici."', '".$nome."', '".$escut."', '".$himne."', '".$cd."', '".$insignia."', '".$camiseta."', '".$bufanda."', '".$altre."', '".$detalls2."')";
+$sql ="INSERT INTO clubs (nom, poblacions_id, paisos_id, provincia_id, inici, inici_detall, nom_esportiu, escut, himne, cd, insignia, camiseta, bufanda, bandera, altre, detalls2) VALUES ('".$nom."', '".$poble."', '".$pais."', '".$provincia."', '".$inici."', '".$detallsinici."', '".$nome."', '".$escut."', '".$himne."', '".$cd."', '".$insignia."', '".$camiseta."', '".$bufanda."', '".$bandera."', '".$altre."', '".$detalls2."')";
 echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 
