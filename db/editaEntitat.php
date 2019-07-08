@@ -23,7 +23,7 @@ $altre = (addslashes($_REQUEST['altre']));
 $detalls2 = (addslashes($_REQUEST['detalls2']));
 
 $sql ="UPDATE clubs SET nom =  '".$nom."', nom_esportiu = '".$nome."', inici = '".$inici."', inici_detall = '".$detallsinici."', escut = '".$escut."', himne = '".$himne."', cd = '".$cd."', insignia =  '".$insignia."', camiseta = '".$camiseta."', bufanda = '".$bufanda."', bandera = '".$bandera."', altre =  '".$altre."', detalls2 = '".$detalls2."' WHERE id='".$id."'";
-//echo $sql."<br/>";
+echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 
 
@@ -33,7 +33,7 @@ $table = "Entitat";
 $sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user."','U','".$table."', CURRENT_TIMESTAMP)";
 mysqli_query($con01, $sqlLog) or die(mysqli_error());
 
-header("Location: ../entitats.php?&msgOk",TRUE, 302);
-exit;
+//header("Location: ../entitats.php?&msgOk",TRUE, 302);
+//exit;
 
 ?>
