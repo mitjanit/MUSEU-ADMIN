@@ -123,7 +123,9 @@
                                               $queryPaisos = "SELECT * FROM paisos ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryPaisos) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
+                                                if($row['nom']!="España"){
+                                                  echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
+                                                }
                                               }
                                             ?>
                                           </select>
@@ -146,11 +148,14 @@
                                             <option value="51">Menorca</option>
                                             <option value="7">Mallorca</option>
                                             <option value="52">Eivissa</option>
+                                            <option value="">------------</option>
                                             <?php
                                               $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryProv) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
+                                                if($row['nom']!="Menorca" && $row['nom']!="Mallorca" && $row['nom']!="Eivissa"){
+                                                  echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
+                                                }
                                               }
                                             ?>
                                             <!--<option value="No Aplicable">No Aplicable</option>-->
