@@ -52,6 +52,30 @@
                                     </div>
                                   </div>
                           </div>
+
+                          <div class=" col-md-3">
+                                <label for="nom">Vinculat a (*):</label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                      <i class="fa fa-info-circle"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-control" id="vinculatjn" name="vinculat" required>
+                                    <option value=""></option>
+                                    <?php
+                                      $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
+                                      $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                      while ($row = mysqli_fetch_array($rs)){
+                                        echo "<option value='".$row['id']."'>".($row['nom_esportiu'])."</option>";
+                                      }
+                                    ?>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                    <i class="fas fa-exclamation-circle"></i> Camp obligatori.
+                                  </div>
+                                </div>
+                          </div>
                       </div>
 
                       <div class="row mb-4">
