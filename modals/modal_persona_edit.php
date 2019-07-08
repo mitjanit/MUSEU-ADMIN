@@ -118,6 +118,7 @@
                                           <select class="form-control" id="e6" name="pais" required>
                                             <option value=""></option>
                                             <option value="1">España</option>
+                                            <option value="">------------</option>
                                             <?php
                                               $queryPaisos = "SELECT * FROM paisos ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryPaisos) or die("Error: ".mysqli_error($con01));
