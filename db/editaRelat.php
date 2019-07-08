@@ -7,11 +7,12 @@ $id = (addslashes($_REQUEST['id']));
 $idp = $_REQUEST['idp'];
 $role = $_REQUEST['role'];
 $temporada = (addslashes($_REQUEST['temporada']));
+$club = (addslashes($_REQUEST['club']));
 $relat = (addslashes($_REQUEST['relat']));
 
 // (id_persona, role, temporada, comentari)
 
-$sql ="UPDATE caixo_persona SET temporada='".$temporada."' , comentari='".$relat."' WHERE id='".$id."'";
+$sql ="UPDATE caixo_persona SET temporada='".$temporada."' , club='".$club."' , comentari='".$relat."' WHERE id='".$id."'";
 //echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 

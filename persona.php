@@ -335,6 +335,7 @@ $nomTaula = "Persona";
                                     <th class="none">Id</th>
                                     <th class="none">Id Persona</th>
                                     <th>Temporada</th>
+                                    <th>Vinculat</th>
                                     <th>Comentari</th>
 
                                 </tr>
@@ -350,6 +351,16 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
@@ -511,6 +522,7 @@ $nomTaula = "Persona";
                                     <th class="none">Id</th>
                                     <th class="none">Id Persona</th>
                                     <th>Temporada</th>
+                                    <th>Vinculat</th>
                                     <th>Comentari</th>
 
                                 </tr>
@@ -526,6 +538,16 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
@@ -680,6 +702,7 @@ $nomTaula = "Persona";
                                     <th class="none">Id</th>
                                     <th class="none">Id Persona</th>
                                     <th>Temporada</th>
+                                    <th>Vinculat</th>
                                     <th>Comentari</th>
 
                                 </tr>
@@ -695,6 +718,16 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
@@ -848,6 +881,7 @@ $nomTaula = "Persona";
                                     <th class="none">Id</th>
                                     <th class="none">Id Persona</th>
                                     <th>Temporada</th>
+                                    <th>Vinculat</th>
                                     <th>Comentari</th>
                                 </tr>
                             </thead>
@@ -862,6 +896,16 @@ $nomTaula = "Persona";
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['id_persona']; ?></td>
                                     <td><?php echo $row['temporada']; ?></td>
+                                    <td>
+                                      <?php 
+                                        if($row['club']!=NULL){
+                                            $query = "SELECT * FROM clubs WHERE id='".$row['club']."'";
+                                            $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                            $rowd = mysqli_fetch_array($rsd);
+                                            echo $rowd['nom_esportiu'];
+                                        }
+                                      ?>
+                                    </td>
                                     <td><?php echo ($row['comentari']); ?></td>
                                   </tr>
                                   <?php
@@ -1013,6 +1057,7 @@ $nomTaula = "Persona";
                                   <th class="none">Id</th>
                                   <th class="none">Id Persona</th>
                                   <th>Temporada</th>
+                                  <th>Vinculat</th>
                                   <th>Comentari</th>
 
                               </tr>
@@ -1028,6 +1073,16 @@ $nomTaula = "Persona";
                                   <td><?php echo $row['id']; ?></td>
                                   <td><?php echo $row['id_persona']; ?></td>
                                   <td><?php echo $row['temporada']; ?></td>
+                                  <td>
+                                    <?php 
+                                      if($row['club']!=NULL){
+                                          $query = "SELECT * FROM clubs WHERE id='".$row['club']."'";
+                                          $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                          $rowd = mysqli_fetch_array($rsd);
+                                          echo $rowd['nom_esportiu'];
+                                      }
+                                    ?>
+                                  </td>
                                   <td><?php echo ($row['comentari']); ?></td>
                                 </tr>
                                 <?php
@@ -1435,7 +1490,7 @@ $nomTaula = "Persona";
             responsive: true,
             select: true,
             autoWidth: false,
-            columnDefs: [ { "width": "10%", "targets": 2 } ],
+            columnDefs: [ { "width": "10%", "targets": 2 }, { "width": "15%", "targets": 3 }  ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1491,7 +1546,7 @@ $nomTaula = "Persona";
             responsive: true,
             select: true,
             autoWidth: false,
-            columnDefs: [ { "width": "10%", "targets": 2 } ],
+            columnDefs: [ { "width": "10%", "targets": 2 }, { "width": "15%", "targets": 3 }  ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1547,7 +1602,7 @@ $nomTaula = "Persona";
             responsive: true,
             select: true,
             autoWidth: false,
-            columnDefs: [ { "width": "10%", "targets": 2 } ],
+            columnDefs: [ { "width": "10%", "targets": 2 }, { "width": "15%", "targets": 3 }  ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1603,7 +1658,7 @@ $nomTaula = "Persona";
             responsive: true,
             select: true,
             autoWidth: false,
-            columnDefs: [ { "width": "10%", "targets": 2 } ],
+            columnDefs: [ { "width": "10%", "targets": 2 }, { "width": "15%", "targets": 3 }  ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -1659,7 +1714,7 @@ $nomTaula = "Persona";
             responsive: true,
             select: true,
             autoWidth: false,
-            columnDefs: [ { "width": "10%", "targets": 2 } ],
+            columnDefs: [ { "width": "10%", "targets": 2 }, { "width": "15%", "targets": 3 }  ],
             buttons: [
                 {
                     extend:    'copyHtml5',
@@ -2136,7 +2191,11 @@ $nomTaula = "Persona";
       if(esEditable){
           $('#ide').attr("value", data[0][0]); // Id Relat
           $('#temporadae').val(data[0][2]); // Temporada
-          $('#relate').html(data[0][3]); // Relat
+          //Club Vinculat
+          $('#clube option').filter(function(){
+              return $(this).text()==data[0][3];
+          }).prop('selected', true);
+          $('#relate').html(data[0][4]); // Relat
           $('#role').val("J");  // Rol Jugador
       }
       
@@ -2165,7 +2224,11 @@ $nomTaula = "Persona";
       if(esEditable){
           $('#ide').attr("value", data[0][0]); // Id Relat
           $('#temporadae').val(data[0][2]); // Temporada
-          $('#relate').html(data[0][3]); // Relat
+          //Club Vinculat
+          $('#clube option').filter(function(){
+              return $(this).text()==data[0][3];
+          }).prop('selected', true);
+          $('#relate').html(data[0][4]); // Relat
           $('#role').val("E");  // Rol Entrenador
       }
       
@@ -2194,7 +2257,11 @@ $nomTaula = "Persona";
       if(esEditable){
           $('#ide').attr("value", data[0][0]); // Id Relat
           $('#temporadae').val(data[0][2]); // Temporada
-          $('#relate').html(data[0][3]); // Relat
+          //Club Vinculat
+          $('#clube option').filter(function(){
+              return $(this).text()==data[0][3];
+          }).prop('selected', true);
+          $('#relate').html(data[0][4]); // Relat
           $('#role').val("A");  // Rol Arbit
       }
       
@@ -2223,7 +2290,11 @@ $nomTaula = "Persona";
       if(esEditable){
           $('#ide').attr("value", data[0][0]); // Id Relat
           $('#temporadae').val(data[0][2]); // Temporada
-          $('#relate').html(data[0][3]); // Relat
+          //Club Vinculat
+          $('#clube option').filter(function(){
+              return $(this).text()==data[0][3];
+          }).prop('selected', true);
+          $('#relate').html(data[0][4]); // Relat
           $('#role').val("D");  // Rol Directiu
       }
       
@@ -2252,7 +2323,11 @@ $nomTaula = "Persona";
       if(esEditable){
           $('#ide').attr("value", data[0][0]); // Id Relat
           $('#temporadae').val(data[0][2]); // Temporada
-          $('#relate').html(data[0][3]); // Relat
+          //Club Vinculat
+          $('#clube option').filter(function(){
+              return $(this).text()==data[0][3];
+          }).prop('selected', true);
+          $('#relate').html(data[0][4]); // Relat
           $('#role').val("O");  // Rol Altre (Otro)
       }
       

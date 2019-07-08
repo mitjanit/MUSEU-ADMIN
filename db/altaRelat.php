@@ -7,9 +7,10 @@ $id = (addslashes($_REQUEST['id']));
 $idp = $_REQUEST['idp'];
 $role = $_REQUEST['role'];
 $temporada = (addslashes($_REQUEST['temporada']));
+$club = $_REQUEST['club'];
 $relat = (addslashes($_REQUEST['relat']));
 
-$sql ="INSERT INTO caixo_persona (id_persona, role, temporada, comentari) VALUES ('".$idp."','".$role."','".$temporada."','".$relat."')";
+$sql ="INSERT INTO caixo_persona (id_persona, role, temporada, club, comentari) VALUES ('".$idp."','".$role."','".$temporada."','".$club."','".$relat."')";
 echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 

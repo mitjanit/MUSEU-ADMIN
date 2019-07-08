@@ -61,7 +61,7 @@
                                       <i class="fa fa-info-circle"></i>
                                     </div>
                                   </div>
-                                  <select class="form-control" id="vinculatjn" name="vinculat" required>
+                                  <select class="form-control" id="clubjn" name="club" required>
                                     <option value=""></option>
                                     <?php
                                       $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
