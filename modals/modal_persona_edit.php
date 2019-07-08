@@ -142,6 +142,9 @@
                                           </div>
                                           <select class="form-control" id="e7" name="provincia" required>
                                             <option value=""></option>
+                                            <option value="51">Menorca</option>
+                                            <option value="7">Mallorca</option>
+                                            <option value="52">Eivissa</option>
                                             <?php
                                               $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryProv) or die("Error: ".mysqli_error($con01));
