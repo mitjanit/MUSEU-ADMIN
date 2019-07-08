@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="editaPersona.php" method="get">
+                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edita-validation" novalidate action="db/editaPersona.php" method="get">
                   <div id="newBody" class="modal-body">
                     <p id="editMessage"></p>
                               <div class="row mb-4">
@@ -293,7 +293,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="e16" name="entrevista" placeholder="Entrevistes">
+                                          <input type="number" min="0" value="0" class="form-control" id="e16" name="entrevistes" placeholder="Entrevistes">
                                         </div>
                                   </div>
 
@@ -305,7 +305,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="e17" name="reportatge" placeholder="Reportatges">
+                                          <input type="number" min="0" value="0" class="form-control" id="e17" name="reportatges" placeholder="Reportatges">
                                         </div>
                                   </div>
 
