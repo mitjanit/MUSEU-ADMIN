@@ -401,9 +401,9 @@
                   txt = $('<b>ERROR: No has seleccionat cap entitat per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades de l'entitat?</b></br/> "+
-                          "<p> <b> Entitat : </b>"+data[0][2]+" | "+data[0][1]+".</p>"+
-                          "<p> <b> Població : </b>"+data[0][3]+".</p>"+
-                          "<p> <b> Any: </b>"+ data[0][]+".</p>");
+                          "<p><b>Entitat:</b>"+data[0][2]+" - "+data[0][1]+".</p>"+
+                          "<p><b>Població:</b>"+data[0][3]+".</p>"+
+                          "<p><b>Any:</b>"+ data[0][6]+".</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
