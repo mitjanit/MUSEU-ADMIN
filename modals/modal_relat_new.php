@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNewRelat" id="modalFormNewRelat" class="new-relat-validation" novalidate action="altaRelat.php" method="get">
+                <form role="form" name="modalFormNewRelat" id="modalFormNewRelat" class="new-relat-validation" novalidate action="db/altaRelat.php" method="get">
                   <input type="hidden" id="role" name="role" />
                   <input type="hidden" id="idp" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
@@ -34,7 +34,7 @@
                                       <i class="fa fa-info-circle"></i>
                                     </div>
                                 </div>
-                                <input readonly type="text" name="jugador" class="form-control" id="entrenador" value="<?php echo $nomComplet; ?>" />
+                                <input readonly type="text" name="persona" class="form-control" id="entrenador" value="<?php echo $nomComplet; ?>" />
                               </div>
                           </div>
 
@@ -46,7 +46,7 @@
                                         <i class="fa fa-info-circle"></i>
                                       </div>
                                     </div>
-                                    <input type="text" class="form-control" name="temporadan" id="temporadan" required maxlength="4" />
+                                    <input type="text" class="form-control" name="temporada" id="temporadan" required maxlength="4" />
                                     <div class="invalid-feedback">
                                       <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                     </div>
@@ -64,7 +64,7 @@
                                       <i class="fa fa-info-circle"></i>
                                     </div>
                                   </div>
-                                  <textarea rows="4" class="form-control" id="relatn" name="relatn" maxlength="100" ></textarea>
+                                  <textarea rows="4" class="form-control" id="relatn" name="relat" maxlength="100" ></textarea>
                                 </div>
                           </div>
 

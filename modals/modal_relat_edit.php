@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEditRelat" id="modalFormEditRelat" class="edit-relat-validation" novalidate action="editaRelat.php" method="get">
+                <form role="form" name="modalFormEditRelat" id="modalFormEditRelat" class="edit-relat-validation" novalidate action="db/editaRelat.php" method="get">
                   <input type="hidden" id="rolee" name="role" />
                   <input type="hidden" id="idpe" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
@@ -47,7 +47,7 @@
                                         <i class="fa fa-info-circle"></i>
                                       </div>
                                     </div>
-                                    <input type="text" class="form-control" name="temporadae" id="temporadae" required maxlength="4" />
+                                    <input type="text" class="form-control" name="temporada" id="temporadae" required maxlength="4" />
                                     <div class="invalid-feedback">
                                       <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                     </div>
@@ -65,7 +65,7 @@
                                       <i class="fa fa-info-circle"></i>
                                     </div>
                                   </div>
-                                  <textarea rows="4" class="form-control" id="relate" name="relate" maxlength="100" ></textarea>
+                                  <textarea rows="4" class="form-control" id="relate" name="relat" maxlength="100" ></textarea>
                                 </div>
                           </div>
 

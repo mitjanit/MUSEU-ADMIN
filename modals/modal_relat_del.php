@@ -9,15 +9,16 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormDeleteRelat" id="modalFormDeleteRelat" action="eliminaRelat.php" method="get">
-                    <input type="hidden" name="idrelatd" id="idrelatd" />
+                <form role="form" name="modalFormDeleteRelat" id="modalFormDeleteRelat" action="db/deleteRelat.php" method="get">
+                    <input type="hidden" name="id" id="idrelatd" />
+                    <input type="hidden" id="idp" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                     <div id="deleteBodyRelat" class="modal-body">
                         <p id="deleteMessageRelat"></p>
                     </div>
                 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                        <button type="button" class="btn btn-primary" id="btnDelete">Eliminar</button>
+                        <button type="button" class="btn btn-primary" id="btnDeleteRelat">Eliminar</button>
                     </div>
                 </form>
             </div>

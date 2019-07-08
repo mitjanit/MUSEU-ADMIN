@@ -2363,6 +2363,11 @@ $nomTaula = "Persona";
             
     });
 
+
+    $('#btnDeleteRelat').click(function() {
+            $('form[name="modalFormDeleteRelat"]').submit();
+    });
+
     // End Modal DELETE Relat
 
 
