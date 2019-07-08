@@ -33,7 +33,7 @@ $table = "Entitat";
 $sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user."','U','".$table."', CURRENT_TIMESTAMP)";
 mysqli_query($con01, $sqlLog) or die(mysqli_error());
 
-//header("Location: ../entitats.php?&msgOk",TRUE, 302);
-//exit;
+header("Location: ../entitats.php?&msgOk",TRUE, 302);
+exit;
 
 ?>
