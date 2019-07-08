@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNew" id="modalFormNew" class="needs-validation" novalidate action="altaPersona.php" method="get">
+                <form role="form" name="modalFormNew" id="modalFormNew" class="needs-validation" novalidate action="db/altaPersona.php" method="get">
                   <div id="newBody" class="modal-body">
                               <div class="row mb-4">
                                   <!-- row 0 -->
@@ -31,7 +31,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" name="c2" id="nome" required maxlength="30" />
+                                          <input type="text" class="form-control" name="nome" id="nome" required maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -46,7 +46,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="nom" name="c3" >
+                                          <input type="text" class="form-control" id="dni" name="dni" >
                                         </div>
                                   </div>
 
@@ -62,7 +62,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="nom" name="c3" required maxlength="30" />
+                                          <input type="text" class="form-control" id="llinatge1" name="llinatge1" required maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -77,7 +77,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="nom" name="c3" required maxlength="30" />
+                                          <input type="text" class="form-control" id="llinatge2" name="llinatge2" required maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -92,7 +92,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="nom" name="c3" required maxlength="30" />
+                                          <input type="text" class="form-control" id="nom" name="nom" required maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -215,7 +215,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detalls" name="c8" maxlength="50" />
+                                          <input type="text" class="form-control" id="detallsmort" name="detallsmort" maxlength="50" />
                                         </div>
                                   </div>
 
@@ -233,7 +233,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detalls" name="c8" maxlength="100" />
+                                          <input type="text" class="form-control" id="detalls" name="detalls" maxlength="100" />
                                         </div>
                                   </div>
                               </div>
@@ -252,7 +252,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="materials" name="c15" maxlength="100" />
+                                          <input type="text" class="form-control" id="materials" name="materials" maxlength="100" />
                                         </div>
                                   </div>
                               </div>
@@ -267,7 +267,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="escut" name="c9" placeholder="Ficha">
+                                          <input type="number" min="0" value="0" class="form-control" id="ficha" name="ficha" />
                                         </div>
                                   </div>
 
@@ -280,7 +280,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="himne" name="c10" placeholder="Fotos">
+                                          <input type="number" min="0" value="0" class="form-control" id="fotos" name="fotos" />
                                         </div>
                                   </div>
 
@@ -292,7 +292,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="cd" name="c11" placeholder="Entrevistes">
+                                          <input type="number" min="0" value="0" class="form-control" id="entrevistes" name="entrevistes" />
                                         </div>
                                   </div>
 
@@ -304,7 +304,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="number" min="0" value="0" class="form-control" id="insignia" name="c12" placeholder="Reportatges">
+                                          <input type="number" min="0" value="0" class="form-control" id="reportatges" name="reportatges" />
                                         </div>
                                   </div>
 
@@ -316,7 +316,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="altre1" name="c13" maxlength="30">
+                                          <input type="text" class="form-control" id="altre1" name="altre1" maxlength="30">
                                         </div>
                                   </div>
 
@@ -328,7 +328,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="altre2" name="c14" maxlength="30">
+                                          <input type="text" class="form-control" id="altre2" name="altre2" maxlength="30">
                                         </div>
                                   </div>
                                   
@@ -345,7 +345,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="altre2" name="c14" maxlength="30">
+                                          <input type="text" class="form-control" id="altre3" name="altre3" maxlength="30">
                                         </div>
                                   </div>
 
@@ -358,7 +358,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detalls2" name="c14" maxlength="100">
+                                          <input type="text" class="form-control" id="detalls2" name="detalls2" maxlength="100">
                                         </div>
                                   </div>
 
