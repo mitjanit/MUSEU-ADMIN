@@ -8,7 +8,9 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNew" id="modalFormNew" class="new-jugador-validation" novalidate action="altaTrajectoriaJugador.php" method="get">
+                <form role="form" name="modalFormNew" id="modalFormNew" class="new-jugador-validation" novalidate action="db/altaTrajectoria.php" method="get">
+                  <input type="hidden" id="role" name="role" value="J" />
+                  <input type="hidden" id="idp" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                               <div class="row mb-4">
                                   <!-- row 0 -->
