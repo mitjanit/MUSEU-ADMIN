@@ -33,7 +33,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" name="temporadajn" id="temporada" required maxlength="4" />
+                                          <input type="text" class="form-control" name="temporada" id="temporadajn" required maxlength="4" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -182,6 +182,22 @@
                                   
 
                               </div>
+
+                              <div class="row mb-4">
+                                  
+                                  <div class=" col-md-12">
+                                        <label for="detalls2">Detalls:</label>
+                                        <div class="input-group">
+                                          <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                              <i class="fa fa-info-circle"></i>
+                                            </div>
+                                          </div>
+                                          <input type="text" class="form-control" id="detalls1jn" name="detalls1" maxlength="100" />
+                                        </div>
+                                  </div>
+
+                              </div> 
                               <!-- end row 0 -->
 
                               <div class="row">
@@ -211,7 +227,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="resultatjn" name="resultatjn" />
+                                          <input type="text" class="form-control" id="resultatjn" name="resultat" />
                                         </div>
                                   </div>
 
@@ -305,7 +321,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detalls2" name="detalls2" maxlength="100" />
+                                          <input type="text" class="form-control" id="detalls2jn" name="detalls2" maxlength="100" />
                                         </div>
                                   </div>
 
