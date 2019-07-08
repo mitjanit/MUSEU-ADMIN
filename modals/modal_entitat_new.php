@@ -8,7 +8,7 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNew" id="modalFormNew" class="needs-validation" novalidate action="altaEntitat.php" method="get">
+                <form role="form" name="modalFormNew" id="modalFormNew" class="needs-validation" novalidate action="db/altaEntitat.php" method="get">
                 <div id="newBody" class="modal-body">
                        
                             <div class="row mb-4">
