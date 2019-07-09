@@ -3,7 +3,7 @@
 <?php 
 
 
-//$id = (addslashes($_REQUEST['id']));
+$id = $_REQUEST['id'];
 $idp = $_REQUEST['idp'];
 $role = $_REQUEST['role'];
 $temporada = addslashes($_REQUEST['temporada']);
@@ -39,7 +39,8 @@ $gf = $_REQUEST['gf'];
 $gc = $_REQUEST['gc'];
 $classif = (addslashes($_REQUEST['classif']));
 
-$sql ="INSERT INTO trajectoria_persona (id_persona, role, temporada, id_club, id_carrec, id_visitant, id_categoria, id_competicio, id_demarcacio, detalls1, pj, resultat, pg, pe, pp, gf, gc, classificacio, detalls2, actuacio, num_equips, entrenador) VALUES ('".$idp."', '".$role."', '".$temporada."', '".$vinculat."', '".$carrec."', '".$visitant."', '".$categoria."', '".$competicio."', '".$demarcacio."', '".$detalls1."', '".$pj."', '".$resultat."', '".$pg."', '".$pe."', '".$pp."', '".$gf."', '".$gc."', '".$classif."', '".$detalls2."', '".$actuacio."', '".$num_equips."', '".$entrenador."')";
+
+$sql ="UPDATE trajectoria_persona SET temporada ='".$temporada."', id_club='".$vinculat."', id_carrec='".$carrec."', id_visitant='".$visitant."', id_categoria='".$categoria."', id_competicio='".$competicio."', id_demarcacio='".$demarcacio."', detalls1='".$detalls1."', pj='".$pj."', resultat='".$resultat."', pg='".$pg."', pe='".$pe."', pp='".$pp."', gf='".$gf."', gc='".$gc."', classificacio='".$classif."', detalls2='".$detalls2."', actuacio='".$actuacio."', num_equips='".$num_equips."', entrenador='".$entrenador."' WHERE id='".$id."'";
 echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 
@@ -55,7 +56,7 @@ switch($role){
 	case "O": $tt = "Altre Càrrec"; break;
 }
 $table = "Trajectoria ".$tt;
-$sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user."','I','".$table."', CURRENT_TIMESTAMP)";
+$sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user."','U','".$table."', CURRENT_TIMESTAMP)";
 echo $sqlLog."<br/>";
 mysqli_query($con01, $sqlLog) or die(mysqli_error());
 

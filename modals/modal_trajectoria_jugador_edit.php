@@ -9,7 +9,9 @@
                   </button>
                 </div>
 
-                <form role="form" name="modalFormEditJugador" id="modalFormEditJugador" class="edit-jugador-validation" novalidate action="editaTrajectoriaJugador.php" method="get">
+                <form role="form" name="modalFormEditJugador" id="modalFormEditJugador" class="edit-jugador-validation" novalidate action="db/editaTrajectoria.php" method="get">
+                  <input type="hidden" name="role" id="rolee" value="J" />
+                  <input type="hidden" name="idp" id="idpersone" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                       <p id="editMessageJugador"></p>
                               <div class="row mb-4">
@@ -22,7 +24,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input readonly type="text" name="idt" class="form-control" id="idje" />
+                                          <input readonly type="text" name="id" class="form-control" id="idje" />
                                         </div>
                                   </div>
                                   <div class=" col-md-3">
@@ -184,6 +186,22 @@
                               </div>
                               <!-- end row 0 -->
 
+                              <div class="row mb-4">
+                                  
+                                  <div class=" col-md-12">
+                                        <label for="detalls2">Detalls 1:</label>
+                                        <div class="input-group">
+                                          <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                              <i class="fa fa-info-circle"></i>
+                                            </div>
+                                          </div>
+                                          <input type="text" class="form-control" id="detallsje" name="detalls1" maxlength="100" />
+                                        </div>
+                                  </div>
+
+                              </div> 
+
                               <div class="row">
                                   <div class="col"><hr></div>
                               </div>
@@ -289,7 +307,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="classje" name="class" />
+                                          <input type="text" class="form-control" id="classje" name="classif" />
                                         </div>
                                   </div>                                 
 
@@ -298,14 +316,14 @@
                               <div class="row mb-4">
                                   
                                   <div class=" col-md-12">
-                                        <label for="detalls2">Detalls:</label>
+                                        <label for="detalls2">Detalls 2:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="detallsje" name="detalls" maxlength="100" />
+                                          <input type="text" class="form-control" id="detalls2je" name="detalls2" maxlength="100" />
                                         </div>
                                   </div>
 

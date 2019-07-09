@@ -59,7 +59,7 @@ $nomTaula = "Accions de l'Usuari";
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT id, user, tipus, taula, date(temps) as dia, time(temps) as hora FROM accions_user WHERE user='".$_SESSION['username']."' ORDER BY dia DESC, hora desc";
+                        $query_rsGrups = "SELECT id, user, tipus, taula, date(temps) as dia, time(temps) as hora FROM accions_user WHERE user='".$_SESSION['username']."' ORDER BY id DESC";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>

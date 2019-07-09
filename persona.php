@@ -1824,6 +1824,7 @@ $nomTaula = "Persona";
         //$('#x1je').val(data[0][14]);
         $('#classje').val(data[0][15]);
         $('#detallsje').val(data[0][16]);
+        $('#detalls2je').val(data[0][17]);
       }
       $('#editMessageJugador').html(txt);
       $('.infoTrajectoria').html("Jugador");
@@ -2055,8 +2056,10 @@ $nomTaula = "Persona";
       else { 
         txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
                       "<p><b> Jugador: </b><?php echo $nomComplet;?>"+"</p>"+
-                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Club: </b>"+data[0][4]+"</p>");
         $('#idtrajectoriad').val(data[0][0]);
+        $('#roled').val("Jugador");
       }
       $('#deleteMessageTrajectoria').html(txt);
       $('.infoTrajectoria').html("Jugador");
