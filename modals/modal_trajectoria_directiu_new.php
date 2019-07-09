@@ -8,7 +8,9 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNewDirectiu" id="modalFormNewDirectiu" class="new-directiu-validation" novalidate action="altaTrajectoriaDirectiu.php" method="get">
+                <form role="form" name="modalFormNewDirectiu" id="modalFormNewDirectiu" class="new-directiu-validation" novalidate action="db/altaTrajectoria.php" method="get">
+                  <input type="hidden" id="roledirectiun" name="role" value="D" />
+                  <input type="hidden" id="idpdirectiun" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                               <div class="row mb-4">
                                   <!-- row 0 -->
@@ -282,7 +284,7 @@
                               <div class="row mb-4">
                                   
                                   <div class=" col-md-12">
-                                        <label for="detalls2">Detalls:</label>
+                                        <label for="detalls2">Detalls 2:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">

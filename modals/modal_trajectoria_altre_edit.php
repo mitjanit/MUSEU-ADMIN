@@ -8,7 +8,9 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEditAltre" id="modalFormEditAltre" class="new-altre-validation" novalidate action="editaTrajectoriaAltre.php" method="get">
+                <form role="form" name="modalFormEditAltre" id="modalFormEditAltre" class="new-altre-validation" novalidate action="db/editaTrajectoria.php" method="get">
+                  <input type="hidden" id="rolealtree" name="role" value="D" />
+                  <input type="hidden" id="idpaltree" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                     <p id="editMessageAltre"></p>
                               <div class="row mb-4">

@@ -27,8 +27,8 @@ if(isset($_REQUEST['actuacio'])){
 
 //NUM EQUIPS
 $num_equips = 0;
-if(isset($_REQUEST['num_equips'])){
-	$num_equips = ($_REQUEST['num_equips']);  // No sempre hi és !!!
+if(isset($_REQUEST['nequips'])){
+	$num_equips = ($_REQUEST['nequips']);  // No sempre hi és !!!
 }
 
 $vinculat = ($_REQUEST['vinculat']);

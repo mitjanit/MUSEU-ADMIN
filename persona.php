@@ -955,7 +955,7 @@ $nomTaula = "Persona";
                                     <th>Club</th>
                                     <th>Càrrec</th>
                                     <th>Categoria</th>
-                                    <th class="none">Representant</th>
+                                    <th>Representant</th>
                                     <th>N.Equips</th>
                                     <th class="none">Detalls</th>
                                     <th>PJ</th>
@@ -2118,7 +2118,8 @@ $nomTaula = "Persona";
       else { 
         txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
                       "<p><b> Directiu: </b><?php echo $nomComplet;?>"+"</p>"+
-                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Club: </b>"+data[0][3]+"</p>");
         $('#idtrajectoriad').val(data[0][0]);
         $('#roled').val("Directiu");
       }
@@ -2138,7 +2139,8 @@ $nomTaula = "Persona";
       else { 
         txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
                       "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
-                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Club: </b>"+data[0][3]+"</p>");
         $('#idtrajectoriad').val(data[0][0]);
         $('#roled').val("Altre Càrrec");
       }
