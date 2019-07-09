@@ -14,7 +14,7 @@ $ficha = $_REQUEST['ficha'];
 $entrevistes = $_REQUEST['entrevistes'];
 $neix = $_REQUEST['naixement'];
 $mort = $_REQUEST['mort'];
-$detalls_mort = (addslashes($_REQUEST['detallsmort']));
+$detallsmort = (addslashes($_REQUEST['detallsmort']));
 $detalls = (addslashes($_REQUEST['detalls']));
 $detalls2 = (addslashes($_REQUEST['detalls2']));
 $material = (addslashes($_REQUEST['materials']));
@@ -26,7 +26,7 @@ $poble = $_REQUEST['poblacio'];
 $provincia = $_REQUEST['provincia'];
 $pais = $_REQUEST['pais'];
 
-$sql ="UPDATE persones SET nom_esportiu =  '".$nome."', nom = '".$nom."', ap1 = '".$ap1."', ap2 = '".$ap2."', croniques = '".$croniques."', fotos = '".$fotos."', entrevistes = '".$entrevistes."', data_naixament =  '".$naixement."', mort = '".$mort."', mort_detall = '".$detallsmort."', detalls = '".$detalls."', material =  '".$material."', ficha = '".$ficha."', dada1 = '".$dada1."', dada2 = '".$dada2."', dada3 = '".$dada3."', detalls2 = '".$detalls2."', dni = '".$dni."' WHERE id='".$id."'";
+$sql ="UPDATE persones SET nom_esportiu =  '".$nome."', nom = '".$nom."', ap1 = '".$ap1."', ap2 = '".$ap2."', croniques = '".$croniques."', fotos = '".$fotos."', entrevistes = '".$entrevistes."', data_naixament =  '".$neix."', mort = '".$mort."', mort_detall = '".$detallsmort."', detalls = '".$detalls."', material =  '".$material."', ficha = '".$ficha."', dada1 = '".$dada1."', dada2 = '".$dada2."', dada3 = '".$dada3."', detalls2 = '".$detalls2."', dni = '".$dni."' WHERE id='".$id."'";
 //echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 
