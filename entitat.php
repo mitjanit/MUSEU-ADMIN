@@ -204,6 +204,14 @@
                                   <th class="none">Altre 1</th>
                                   <th class="none">Altre 2</th>
                                   <th class="none">Detalls</th>
+                                  <th class="none">Detalls Fotos</th>
+                                  <th class="none">Detalls Entrevistes</th>
+                                  <th class="none">Detalls Reportatges</th>
+                                  <th class="none">Detalls Cartells</th>
+                                  <th class="none">Detalls Llibres</th>
+                                  <th class="none">Detalls Videos</th>
+                                  <th class="none">Detalls Altre 1</th>
+                                  <th class="none">Detalls Altre 2</th>
                                   
                               </tr>
                           </thead>
@@ -231,6 +239,14 @@
                                   <td><?php echo ($row['altre1']); ?></td>
                                   <td><?php echo ($row['altre2']); ?></td>
                                   <td><?php echo ($row['detalls']); ?></td>
+                                  <td><?php echo ($row['fotod']); ?></td>
+                                  <td><?php echo ($row['entrevistad']); ?></td>
+                                  <td><?php echo ($row['reportatged']); ?></td>
+                                  <td><?php echo ($row['cartelld']); ?></td>
+                                  <td><?php echo ($row['llibred']); ?></td>
+                                  <td><?php echo ($row['videod']); ?></td>
+                                  <td><?php echo ($row['altre1d']); ?></td>
+                                  <td><?php echo ($row['altre2d']); ?></td>
                                 </tr>
                                 <?php
                                     }
@@ -387,7 +403,14 @@
                                     <th>Video</th>
                                     <th class="none">Altre 1</th>
                                     <th class="none">Altre 2</th>
-                                    <th class="none">Detalls 3</th>
+                                    <th class="none">Detalls Foto</th>
+                                    <th class="none">Detalls Entrevista</th>
+                                    <th class="none">Detalls Reportatge</th>
+                                    <th class="none">Detalls Cartell</th>
+                                    <th class="none">Detalls Programa</th>
+                                    <th class="none">Detalls Video</th>
+                                    <th class="none">Detalls Altre 1</th>
+                                    <th class="none">Detalls Altre 2</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -423,7 +446,14 @@
                                     <td><?php echo $row['video']; ?></td>
                                     <td><?php echo ($row['altre1']); ?></td>
                                     <td><?php echo ($row['altre2']); ?></td>
-                                    <td><?php echo ($row['detalls3']); ?></td>
+                                    <td><?php echo ($row['fotod']); ?></td>
+                                    <td><?php echo ($row['entrevistad']); ?></td>
+                                    <td><?php echo ($row['cronicad']); ?></td>
+                                    <td><?php echo ($row['cartelld']); ?></td>
+                                    <td><?php echo ($row['programad']); ?></td>
+                                    <td><?php echo ($row['videod']); ?></td>
+                                    <td><?php echo ($row['altre1d']); ?></td>
+                                    <td><?php echo ($row['altre2d']); ?></td>
                                 </tr>
                                 <?php
                                     }
@@ -766,8 +796,9 @@
             txt = $('<b>ERROR: No has seleccionat cap competició per eliminar.</b>');}
           else { 
             txt = $("<p><b>Vols esborrar les dades de la competició?</b></p> "+
-                          "<p><b> Entitat: </b><?php echo $nomComplet;?>"+"</p>"+
-                          "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+                          "<p><b> Entitat: </b><?php echo $nomComplet;?>"+".</p>"+
+                          "<p><b> Temporada: </b>"+data[0][2]+".</p>"+
+                          "<p><b> Competició: </b>"+data[0][3]+" - "+ data[0][4]+".</p>");
             $('#idcompd').val(data[0][0]);
           }
           $('#deleteMessageComps').html(txt);
@@ -792,21 +823,29 @@
           else { 
             txt = $("<b></b>");
             
-            $('#iddee').val(data[0][0]);
-            $('#temporadadee').val(data[0][2]);
-            $('#documentdee').val(data[0][3]);
-            $('#contingutdee').val(data[0][4]);
-            $('#premsadee').val(data[0][5]);
-            $('#altresdee').val(data[0][6]);
-            $('#fotodee').val(data[0][7]);
-            $('#entrevistadee').val(data[0][8]);
-            $('#reportatgedee').val(data[0][9]);
-            $('#cartelldee').val(data[0][10]);
-            $('#llibredee').val(data[0][11]);
-            $('#videodee').val(data[0][12]);
-            $('#altre1dee').val(data[0][13]);
-            $('#altre2dee').val(data[0][14]);
-            $('#detallsdee').val(data[0][15]);
+            $('#ide').val(data[0][0]);
+            $('#temporadae').val(data[0][2]);
+            $('#documente').val(data[0][3]);
+            $('#contingute').val(data[0][4]);
+            $('#premsae').val(data[0][5]);
+            $('#altrese').val(data[0][6]);
+            $('#fotosee').val(data[0][7]);
+            $('#entrevistae').val(data[0][8]);
+            $('#reportatgee').val(data[0][9]);
+            $('#cartelle').val(data[0][10]);
+            $('#llibree').val(data[0][11]);
+            $('#videoe').val(data[0][12]);
+            $('#altre1ee').val(data[0][13]);
+            $('#altre2ee').val(data[0][14]);
+            $('#detallse').val(data[0][15]);
+            $('#detallsfotose').val(data[0][16]);
+            $('#detallsentrevistae').val(data[0][17]);
+            $('#detallsreportatgee').val(data[0][18]);
+            $('#detallscartelle').val(data[0][19]);
+            $('#detallsllibree').val(data[0][20]);
+            $('#detallsvideoe').val(data[0][21]);
+            $('#detallsaltre1e').val(data[0][22]);
+            $('#detallsaltre2e').val(data[0][23]);
 
             
           }
@@ -867,15 +906,23 @@
             $('#actuacioaee').val(data[0][4]);
             $('#detalls1aee').val(data[0][5]);
             $('#detalls2aee').val(data[0][6]);
-            $('#fotoaee').val(data[0][7]);
-            $('#entrevistaaee').val(data[0][8]);
-            $('#reportatgeaee').val(data[0][9]);
-            $('#cartellaee').val(data[0][10]);
-            $('#llibreaee').val(data[0][11]);
-            $('#videoaee').val(data[0][12]);
+
+            $('#fotosaee1').val(data[0][7]);
+            $('#entrevistaee1').val(data[0][8]);
+            $('#reportatgaee1').val(data[0][9]);
+            $('#cartellaee1').val(data[0][10]);
+            $('#programaaee1').val(data[0][11]);
+            $('#videoaee1').val(data[0][12]);
             $('#altre1aee').val(data[0][13]);
             $('#altre2aee').val(data[0][14]);
-            $('#detalls3aee').val(data[0][15]);
+            $('#detallsfotosaee').val(data[0][15]);
+            $('#detallsentrevistaee').val(data[0][16]);
+            $('#detallsreportatgaee').val(data[0][17]);
+            $('#detallscartellaee').val(data[0][18]);
+            $('#detallsprogramaaee').val(data[0][19]);
+            $('#detallsvideoaee').val(data[0][20]);
+            $('#detallsaltre1aee').val(data[0][21]);
+            $('#detallsaltre2aee').val(data[0][22]);
 
             
           }

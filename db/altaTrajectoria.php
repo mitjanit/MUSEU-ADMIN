@@ -8,8 +8,18 @@ $idp = $_REQUEST['idp'];
 $role = $_REQUEST['role'];
 $temporada = addslashes($_REQUEST['temporada']);
 $demarcacio = ($_REQUEST['demarcacio']);
-$carrec = ($_REQUEST['carrec']);  // No sempre hi és !!!
-$actuacio = ($_REQUEST['actuació']);  // No sempre hi és !!!
+$carrec=1;
+if(isset($_REQUEST['carrec'])){
+	$carrec = ($_REQUEST['carrec']);  // No sempre hi és !!!
+}
+$actuacio = "";
+if(isset($_REQUEST['actuacio'])){
+	$actuacio = ($_REQUEST['actuacio']);  // No sempre hi és !!!
+}
+$num_equips = 0;
+if(isset($_REQUEST['num_equips'])){
+	$num_equips = ($_REQUEST['num_equips']);  // No sempre hi és !!!
+}
 $vinculat = ($_REQUEST['vinculat']);
 $visitant = ($_REQUEST['visitant']);
 $entrenador = (addslashes($_REQUEST['entrenador']));
@@ -19,8 +29,12 @@ $categoria = $_REQUEST['categoria'];
 $competicio = $_REQUEST['competicio'];
 $pj = $_REQUEST['pj'];
 $resultat = (addslashes($_REQUEST['resultat']));
-$pc = $_REQUEST['pc'];
-$ps = $_REQUEST['ps'];
+$pg = $_REQUEST['pc'];
+$pe = $_REQUEST['ps'];
+$pp = 0;
+if(isset($_REQUEST['pp'])){
+	$pp = ($_REQUEST['pp']);  // No sempre hi és !!!
+}
 $gf = $_REQUEST['gf'];
 $gc = $_REQUEST['gc'];
 $classif = (addslashes($_REQUEST['classif']));

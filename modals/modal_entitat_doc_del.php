@@ -9,8 +9,9 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormDeleteDocs" id="modalFormDeleteDocs" action="deleteDocEntitat.php" method="get">
+                <form role="form" name="modalFormDeleteDocs" id="modalFormDeleteDocs" action="db/deleteDocument.php" method="get">
                     <input type="hidden" name="id" id="iddocd" />
+                    <input type="hidden" id="idcd" name="idc" value="<?php echo $_REQUEST['id']; ?>" />
                         <div id="deleteBody" class="modal-body">
                             <p id="deleteMessageDocs"></p>
                         </div>

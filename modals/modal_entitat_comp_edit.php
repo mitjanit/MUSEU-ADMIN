@@ -8,7 +8,8 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEditCompEntitat" id="modalFormEditCompEntitat" class="edit-comp-validation" novalidate action="altaCompEntitat.php" method="get">
+                <form role="form" name="modalFormEditCompEntitat" id="modalFormEditCompEntitat" class="edit-comp-validation" novalidate action="db/editaCompEntitat.php" method="get">
+                  <input type="hidden" id="idclubcompe" name="idc" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                     <p id="editMessageComps"></p>
                               <div class="row mb-4">

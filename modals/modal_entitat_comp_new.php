@@ -8,7 +8,8 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNewCompEntitat" id="modalFormNewCompEntitat" class="new-comp-validation" novalidate action="altaCompEntitat.php" method="get">
+                <form role="form" name="modalFormNewCompEntitat" id="modalFormNewCompEntitat" class="new-comp-validation" novalidate action="db/altaCompEntitat.php" method="get">
+                  <input type="hidden" id="idclubcomp" name="idc" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                               <div class="row mb-4">
                                   <!-- row 0 -->
@@ -20,7 +21,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input readonly type="text" name="id" class="form-control" id="iden" placeholder="Identificador" />
+                                          <input readonly type="text" name="id" class="form-control" id="idcen" placeholder="Identificador" />
                                         </div>
                                   </div>
                                   <div class=" col-md-3">
@@ -31,7 +32,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" name="temporada" id="temporadaen" required maxlength="4" />
+                                          <input type="text" class="form-control" name="temporada" id="temporadacen" required maxlength="4" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -46,7 +47,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="competicioen" name="competicio" required>
+                                          <select class="form-control" id="competiciocen" name="competicio" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM competicions ORDER BY nom ASC";
@@ -70,7 +71,7 @@
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <select class="form-control" id="categoriaen" name="categoria" required>
+                                          <select class="form-control" id="categoriacen" name="categoria" required>
                                             <option value=""></option>
                                             <?php
                                               $query = "SELECT * FROM categories ORDER BY nom ASC";
@@ -256,7 +257,7 @@
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                      <button type="submit" class="btn btn-primary" id="btnNew">Guardar</button>
+                      <button type="submit" class="btn btn-primary" id="btnNewCompEntitat">Guardar</button>
                   </div>
                 </form>
             </div>
