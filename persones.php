@@ -351,8 +351,10 @@
                     }).prop('selected', true);
 
                     $('#e9e').attr("value", data[0][9]);   // Naixement
+                    alert("Naixement: "+data[0][9]);
                     $('#e10').attr("value", data[0][10]); // Mort
                     $('#e11e').attr("value", data[0][11]); // Detalls Mort
+                    alert("Detalls Mort: "+data[0][11]);
                     $('#e12').attr("value", data[0][12]); // Detalls
                     $('#e13').attr("value", data[0][13]); // Materials
                     $('#e14').attr("value", data[0][14]);
