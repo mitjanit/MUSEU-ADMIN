@@ -350,9 +350,9 @@
                         return $(this).text()==data[0][8];
                     }).prop('selected', true);
 
-                    $('#e9').attr("value", data[0][9]);   // Naixement
+                    $('#e9e').attr("value", data[0][9]);   // Naixement
                     $('#e10').attr("value", data[0][10]); // Mort
-                    $('#e11').attr("value", data[0][11]); // Detalls Mort
+                    $('#e11e').attr("value", data[0][11]); // Detalls Mort
                     $('#e12').attr("value", data[0][12]); // Detalls
                     $('#e13').attr("value", data[0][13]); // Materials
                     $('#e14').attr("value", data[0][14]);
