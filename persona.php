@@ -1907,7 +1907,7 @@ $nomTaula = "Persona";
         $('#actuacioae').val(data[0][4]);
 
         // Categoria selected option
-        $('#categoriaae option').filter(function(){
+        $('#categoria_ae option').filter(function(){
             return $(this).text()==data[0][5];
         }).prop('selected', true);
 
@@ -2100,6 +2100,7 @@ $nomTaula = "Persona";
                       "<p><b> Arbit: </b><?php echo $nomComplet;?>"+"</p>"+
                       "<p><b> Temporada: </b>"+data[0][2]+"</p>");
         $('#idtrajectoriad').val(data[0][0]);
+        $('#roled').val("Arbit");
       }
       $('#deleteMessageTrajectoria').html(txt);
       $('.infoTrajectoria').html("Arbit");
@@ -2119,6 +2120,7 @@ $nomTaula = "Persona";
                       "<p><b> Directiu: </b><?php echo $nomComplet;?>"+"</p>"+
                       "<p><b> Temporada: </b>"+data[0][2]+"</p>");
         $('#idtrajectoriad').val(data[0][0]);
+        $('#roled').val("Directiu");
       }
       $('#deleteMessageTrajectoria').html(txt);
       $('.infoTrajectoria').html("Directiu");
@@ -2138,6 +2140,7 @@ $nomTaula = "Persona";
                       "<p><b> Persona: </b><?php echo $nomComplet;?>"+"</p>"+
                       "<p><b> Temporada: </b>"+data[0][2]+"</p>");
         $('#idtrajectoriad').val(data[0][0]);
+        $('#roled').val("Altre Càrrec");
       }
       $('#deleteMessageTrajectoria').html(txt);
       $('.infoTrajectoria').html("Altre Càrrec");

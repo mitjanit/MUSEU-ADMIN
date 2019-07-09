@@ -20,7 +20,7 @@ if(isset($_REQUEST['carrec'])){
 	$carrec = ($_REQUEST['carrec']);  // No sempre hi és !!!
 }
 
-// ACTUACIO
+//ACTUACIO 
 $actuacio = "";
 if(isset($_REQUEST['actuacio'])){
 	$actuacio = ($_REQUEST['actuacio']);  // No sempre hi és !!!
@@ -31,7 +31,6 @@ $num_equips = 0;
 if(isset($_REQUEST['num_equips'])){
 	$num_equips = ($_REQUEST['num_equips']);  // No sempre hi és !!!
 }
-
 $vinculat = ($_REQUEST['vinculat']);
 $visitant = ($_REQUEST['visitant']);
 
@@ -43,16 +42,33 @@ if(isset($_REQUEST['entrenador'])){
 else if(isset($_REQUEST['president'])){
 	$entrenador = (addslashes($_REQUEST['president']));
 }
+else if(isset($_REQUEST['representant'])){
+	$entrenador = (addslashes($_REQUEST['representant']));
+}
 $detalls1 = (addslashes($_REQUEST['detalls1']));
 $detalls2 = (addslashes($_REQUEST['detalls2']));
 $categoria = $_REQUEST['categoria'];
 $competicio = $_REQUEST['competicio'];
 
-// PJ
-$pj = $_REQUEST['pj'];
-$resultat = (addslashes($_REQUEST['resultat']));
+// PJ o ACT
+$pj = 0;
+if(isset($_REQUEST['pj'])){
+	$pj = $_REQUEST['pj'];
+}
+else if(isset($_REQUEST['act'])){
+	$pj = $_REQUEST['act'];
+}
 
-// PG o PC
+// RESULTAT o CATEG
+$resultat = "";
+if(isset($_REQUEST['pj'])){
+	$resultat = (addslashes($_REQUEST['resultat']));
+}
+else if(isset($_REQUEST['categ'])){
+	$resultat = (addslashes($_REQUEST['categ']));
+}
+
+// PG o PC o SUP
 $pg = 0;
 if(isset($_REQUEST['pc'])){
 	$pg = $_REQUEST['pc'];
@@ -60,8 +76,11 @@ if(isset($_REQUEST['pc'])){
 else if(isset($_REQUEST['pg'])){
 	$pg = $_REQUEST['pg'];
 }
+else if(isset($_REQUEST['sup'])){
+	$pg = $_REQUEST['sup'];
+}
 
-// PE o PS
+// PE o PS o INF
 $pe = 0;
 if(isset($_REQUEST['pe'])){
 	$pe = $_REQUEST['pe'];
@@ -69,14 +88,32 @@ if(isset($_REQUEST['pe'])){
 else if(isset($_REQUEST['ps'])){
 	$pe = $_REQUEST['ps'];
 }
+else if(isset($_REQUEST['inf'])){
+	$pe = $_REQUEST['inf'];
+}
 
+// PP o JLINEA
 $pp = 0;
 if(isset($_REQUEST['pp'])){
 	$pp = ($_REQUEST['pp']);  // No sempre hi és !!!
 }
+else if(isset($_REQUEST['jlinea'])){
+	$pp = $_REQUEST['jlinea'];
+}
 
-$gf = $_REQUEST['gf'];
-$gc = $_REQUEST['gc'];
+// GF
+$gf = 0;
+if(isset($_REQUEST['gf'])){
+	$gf = ($_REQUEST['gf']);  // No sempre hi és !!!
+}
+
+// GC
+$gc = 0;
+if(isset($_REQUEST['gc'])){
+	$gc = ($_REQUEST['gc']);  // No sempre hi és !!!
+}
+
+// CLASSIF
 $classif = (addslashes($_REQUEST['classif']));
 
 
