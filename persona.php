@@ -2077,8 +2077,10 @@ $nomTaula = "Persona";
       else { 
         txt = $("<p><b>Vols esborrar les dades de la trajectòria?</b></p> "+
                       "<p><b> Entrenador: </b><?php echo $nomComplet;?>"+"</p>"+
-                      "<p><b> Temporada: </b>"+data[0][2]+"</p>");
+                      "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                      "<p><b> Club: </b>"+data[0][3]+"</p>");
         $('#idtrajectoriad').val(data[0][0]);
+        $('#roled').val("Entrenador");
       }
       $('#deleteMessageTrajectoria').html(txt);
       $('.infoTrajectoria').html("Entrenador");

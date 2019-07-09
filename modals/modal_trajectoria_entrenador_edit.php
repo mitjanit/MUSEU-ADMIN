@@ -8,7 +8,9 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edit-entrenador-validation" novalidate action="editaTrajectoria.php" method="get">
+                <form role="form" name="modalFormEdit" id="modalFormEdit" class="edit-entrenador-validation" novalidate action="db/editaTrajectoria.php" method="get">
+                  <input type="hidden" name="role" id="roleee" value="E" />
+                  <input type="hidden" name="idp" id="identrenadore" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                       <p id="editMessageEntrenador"></p>
                               <div class="row mb-4">
@@ -308,7 +310,7 @@
                               <div class="row mb-4">
                                   
                                   <div class=" col-md-12">
-                                        <label for="detalls2">Detalls:</label>
+                                        <label for="detalls2">Detalls 2:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -323,7 +325,7 @@
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                      <button type="submit" class="btn btn-primary" id="btnNew">Guardar</button>
+                      <button type="submit" class="btn btn-primary" id="btnEditTrajectoriaEntrenador">Guardar</button>
                   </div>
                 </form>
             </div>
