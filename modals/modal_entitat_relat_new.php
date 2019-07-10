@@ -64,7 +64,7 @@
                                       <i class="fa fa-info-circle"></i>
                                     </div>
                                   </div>
-                                  <textarea rows="4" class="form-control" id="relatn" name="relat" maxlength="100" ></textarea>
+                                  <textarea rows="4" class="form-control" id="relatn" name="relat" maxlength="200" ></textarea>
                                 </div>
                           </div>
 
