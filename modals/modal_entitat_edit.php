@@ -160,7 +160,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="50" class="form-control" id="e7" name="detalls" />
+                                        <input type="text" maxlength="100" class="form-control" id="e7" name="detalls" />
                                       </div>
                                 </div>
 
@@ -282,7 +282,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="50" class="form-control" id="e16" name="detalls2" />
+                                        <input type="text" maxlength="100" class="form-control" id="e16" name="detalls2" />
                                       </div>
                                 </div>
 

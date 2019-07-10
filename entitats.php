@@ -100,7 +100,6 @@
                             ?></td>
                             <td>
                                 <?php 
-                                echo $row['paisos_id'];
                                 $query_pais = "SELECT * FROM paisos WHERE id='".$row['pais_id']."'";
                                 $rspais = mysqli_query($con01, $query_pais) or die("Error: ".mysqli_error($con01));
                                 $rowpais = mysqli_fetch_array($rspais);
