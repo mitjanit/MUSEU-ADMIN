@@ -303,7 +303,7 @@
                     $('#e2').attr("value", data[0][2]);
 
                     // Pais select
-                    $('#e3 option').filter(function(){
+                    $('#e3pais option').filter(function(){
                         return $(this).text()==data[0][5];
                     }).prop('selected', true);
 
@@ -339,8 +339,8 @@
             $('form[name="modalFormEdit"]').submit();
         });
 
-        $('#e3').change(function() {
-          var pais = $("#e3 option:selected").text();
+        $('#e3pais').change(function() {
+          var pais = $("#e3pais option:selected").text();
           if(pais!="España"){
             $('#e4 option').filter(function(){
                 return $(this).text()=="No Aplicable";

@@ -67,7 +67,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <select class="form-control" id="e3" name="pais" required>
+                                        <select class="form-control" id="e3pais" name="pais" required>
                                           <option value=""></option>
                                           <option value="1">España</option>
                                           <option value="">------------</option>

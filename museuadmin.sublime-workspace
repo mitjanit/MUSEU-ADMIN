@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"detallsal",
+				"detallsaltre2"
+			],
+			[
+				"ene",
+				"entrenador"
+			],
+			[
+				"class",
+				"classificacio"
+			],
+			[
+				"con",
+				"continguts"
+			],
+			[
 				"cla",
 				"classif"
 			],
@@ -126,10 +142,6 @@
 			[
 				"text",
 				"text-align\tproperty"
-			],
-			[
-				"class",
-				"className"
 			],
 			[
 				"img",
@@ -502,46 +514,34 @@
 			[
 				"Mut",
 				"Mutation"
-			],
-			[
-				"mu",
-				"Mutation"
-			],
-			[
-				"mut",
-				"mutateRate"
-			],
-			[
-				"stop",
-				"stopEvolution"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "db/altaTrajectoria.php",
+			"file": "modals/modal_persona_edit.php",
 			"settings":
 			{
-				"buffer_size": 2765,
+				"buffer_size": 24350,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "modals/modal_trajectoria_jugador_new.php",
+			"file": "db/editaPersona.php",
 			"settings":
 			{
-				"buffer_size": 21943,
+				"buffer_size": 1827,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "persona.php",
+			"file": "persones.php",
 			"settings":
 			{
-				"buffer_size": 114729,
+				"buffer_size": 19081,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -625,10 +625,48 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www/museu/MUSEU-ADMIN",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/museu/MUSEU-ADMIN/persona.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaTrajectoria.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaTrajectoria.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_altre_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_directiu_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_altre_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_directiu_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_arbit_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_arbit_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteTrajectoria.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_del.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/logs.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/entitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaActEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteActEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_del.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaActEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_edit2.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaCompEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaCompEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteCompEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_del.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_competicio_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_del.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteDocument.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaDocument.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaDocument.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaCarrec.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/entitats.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/poblacions.php",
@@ -643,19 +681,15 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaEntitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaEntitat.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteEntitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/persona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaRelat.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaRelat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deletePersona.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_poblacio_edit.php",
@@ -666,7 +700,6 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_carrec_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_carrec_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_carrec_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_arbit_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_categoria_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_categoria_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_categoria_del.php",
@@ -674,26 +707,10 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_competicio_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_tipus_act_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_tipus_act_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/logs.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_competicio_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteTipusActivitats.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_competicio_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/entitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/array.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_directiu_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_altre_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_arbit_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/comunitats.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/paisos.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/provincies.php",
@@ -701,8 +718,6 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_jugador_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_arbit_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_jugador_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_altre_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_directiu_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_arbit_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_entrenador_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_directiu_new.php",
@@ -742,25 +757,11 @@
 		"/C/wamp/www/museu/logout.php",
 		"/C/wamp/www/museu/common/head.php",
 		"/C/wamp/www/museu/common/notifications.php",
-		"/C/wamp/www/museu/common/mysessions.php",
-		"/C/wamp/www/museu/tables.html",
-		"/C/Users/ToniMitjanit/Desktop/Signin Template for Bootstrap.html",
-		"/C/wamp/www/museu/common/modalout.php",
-		"/C/wamp/www/museu/common/footer.php",
-		"/C/wamp/www/museu/login2.php",
-		"/C/wamp/www/museu/css/sb-admin-2.css",
-		"/C/wamp/www/museu/login.php",
-		"/C/wamp/www/WEBS/isim/pages/pacients.php",
-		"/C/wamp/www/WEBS/fpq4/pcs/llistat_ordinadors.php",
-		"/C/wamp/www/WEBS/fpq4/signatura/llistatactivitats.php",
-		"/C/wamp/www/WEBS/museu/common/navigation.php",
-		"/C/wamp/www/WEBS/museu/common/shortcuts.php",
-		"/C/wamp/www/WEBS/museu/common/index.php",
-		"/C/wamp/www/WEBS/museu/common/notificacions.php"
+		"/C/wamp/www/museu/common/mysessions.php"
 	],
 	"find":
 	{
-		"height": 78.0
+		"height": 76.0
 	},
 	"find_in_files":
 	{
@@ -775,6 +776,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"btn-edit-docs",
 			"Spain",
 			"insignia",
 			"Spain",
@@ -800,24 +802,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "db/altaTrajectoria.php",
+					"file": "modals/modal_persona_edit.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2765,
+						"buffer_size": 24350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								300,
-								300
+								14756,
+								14756
 							]
 						],
 						"settings":
@@ -841,415 +843,61 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 174.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "modals/modal_trajectoria_jugador_new.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21943,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12634,
-								12634
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5916.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "persona.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 114729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								17794,
-								17794
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_square_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -1257,15 +905,15 @@
 								{
 									"1":
 									[
-										17794,
-										17795
+										14756,
+										14757
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
+										"Packages/BracketHighlighter/icons/double_quote.png",
 										"region.greenish"
 									]
 								},
@@ -1273,8 +921,8 @@
 								{
 									"1":
 									[
-										17785,
-										17786
+										14751,
+										14752
 									]
 								},
 								"unmatched":
@@ -1283,71 +931,455 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
-								"bh_default_content"
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9123.0,
+						"translation.y": 5175.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "db/editaPersona.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 150.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "persones.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14315,
+								14315
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										14563,
+										14564
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										14534,
+										14535
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										15123,
+										15124
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										13238,
+										13239
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6450.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1355,7 +1387,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 40.0
+		"height": 38.0
 	},
 	"input":
 	{
@@ -1400,7 +1432,7 @@
 	"project": "museuadmin.sublime-project",
 	"replace":
 	{
-		"height": 76.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1442,7 +1474,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 249.0,
+	"side_bar_width": 382.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
