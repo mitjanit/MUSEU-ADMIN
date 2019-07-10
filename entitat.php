@@ -161,6 +161,9 @@
           <li class="nav-item">
             <a class="nav-link" id="acts-tab" data-toggle="tab" href="#acts" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-calendar"></i> Activitats</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" id="relats-tab" data-toggle="tab" href="#relats" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-comments"></i> Relats</a>
+          </li>
         </ul>
 
         <!-- tab contents -->
@@ -469,6 +472,65 @@
             </div>
           </div>
 
+          <div class="tab-pane fade" id="relats" role="tabpanel" aria-labelledby="relats-tab">
+            <!-- Activitats table -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-calendar"></i> Relats de l'Entitat // <span id="entitatRelats"></span>.</h6>
+
+                </div>
+                <div class="card-body">
+                  <div class="row mb-4" id="relats-botons">
+                      <div class=" col-md-6">
+                          <div class="btn-group"  role="group">
+                              <button type="button" class="btn btn-primary btn-new-relats" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit-relats" data-toggle="modal" data-target="#myEditModalRelat"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-relats" data-toggle="modal" data-target="#myDeleteModalRelat"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          </div>
+                      </div>
+                      <div class="col-md-6"></div>
+                  </div>
+
+                  <!-- row activitats entitat -->
+                  <div class="row mb-4" >
+                    <div class="table-responsive overflow-hidden">
+                        <table width="100%" class="table table-striped table-bordered table-hover display" id="dtRelatsEntitat">
+                            <thead>
+                                <tr>
+                                    <th class="none">Id</th>
+                                    <th class="none">Id Entitat</th>
+                                    <th>Temporada</th>
+                                    <th>Relat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    $sql ="SELECT * FROM caixo_club
+                                            WHERE club='".$_REQUEST['id']."'
+                                            ORDER BY temporada ASC";
+                                    $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
+                                    while ($row = mysqli_fetch_array($rs)){
+                                ?>
+                                <tr>
+                                    <td><?php echo $row['id']; ?></td>
+                                    <td><?php echo $row['club']; ?></td>
+                                    <td><?php echo $row['temporada']; ?></td>
+                                    <td><?php echo ($row['comentari']); ?></td>
+                                </tr>
+                                <?php
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
+                      <!-- /.col -->
+                    </div>
+                  <!-- /.row -->
+                  </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <!-- end tab contents -->
 
@@ -512,6 +574,10 @@
   <?php include 'modals/modal_entitat_act_edit.php'; ?>
   <?php include 'modals/modal_entitat_act_del.php'; ?>
 
+  <?php include 'modals/modal_entitat_relat_new.php'; ?>
+  <?php include 'modals/modal_entitat_relat_edit.php'; ?>
+  <?php include 'modals/modal_entitat_relat_del.php'; ?>
+
 
   <?php include("common/end.php") ?>
 
@@ -536,6 +602,7 @@
         $('#entitatComps').html(nomEntitat);
         $('#entitatDocs').html(nomEntitat);
         $('#entitatActs').html(nomEntitat);
+        $('#entitatRelats').html(nomEntitat);
 
         $('#dtNumsEntitat').DataTable({
             responsive: false,
@@ -712,6 +779,62 @@
         });
 
         tActs.buttons().container().appendTo( '#acts-botons .col-md-6:eq(1)' );
+
+        var tRelats = $('#dtRelatsEntitat').DataTable({
+            responsive: true,
+            select: true,
+            autoWidth: false,
+            columnDefs: [ { "width": "10%", "targets": 2 }  ],
+            buttons: [
+                {
+                    extend:    'copyHtml5',
+                    text:      '<i class="fas fa-clone"></i> Copiar',
+                    titleAttr: 'Copia'
+                },
+                {
+                    extend:    'excelHtml5',
+                    text:      '<i class="fas fa-file-excel"></i> Excel',
+                    titleAttr: 'Excel'
+                },
+                {
+                    extend:    'csvHtml5',
+                    text:      '<i class="fas fa-file-csv"></i> CSV',
+                    titleAttr: 'CSV'
+                },
+                {
+                    extend:    'pdfHtml5',
+                    text:      '<i class="fas fa-file-pdf"></i> PDF',
+                    titleAttr: 'PDF'
+                }
+            ],
+            language: {
+              "lengthMenu": "Mostrar _MENU_ files per pàgina",
+              "zeroRecords": "No s'han trobat dades",
+              "info": "Mostrant pàgina _PAGE_ de _PAGES_",
+              "infoEmpty": "Sense files disponibles",
+              "infoFiltered": "(filtrats de _MAX_ de files)",
+              "search": "Cercar",
+              "sInfoPostFix":  "",
+              "sSearch":       "Filtrar:",
+              "sUrl": "",
+              "oPaginate": {
+                  "sFirst":    "Primer",
+                  "sPrevious": "Anterior",
+                  "sNext":     "Següent",
+                  "sLast":     "Darrer"
+              },
+              "buttons": {
+                              "copyTitle": '<i class="fas fa-clone"></i> Copiar Dades',
+                              "copyKeys": 'Premeu <i>ctrl</i> o <i>\u2318</i> + <i>C</i> per copiar les dades de la taula al vostre porta-retalls. <br><br>Per cancel·lar, feu clic en aquest missatge o premeu Esc.',
+                              "copySuccess": {
+                                  _: '%d linies copiades',
+                                  1: '1 linia copiada'
+                              }
+                          }
+            }
+        });
+
+        tRelats.buttons().container().appendTo( '#relats-botons .col-md-6:eq(1)' );
 
 
         // Missatge max-length
@@ -959,6 +1082,57 @@
 
         $('#btnDeleteAct').click(function() {
                 $('form[name="modalFormDeleteActs"]').submit();
+        });
+
+
+        // MODAL EDIT Relat Entitat
+
+        // Modal EDIT Relat 
+        $(".btn-edit-relats").click(function() {
+
+          var esEditable = false;
+
+          var table = $('#dtRelatsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+
+          var numSelected = table.rows( { selected: true }).count();
+          if(numSelected==0) {
+              var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
+              $('#editMessageRelat').html(txt);
+          }
+          else {
+              var txt = $('<b></b>');
+              esEditable = true;
+              $('#editMessageRelat').html(txt);
+          }
+
+          if(esEditable){
+              $('#idre').attr("value", data[0][0]); // Id Relat
+              $('#temporadare').val(data[0][2]); // Temporada
+              $('#relatre').html(data[0][3]); // Relat
+          }
+          
+        });
+
+        // MODAL DELETE Relats Entitat
+
+        $(".btn-delete-relats").click(function() {
+
+          var table = $('#dtRelatsEntitat').DataTable();
+          var data=table.rows( { selected: true }).data();
+          var numSelected = table.rows( { selected: true }).count();
+          var txt;
+          if(numSelected==0) {
+            txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
+          else { 
+            txt = $("<p><b>Vols esborrar les dades del relat?</b></p> "+
+                          "<p><b> Entitat: </b><?php echo $nomComplet;?>"+"</p>"+
+                          "<p><b> Temporada: </b>"+data[0][2]+"</p>"+
+                          "<p><b> Comentari: </b>"+data[0][3]+"</p>");
+            $('#idrelatd').val(data[0][0]);
+          }
+          $('#deleteMessageRelat').html(txt);
+                
         });
 
 
