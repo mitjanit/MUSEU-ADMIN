@@ -22,7 +22,7 @@ $bandera = $_REQUEST['bandera'];
 $altre = (addslashes($_REQUEST['altre']));
 $detalls2 = (addslashes($_REQUEST['detalls2']));
 
-$sql ="UPDATE clubs SET nom =  '".$nom."', nom_esportiu = '".$nome."', inici = '".$inici."', inici_detall = '".$detallsinici."', escut = '".$escut."', himne = '".$himne."', cd = '".$cd."', insignia =  '".$insignia."', camiseta = '".$camiseta."', bufanda = '".$bufanda."', bandera = '".$bandera."', altre =  '".$altre."', detalls2 = '".$detalls2."' WHERE id='".$id."'";
+$sql ="UPDATE clubs SET nom =  '".$nom."', nom_esportiu = '".$nome."', inici = '".$inici."', inici_detall = '".$detallsinici."', escut = '".$escut."', himne = '".$himne."', cd = '".$cd."', insignia =  '".$insignia."', camiseta = '".$camiseta."', bufanda = '".$bufanda."', bandera = '".$bandera."', altre =  '".$altre."', detalls2 = '".$detalls2."', poblacions_id='".$poble."', provincia_id='".$provincia."', pais_id='".$pais."' WHERE id='".$id."'";
 echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 
