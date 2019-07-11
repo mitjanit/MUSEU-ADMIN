@@ -312,6 +312,12 @@
                     }).prop('selected', true);
 
                     // Localitat select
+
+                    var idProv = $('#e4').val();
+                    alert(idProv);
+                    $("#e5").empty();
+                    loadLocalitats(idProv, "#e5");
+
                     $('#e5 option').filter(function(){
                         return $(this).text()==data[0][3];
                     }).prop('selected', true);
