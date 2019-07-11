@@ -315,6 +315,7 @@
 
                     var idProv = $('#e4').val();
                     alert(idProv);
+                    alert(data[0][3]);
                     $("#e5").empty();
                     loadLocalitats(idProv, "#e5");
 
