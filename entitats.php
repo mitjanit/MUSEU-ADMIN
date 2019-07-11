@@ -317,12 +317,12 @@
                     alert(idProv);
                     alert(data[0][3]);
                     $("#e5").empty();
-                    loadLocalitats(idProv, "#e5");
-
+                    loadLocalitatsSelected(idProv, "#e5", data[0][3]);
+                    /*
                     $('#e5 option').filter(function(){
                         return $(this).text()==data[0][3];
                     }).prop('selected', true);
-                    
+                    */
                     $('#e6').attr("value", data[0][6]);
                     $('#e7').attr("value", data[0][7]);
                     $('#e8').attr("value", data[0][8]);
@@ -361,6 +361,31 @@
           }
 
         });
+
+        function loadLocalitatsSelected(idProv, selectID, selectedText) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var localitats = JSON.parse(this.responseText);
+              var item0 = $("<option/>", {value:"0", text:"Selecciona"});
+              $(selectID).append(item0);
+              for (l in localitats) {
+                var id = localitats[l].id;
+                var nom = localitats[l].nom;
+                var id_prov = localitats[l].provincies_id;
+                if(id_prov==idProv){
+                  var item = $("<option/>", {value:id, text:nom});
+                  if(selectedText==nom){
+                    var item = $("<option/>", {value:id, text:nom, selected:'true'});
+                  }
+                  $(selectID).append(item);
+                }
+              }
+            }
+          };
+          xhttp.open("GET", "http://34.90.92.235/api/poblacions", true);
+          xhttp.send();
+        }
 
         function loadLocalitats(idProv, selectID) {
           var xhttp = new XMLHttpRequest();
