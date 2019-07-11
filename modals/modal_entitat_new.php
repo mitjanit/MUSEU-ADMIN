@@ -88,14 +88,14 @@
                                 </div>
 
                                 <div class=" col-md-4">
-                                      <label for="provincia">Provincia :</label>
+                                      <label for="provincia">Provincia (*):</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
                                           <div class="input-group-text">
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <select class="form-control" id="provincia" name="provincia">
+                                        <select class="form-control" id="provincia" name="provincia" required>
                                           <option value=""></option>
                                           <option value="51">Menorca</option>
                                           <option value="7">Mallorca</option>
@@ -116,14 +116,14 @@
                                 </div>
 
                                 <div class=" col-md-4">
-                                      <label for="poblacio">Població :</label>
+                                      <label for="poblacio">Població (*):</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
                                           <div class="input-group-text">
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <select class="form-control" id="poblacio" name="poblacio">
+                                        <select class="form-control" id="poblacio" name="poblacio" required>
                                           <option value=""></option>
                                           <?php
                                             $queryPob = "SELECT * FROM poblacions ORDER BY nom ASC";
