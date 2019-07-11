@@ -161,7 +161,7 @@
                 </div>
                 <div class="card-body">
                   <p>Aquest és un projecte de gestió de dades del futbol menorquí gestionat per l'<b>Associació Històrica del Futbol Menorquí</b>.</p>
-                  <p>Abans d'utilitzar aquesta aplicació o en cas de dubtes, es recomana consultar el <a target="_blank" rel="nofollow" href="pdf/manual.pdf">Manual de l'Aplicació de Gestió de Dades del Museu del Futbol Menorquí &rarr;</a></p>
+                  <p>Abans d'utilitzar aquesta aplicació o en cas de dubtes, es recomana consultar el <a target="_blank" rel="nofollow" href="docs/manual.pdf">Manual de l'Aplicació de Gestió de Dades del Museu del Futbol Menorquí &rarr;</a></p>
                 </div>
               </div>
 
