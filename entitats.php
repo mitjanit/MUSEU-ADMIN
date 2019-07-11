@@ -314,8 +314,6 @@
                     // Localitat select
 
                     var idProv = $('#e4').val();
-                    alert(idProv);
-                    alert(data[0][3]);
                     $("#e5").empty();
                     loadLocalitatsSelected(idProv, "#e5", data[0][3]);
                     /*
@@ -367,8 +365,8 @@
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
               var localitats = JSON.parse(this.responseText);
-              var item0 = $("<option/>", {value:"0", text:"Selecciona"});
-              $(selectID).append(item0);
+              //var item0 = $("<option/>", {value:"0", text:"Selecciona"});
+              //$(selectID).append(item0);
               for (l in localitats) {
                 var id = localitats[l].id;
                 var nom = localitats[l].nom;
