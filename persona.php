@@ -108,9 +108,31 @@ $nomTaula = "Persona";
                                       ?>
                                       <tr>
                                           <td><?php echo $row['dni']; ?></td>
-                                          <td><?php echo $row['poblacions_id']; ?></td>
-                                          <td><?php echo $row['provincia_id']; ?></td>
-                                          <td><?php echo $row['paisos_id']; ?></td>
+                                          <td><?php 
+                                              if($row['poblacions_id']!=NULL){
+                                                  $query_pob = "SELECT * FROM poblacions WHERE id='".$row['poblacions_id']."'";
+                                                  $rsp = mysqli_query($con01, $query_pob) or die("Error: ".mysqli_error($con01));
+                                                  $rowp = mysqli_fetch_array($rsp);
+                                                  echo $rowp['nom'];
+                                              }
+                                          ?>
+                                          </td>
+                                          <td><?php if($row['provincia_id']!=NULL){
+                                                  $query_prov = "SELECT * FROM provincies WHERE id='".$row['provincia_id']."'";
+                                                  $rsprov = mysqli_query($con01, $query_prov) or die("Error: ".mysqli_error($con01));
+                                                  $rowprov = mysqli_fetch_array($rsprov);
+                                                  echo ($rowprov['nom']);
+                                              } 
+                                          ?>
+                                          </td>
+                                          <td><?php  if($row['paisos_id']!=NULL){
+                                              $query_pais = "SELECT * FROM paisos WHERE id='".$row['paisos_id']."'";
+                                                  $rspais = mysqli_query($con01, $query_pais) or die("Error: ".mysqli_error($con01));
+                                                  $rowpais = mysqli_fetch_array($rspais);
+                                                  echo ($rowpais['nom']); 
+                                                }
+                                          ?> 
+                                          </td>
                                           <td><?php echo $row['data_naixament']; ?></td>
                                           <td><?php echo $row['mort']; ?></td>
                                           <td><?php echo ($row['mort_detall']); ?></td>
