@@ -32,7 +32,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="4" class="form-control" name="temporada" id="temporadan" required />
+                                        <input type="text" maxlength="7" class="form-control" name="temporada" id="temporadan" required />
                                         <div class="invalid-feedback">
                                           <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                         </div>
