@@ -124,7 +124,7 @@
                                               $queryPaisos = "SELECT * FROM paisos ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryPaisos) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                if($row['nom']!="España" && $row['nom']!="Desconocido"){){
+                                                if($row['nom']!="España" && $row['nom']!="Desconocido"){
                                                   echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                                 }
                                               }
