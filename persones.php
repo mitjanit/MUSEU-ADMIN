@@ -397,6 +397,7 @@
             if (this.readyState == 4 && this.status == 200) {
               var localitats = JSON.parse(this.responseText);
               var item0 = $("<option/>", {value:"0", text:"Selecciona"});
+              var item0 = $("<option/>", {value:"72", text:"Desconocido"});
               $(selectID).append(item0);
               for (l in localitats) {
                 var id = localitats[l].id;
