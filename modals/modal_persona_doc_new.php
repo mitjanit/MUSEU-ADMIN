@@ -125,12 +125,14 @@
                                   <li class="nav-item">
                                     <a class="nav-link" id="reportatges-tab" data-toggle="tab" href="#reportatges" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-file-alt"></i> Reportatges</a>
                                   </li>
+                                  <!--
                                   <li class="nav-item">
                                     <a class="nav-link" id="llibres-tab" data-toggle="tab" href="#llibres" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-book"></i> Llibres</a>
                                   </li>
                                   <li class="nav-item">
                                     <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-video"></i> Videos</a>
                                   </li>
+                                -->
                                   <li class="nav-item">
                                     <a class="nav-link" id="altre1-tab" data-toggle="tab" href="#altre1" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-one"></i> Altre 1</a>
                                   </li>
@@ -284,7 +286,8 @@
                                       </div>
 
                                   </div>
-
+                                  
+                                  <!--
                                   <div class="tab-pane fade" id="llibres" role="tabpanel" aria-labelledby="llibres-tab">
 
                                       <div class="row">
@@ -356,7 +359,7 @@
                                     </div>
 
                                   </div>                           
-
+                                  -->
 
                                   <div class="tab-pane fade" id="altre1" role="tabpanel" aria-labelledby="altre1-tab">
 
