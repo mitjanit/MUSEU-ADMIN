@@ -21,7 +21,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input readonly type="text" name="id" class="form-control" id="idden" placeholder="Id"/>
+                                        <input readonly type="text" name="id" class="form-control" id="iddpn" placeholder="Id"/>
                                       </div>
                                 </div>
                                 <div class=" col-md-2">
