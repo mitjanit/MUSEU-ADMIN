@@ -1157,57 +1157,53 @@ $nomTaula = "Persona";
                                     <th>Continguts</th>
                                     <th>Premsa</th>
                                     <th class="none">Altres</th>
+                                    <th>Fitxa</th>
                                     <th>Foto</th>
                                     <th>Entre</th>
                                     <th>Repor</th>
-                                    <th>Cartel</th>
-                                    <th>Llibre</th>
-                                    <th>Video</th>
                                     <th class="none">Altre 1</th>
                                     <th class="none">Altre 2</th>
+                                    <th class="none">Altre 3</th>
                                     <th class="none">Detalls</th>
+                                    <th class="none">Detalls Fitxa</th>
                                     <th class="none">Detalls Fotos</th>
                                     <th class="none">Detalls Entrevistes</th>
                                     <th class="none">Detalls Reportatges</th>
-                                    <th class="none">Detalls Cartells</th>
-                                    <th class="none">Detalls Llibres</th>
-                                    <th class="none">Detalls Videos</th>
                                     <th class="none">Detalls Altre 1</th>
                                     <th class="none">Detalls Altre 2</th>
+                                    <th class="none">Detalls Altre 3</th>
                                 </tr>
                             </thead>
                               <tbody><?php
-                                        $sql ="SELECT * FROM document_entitat
-                                              WHERE id_entitat='".$_REQUEST['id']."'
+                                        $sql ="SELECT * FROM document_persona
+                                              WHERE id_persona='".$_REQUEST['id']."'
                                               ORDER BY temporada ASC";
                                         $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
                                         while ($row = mysqli_fetch_array($rs)){
                                     ?>
                                     <tr>
                                       <td><?php echo $row['id']; ?></td>
-                                      <td><?php echo $row['id_entitat']; ?></td>
+                                      <td><?php echo $row['id_persona']; ?></td>
                                       <td><?php echo $row['temporada']; ?></td>
                                       <td><?php echo ($row['document']); ?></td>
                                       <td><?php echo ($row['continguts']); ?></td>
                                       <td><?php echo ($row['premsa']); ?></td>
                                       <td><?php echo ($row['altres']); ?></td>
+                                      <td><?php echo $row['fitxa']; ?></td>
                                       <td><?php echo $row['foto']; ?></td>
                                       <td><?php echo $row['entrevista']; ?></td>
                                       <td><?php echo $row['reportatge']; ?></td>
-                                      <td><?php echo $row['cartell']; ?></td>
-                                      <td><?php echo $row['llibre']; ?></td>
-                                      <td><?php echo $row['video']; ?></td>
                                       <td><?php echo ($row['altre1']); ?></td>
                                       <td><?php echo ($row['altre2']); ?></td>
+                                      <td><?php echo ($row['altre3']); ?></td>
                                       <td><?php echo ($row['detalls']); ?></td>
+                                      <td><?php echo ($row['fitxad']); ?></td>
                                       <td><?php echo ($row['fotod']); ?></td>
                                       <td><?php echo ($row['entrevistad']); ?></td>
                                       <td><?php echo ($row['reportatged']); ?></td>
-                                      <td><?php echo ($row['cartelld']); ?></td>
-                                      <td><?php echo ($row['llibred']); ?></td>
-                                      <td><?php echo ($row['videod']); ?></td>
                                       <td><?php echo ($row['altre1d']); ?></td>
                                       <td><?php echo ($row['altre2d']); ?></td>
+                                      <td><?php echo ($row['altre3d']); ?></td>
                                     </tr>
                                     <?php
                                         }
