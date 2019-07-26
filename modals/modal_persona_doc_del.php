@@ -1,17 +1,17 @@
 <!-- dialeg modal DELETE -->
     <!---->
     <div class="modal fade" id="myDeleteModalDocs" tabindex="-1" role="dialog" aria-labelledby="myDeleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog"  role="document">
+        <div class="modal-dialog modal-md"  role="document">
             <div class="modal-content deleteModal">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-trash-alt"></i> Elimina Document Entitat | <?php echo $nomComplet; ?></h5>
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-trash-alt"></i> Elimina Document Persona | <?php echo $nomComplet; ?></h5>
                   <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormDeleteDocs" id="modalFormDeleteDocs" action="db/deleteDocument.php" method="get">
-                    <input type="hidden" name="id" id="iddocd" />
-                    <input type="hidden" id="idcd" name="idc" value="<?php echo $_REQUEST['id']; ?>" />
+                <form role="form" name="modalFormDeleteDocs" id="modalFormDeleteDocs" action="db/deleteDocumentPersona.php" method="get">
+                    <input type="hidden" name="id" id="iddocpd" />
+                    <input type="hidden" id="idpd" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                         <div id="deleteBody" class="modal-body">
                             <p id="deleteMessageDocs"></p>
                         </div>

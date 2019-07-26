@@ -8,9 +8,10 @@
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormeditPersonaDoc" id="modalFormEditPersonaDoc" class="edit-doc-validation" novalidate action="db/editaDocumentPersona.php" method="get">
+                <form role="form" name="modalFormEditPersonaDoc" id="modalFormEditPersonaDoc" class="edit-doc-validation" novalidate action="db/editaDocumentPersona.php" method="get">
                   <input type="hidden" id="idpe" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                 <div id="newBody" class="modal-body">
+                    <p id="editMessageDocs"></p>
                             <div class="row mb-4">
                                 <!-- row 0 -->
                                 <div class=" col-md-2">
@@ -21,7 +22,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input readonly type="text" name="id" class="form-control" id="iddpe" placeholder="Id"/>
+                                        <input readonly type="text" name="id" class="form-control" id="iddpe"/>
                                       </div>
                                 </div>
                                 <div class=" col-md-2">
@@ -32,7 +33,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="7" class="form-control" name="temporada" id="temporadan" required />
+                                        <input type="text" maxlength="7" class="form-control" name="temporada" id="temporadadpe" required />
                                         <div class="invalid-feedback">
                                           <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                         </div>
@@ -47,7 +48,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="50" class="form-control" id="documentn" name="document" />
+                                        <input type="text" maxlength="50" class="form-control" id="documentde" name="document" />
                                       </div>
                                 </div>
 
@@ -59,7 +60,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="50" class="form-control" id="contingutn" name="contingut" />
+                                        <input type="text" maxlength="50" class="form-control" id="contingutde" name="contingut" />
                                       </div>
                                 </div>
 
@@ -75,7 +76,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" class="form-control" id="premsan" name="premsa" maxlength="50" />
+                                        <input type="text" class="form-control" id="premsade" name="premsa" maxlength="50" />
                                       </div>
                                 </div>
 
@@ -87,7 +88,7 @@
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="50" class="form-control" id="altresn" name="altres" />
+                                        <input type="text" maxlength="50" class="form-control" id="altresde" name="altres" />
                                       </div>
                                 </div>
 
@@ -102,7 +103,7 @@
                                                         <i class="fa fa-info-circle"></i>
                                                       </div>
                                                     </div>
-                                                    <input type="text" class="form-control" id="detallsn" name="detalls" maxlength="100" />
+                                                    <input type="text" class="form-control" id="detallsdpe" name="detalls" maxlength="100" />
                                                   </div>
                                 </div>
 
@@ -112,18 +113,18 @@
                             </div>
                             <!--<div class="row mb-4">-->
                               <!-- Tabs (Fotos, ....) -->
-                                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                                <ul class="nav nav-tabs nav-justified" id="myTabe" role="tablist">
                                   <li class="nav-item">
-                                    <a class="nav-link active" id="fitxa-tab" data-toggle="tab" href="#fitxa" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-file"></i> Fitxa</a>
+                                    <a class="nav-link active" id="fitxa-tabe" data-toggle="tab" href="#fitxae" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-file"></i> Fitxa</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" id="fotos-tab" data-toggle="tab" href="#fotos" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-camera"></i> Fotos</a>
+                                    <a class="nav-link" id="fotos-tabe" data-toggle="tab" href="#fotose" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-camera"></i> Fotos</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" id="entrevistes-tab" data-toggle="tab" href="#entrevistes" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-microphone"></i> Entrevistes</a>
+                                    <a class="nav-link" id="entrevistes-tabe" data-toggle="tab" href="#entrevistese" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-microphone"></i> Entrevistes</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" id="reportatges-tab" data-toggle="tab" href="#reportatges" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-file-alt"></i> Reportatges</a>
+                                    <a class="nav-link" id="reportatges-tabe" data-toggle="tab" href="#reportatgese" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-file-alt"></i> Reportatges</a>
                                   </li>
                                   <!--
                                   <li class="nav-item">
@@ -134,19 +135,19 @@
                                   </li>
                                 -->
                                   <li class="nav-item">
-                                    <a class="nav-link" id="altre1-tab" data-toggle="tab" href="#altre1" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-one"></i> Altre 1</a>
+                                    <a class="nav-link" id="altre1-tabe" data-toggle="tab" href="#altre1e" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-one"></i> Altre 1</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" id="altre2-tab" data-toggle="tab" href="#altre2" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-two"></i> Altre 2</a>
+                                    <a class="nav-link" id="altre2-tabe" data-toggle="tab" href="#altre2e" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-two"></i> Altre 2</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" id="altre3-tab" data-toggle="tab" href="#altre3" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-three"></i> Altre 3</a>
+                                    <a class="nav-link" id="altre3-tabe" data-toggle="tab" href="#altre3e" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-three"></i> Altre 3</a>
                                   </li>
                                 </ul>
                                 <!-- tab contents -->
-                                <div class="tab-content" id="myTabContent">
+                                <div class="tab-content" id="myTabContente">
 
-                                  <div class="tab-pane fade show active" id="fitxa" role="tabpanel" aria-labelledby="fitxa-tab">
+                                  <div class="tab-pane fade show active" id="fitxae" role="tabpanel" aria-labelledby="fitxa-tabe">
 
                                       <div class="row">
                                           <div class="col">&nbsp;</div>
@@ -162,7 +163,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="number" min="0" value="0" class="form-control" id="fitxan" name="fitxa" />
+                                                  <input type="number" min="0" value="0" class="form-control" id="fitxade" name="fitxa" />
                                                 </div>
                                           </div>
 
@@ -174,14 +175,14 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="detallsfitxan" name="detallsfitxa" maxlength="100" />
+                                                  <input type="text" class="form-control" id="detallsfitxade" name="detallsfitxa" maxlength="100" />
                                                 </div>
                                           </div>
 
                                       </div>
                                   </div>
                                   
-                                  <div class="tab-pane fade" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
+                                  <div class="tab-pane fade" id="fotose" role="tabpanel" aria-labelledby="fotos-tabe">
 
                                       <div class="row">
                                           <div class="col">&nbsp;</div>
@@ -197,7 +198,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="number" min="0" value="0" class="form-control" id="fotosn" name="fotos" />
+                                                  <input type="number" min="0" value="0" class="form-control" id="fotosde" name="fotos" />
                                                 </div>
                                           </div>
 
@@ -209,14 +210,14 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="detallsfotosn" name="detallsfotos" maxlength="100" />
+                                                  <input type="text" class="form-control" id="detallsfotosde" name="detallsfotos" maxlength="100" />
                                                 </div>
                                           </div>
 
                                       </div>
                                   </div>
 
-                                  <div class="tab-pane fade" id="entrevistes" role="tabpanel" aria-labelledby="entrevistes-tab">
+                                  <div class="tab-pane fade" id="entrevistese" role="tabpanel" aria-labelledby="entrevistes-tabe">
 
                                       <div class="row">
                                           <div class="col">&nbsp;</div>
@@ -232,7 +233,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="number" min="0" value="0" class="form-control" id="entrevistan" name="entrevista" />
+                                                  <input type="number" min="0" value="0" class="form-control" id="entrevistade" name="entrevista" />
                                                 </div>
                                           </div>
 
@@ -244,7 +245,7 @@
                                                           <i class="fa fa-info-circle"></i>
                                                         </div>
                                                       </div>
-                                                      <input type="text" class="form-control" id="detallsentrevistan" name="detallsentrevista" maxlength="100" />
+                                                      <input type="text" class="form-control" id="detallsentrevistade" name="detallsentrevista" maxlength="100" />
                                                     </div>
                                           </div>
 
@@ -252,7 +253,7 @@
 
                                   </div>
 
-                                  <div class="tab-pane fade" id="reportatges" role="tabpanel" aria-labelledby="reportatges-tab">
+                                  <div class="tab-pane fade" id="reportatgese" role="tabpanel" aria-labelledby="reportatges-tabe">
 
                                       <div class="row">
                                           <div class="col">&nbsp;</div>
@@ -267,7 +268,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="number" min="0" value="0" class="form-control" id="reportatgen" name="reportatge" />
+                                                  <input type="number" min="0" value="0" class="form-control" id="reportatgede" name="reportatge" />
                                                 </div>
                                           </div>
 
@@ -279,7 +280,7 @@
                                                           <i class="fa fa-info-circle"></i>
                                                         </div>
                                                       </div>
-                                                      <input type="text" class="form-control" id="detallsreportatgen" name="detallsreportatge" maxlength="100" />
+                                                      <input type="text" class="form-control" id="detallsreportatgede" name="detallsreportatge" maxlength="100" />
                                                     </div>
                                           </div>
 
@@ -361,7 +362,7 @@
                                   </div>                           
                                   -->
 
-                                  <div class="tab-pane fade" id="altre1" role="tabpanel" aria-labelledby="altre1-tab">
+                                  <div class="tab-pane fade" id="altre1e" role="tabpanel" aria-labelledby="altre1-tabe">
 
                                   
                                     <div class="row">
@@ -378,7 +379,7 @@
                                                     <i class="fa fa-info-circle"></i>
                                                   </div>
                                                 </div>
-                                                <input type="text" maxlength="20" class="form-control" id="altre1n" name="altre1" />
+                                                <input type="text" maxlength="20" class="form-control" id="altre1de" name="altre1" />
                                               </div>
                                         </div>
 
@@ -390,7 +391,7 @@
                                                                     <i class="fa fa-info-circle"></i>
                                                                   </div>
                                                                 </div>
-                                                                <input type="text" class="form-control" id="detallsaltre1n" name="detallsaltre1" maxlength="100" />
+                                                                <input type="text" class="form-control" id="detallsaltre1de" name="detallsaltre1" maxlength="100" />
                                                               </div>
                                         </div>
 
@@ -398,7 +399,7 @@
 
                                   </div>
 
-                                  <div class="tab-pane fade" id="altre2" role="tabpanel" aria-labelledby="altre2-tab">
+                                  <div class="tab-pane fade" id="altre2e" role="tabpanel" aria-labelledby="altre2-tabe">
 
                                       <div class="row">
                                           <div class="col">&nbsp;</div>
@@ -414,7 +415,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" maxlength="20" class="form-control" id="altre2n" name="altre2" />
+                                                  <input type="text" maxlength="20" class="form-control" id="altre2de" name="altre2" />
                                                 </div>
                                           </div>
 
@@ -426,14 +427,14 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" maxlength="100" class="form-control" id="detallsaltre2n" name="detallsaltre2" maxlength="100" />
+                                                  <input type="text" maxlength="100" class="form-control" id="detallsaltre2de" name="detallsaltre2" maxlength="100" />
                                                 </div>
                                           </div>
 
                                       </div>
                                   </div>
 
-                                  <div class="tab-pane fade" id="altre3" role="tabpanel" aria-labelledby="altre3-tab">
+                                  <div class="tab-pane fade" id="altre3e" role="tabpanel" aria-labelledby="altre3-tabe">
 
                                       <div class="row">
                                           <div class="col">&nbsp;</div>
@@ -449,7 +450,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" maxlength="20" class="form-control" id="altre3n" name="altre3" />
+                                                  <input type="text" maxlength="20" class="form-control" id="altre3de" name="altre3" />
                                                 </div>
                                           </div>
 
@@ -461,7 +462,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" maxlength="100" class="form-control" id="detallsaltre3n" name="detallsaltre3" maxlength="100" />
+                                                  <input type="text" maxlength="100" class="form-control" id="detallsaltre3de" name="detallsaltre3" maxlength="100" />
                                                 </div>
                                           </div>
 
@@ -477,7 +478,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-                    <button type="submit" class="btn btn-primary" id="btnNewEntitatDoc">Guardar</button>
+                    <button type="submit" class="btn btn-primary" id="btnNewPersonaDoc">Guardar</button>
                 </div>
                 </form>
             </div>

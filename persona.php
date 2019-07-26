@@ -1137,8 +1137,8 @@ $nomTaula = "Persona";
                       <div class=" col-md-6">
                           <div class="btn-group"  role="group">
                               <button type="button" class="btn btn-primary btn-new-doc" data-toggle="modal" data-target="#myNewModalDocs"><i class="fas fa-plus-circle"></i> Alta</button>
-                              <button type="button" class="btn btn-primary btn-edit-doc" data-toggle="modal" data-target="#myEditModalDocs"><i class="fa fa-edit"></i> Edita</button>
-                              <button type="button" class="btn btn-primary btn-delete-doc" data-toggle="modal" data-target="#myDeleteModalDocs"><i class="fas fa-minus-circle"></i> Elimina</button>
+                              <button type="button" class="btn btn-primary btn-edit-docs" data-toggle="modal" data-target="#myEditModalDocs"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-docs" data-toggle="modal" data-target="#myDeleteModalDocs"><i class="fas fa-minus-circle"></i> Elimina</button>
                           </div>
                       </div>
                       <div class="col-md-6"></div>
@@ -2636,6 +2636,81 @@ $nomTaula = "Persona";
     });
 
     // End Modal DELETE Relat
+
+
+    // Documents Persona
+
+    // Modal EDIT Docs
+
+    $(".btn-edit-docs").click(function() {
+
+      var table = $('#dtDocs').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap document per editar.</b>');}
+      else { 
+        txt = $("<b></b>");
+        
+        $('#iddpe').val(data[0][0]);
+        $('#idpe').val(data[0][1]);
+        $('#temporadadpe').val(data[0][2]);
+        $('#documentde').val(data[0][3]);
+        $('#contingutde').val(data[0][4]);
+        $('#premsade').val(data[0][5]);
+        $('#altresde').val(data[0][6]);
+        $('#fitxade').val(data[0][7]);
+        $('#fotosde').val(data[0][8]);
+        $('#entrevistade').val(data[0][9]);
+        $('#reportatgede').val(data[0][10]);
+        $('#altre1de').val(data[0][11]);
+        $('#altre2de').val(data[0][12]);
+        $('#altre3de').val(data[0][13]);
+        $('#detallsdpe').val(data[0][14]);
+        $('#detallsfitxade').val(data[0][15]);
+        $('#detallsfotosde').val(data[0][16]);
+        $('#detallsentrevistade').val(data[0][17]);
+        $('#detallsreportatgede').val(data[0][18]);
+        $('#detallsaltre1de').val(data[0][19]);
+        $('#detallsaltre2de').val(data[0][20]);
+        $('#detallsaltre3de').val(data[0][21]);
+
+        
+      }
+      $('#editMessageDocs').html(txt);
+            
+    });
+
+    $('#btnEditDocs').click(function() {
+        $('form[name="modalFormEditDocPersona"]').validator();
+        $('form[name="modalFormEditDocPersona"]').submit();
+    });
+
+    // Modal DELETE Docs Entitat
+
+    $(".btn-delete-docs").click(function() {
+
+      var table = $('#dtDocs').DataTable();
+      var data=table.rows( { selected: true }).data();
+      var numSelected = table.rows( { selected: true }).count();
+      var txt;
+      if(numSelected==0) {
+        txt = $('<b>ERROR: No has seleccionat cap document per eliminar.</b>');}
+      else { 
+        txt = $("<p><b>Vols esborrar les dades del document?</b></p> "+
+                      "<p><b> Persona: </b><?php echo $nomComplet;?>"+".</p>"+
+                      "<p><b> Temporada: </b>"+data[0][2]+".</p>"+
+                      "<p><b> Document: </b>"+data[0][3]+".</p>");
+        $('#iddocpd').val(data[0][0]);
+      }
+      $('#deleteMessageDocs').html(txt);
+            
+    });
+
+    $('#btnDeleteDoc').click(function() {
+            $('form[name="modalFormDeleteDocs"]').submit();
+    });
 
 
     <?php 
