@@ -421,11 +421,9 @@
           if(provincia!="No Aplicable" && provincia!=""){
             $("#e8").empty();
             loadLocalitats(idProvincia, "#e8");
-            alert("Done");
           }
           else {
             $("#e8").empty();
-            alert("No a`plicable o buit");
           }
 
         });
