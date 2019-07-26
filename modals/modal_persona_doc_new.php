@@ -3,12 +3,12 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content newModal">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Alta Document Entitat | <?php echo $nomComplet; ?></h5>
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-square"></i> Alta Document Persona | <?php echo $nomComplet; ?></h5>
                   <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <form role="form" name="modalFormNewEntitatDoc" id="modalFormNewEntitatDoc" class="new-doc-validation" novalidate action="db/altaDocument.php" method="get">
+                <form role="form" name="modalFormNewPersonaDoc" id="modalFormNewPersonaDoc" class="new-doc-validation" novalidate action="db/altaDocumentPersona.php" method="get">
                   <input type="hidden" id="idc" name="idc" value="<?php echo $_REQUEST['id']; ?>" />
                 <div id="newBody" class="modal-body">
                             <div class="row mb-4">
@@ -40,32 +40,26 @@
                                 </div>
 
                                 <div class=" col-md-4">
-                                      <label for="nom">Document (*):</label>
+                                      <label for="nom">Document :</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
                                           <div class="input-group-text">
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="50" class="form-control" id="documentn" name="document" required />
-                                        <div class="invalid-feedback">
-                                          <i class="fas fa-exclamation-circle"></i> Camp obligatori.
-                                        </div>
+                                        <input type="text" maxlength="50" class="form-control" id="documentn" name="document" />
                                       </div>
                                 </div>
 
                                 <div class=" col-md-4">
-                                      <label for="nom">Contingut (*):</label>
+                                      <label for="nom">Contingut :</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
                                           <div class="input-group-text">
                                             <i class="fa fa-info-circle"></i>
                                           </div>
                                         </div>
-                                        <input type="text" maxlength="50" class="form-control" id="contingutn" name="contingut" required />
-                                        <div class="invalid-feedback">
-                                          <i class="fas fa-exclamation-circle"></i> Camp obligatori.
-                                        </div>
+                                        <input type="text" maxlength="50" class="form-control" id="contingutn" name="contingut" />
                                       </div>
                                 </div>
 
@@ -120,16 +114,16 @@
                               <!-- Tabs (Fotos, ....) -->
                                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                                   <li class="nav-item">
-                                    <a class="nav-link active" id="fotos-tab" data-toggle="tab" href="#fotos" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-camera"></i> Fotos</a>
+                                    <a class="nav-link active" id="fitxa-tab" data-toggle="tab" href="#fitxa" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-file"></i> Fitxa</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="fotos-tab" data-toggle="tab" href="#fotos" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-camera"></i> Fotos</a>
                                   </li>
                                   <li class="nav-item">
                                     <a class="nav-link" id="entrevistes-tab" data-toggle="tab" href="#entrevistes" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-microphone"></i> Entrevistes</a>
                                   </li>
                                   <li class="nav-item">
                                     <a class="nav-link" id="reportatges-tab" data-toggle="tab" href="#reportatges" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-file-alt"></i> Reportatges</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" id="cartells-tab" data-toggle="tab" href="#cartells" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-file-image"></i> Cartells</a>
                                   </li>
                                   <li class="nav-item">
                                     <a class="nav-link" id="llibres-tab" data-toggle="tab" href="#llibres" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-book"></i> Llibres</a>
@@ -143,11 +137,49 @@
                                   <li class="nav-item">
                                     <a class="nav-link" id="altre2-tab" data-toggle="tab" href="#altre2" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-two"></i> Altre 2</a>
                                   </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" id="altre3-tab" data-toggle="tab" href="#altre3" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-dice-three"></i> Altre 3</a>
+                                  </li>
                                 </ul>
                                 <!-- tab contents -->
                                 <div class="tab-content" id="myTabContent">
+
+                                  <div class="tab-pane fade show active" id="fitxa" role="tabpanel" aria-labelledby="fitxa-tab">
+
+                                      <div class="row">
+                                          <div class="col">&nbsp;</div>
+                                      </div>
+
+                                      <div class="row">
+
+                                          <div class=" col-md-2">
+                                                <label for="foto">Fitxa:</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="number" min="0" value="0" class="form-control" id="fitxan" name="fitxa" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-10">
+                                                <label for="foto">Detalls Fitxa:</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="detallsfitxan" name="detallsfitxa" maxlength="100" />
+                                                </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
                                   
-                                  <div class="tab-pane fade show active" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
+                                  <div class="tab-pane fade" id="fotos" role="tabpanel" aria-labelledby="fotos-tab">
 
                                       <div class="row">
                                           <div class="col">&nbsp;</div>
@@ -249,41 +281,6 @@
                                                     </div>
                                           </div>
 
-                                      </div>
-
-                                  </div>
-
-                                  <div class="tab-pane fade" id="cartells" role="tabpanel" aria-labelledby="cartells-tab">
-
-                                      <div class="row">
-                                          <div class="col">&nbsp;</div>
-                                      </div>
-
-                                      <div class="row">
-
-                                          <div class=" col-md-2">
-                                                <label for="cd">Cartells:</label>
-                                                <div class="input-group">
-                                                  <div class="input-group-prepend">
-                                                    <div class="input-group-text">
-                                                      <i class="fa fa-info-circle"></i>
-                                                    </div>
-                                                  </div>
-                                                  <input type="number" min="0" value="0" class="form-control" id="cartelln" name="cartell" />
-                                                </div>
-                                          </div>
-
-                                          <div class=" col-md-10">
-                                                        <label for="foto">Detalls Cartells:</label>
-                                                        <div class="input-group">
-                                                          <div class="input-group-prepend">
-                                                            <div class="input-group-text">
-                                                              <i class="fa fa-info-circle"></i>
-                                                            </div>
-                                                          </div>
-                                                          <input type="text" class="form-control" id="detallscartelln" name="detallscartell" maxlength="100" />
-                                                        </div>
-                                          </div>
                                       </div>
 
                                   </div>
@@ -426,7 +423,42 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" maxlength="50" class="form-control" id="detallsaltre2n" name="detallsaltre2" maxlength="100" />
+                                                  <input type="text" maxlength="100" class="form-control" id="detallsaltre2n" name="detallsaltre2" maxlength="100" />
+                                                </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+
+                                  <div class="tab-pane fade" id="altre3" role="tabpanel" aria-labelledby="altre3-tab">
+
+                                      <div class="row">
+                                          <div class="col">&nbsp;</div>
+                                      </div>
+
+                                      <div class="row">
+
+                                          <div class=" col-md-2">
+                                                <label for="altre">Altre 3:</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" maxlength="20" class="form-control" id="altre3n" name="altre3" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-10">
+                                                <label for="detalls2">Detalls Altre 3:</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" maxlength="100" class="form-control" id="detallsaltre3n" name="detallsaltre3" maxlength="100" />
                                                 </div>
                                           </div>
 
