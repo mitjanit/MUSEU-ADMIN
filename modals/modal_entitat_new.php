@@ -107,7 +107,7 @@
                                             $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
                                             $rs = mysqli_query($con01, $queryProv) or die("Error: ".mysqli_error($con01));
                                             while ($row = mysqli_fetch_array($rs)){
-                                              if($row['nom']!="Menorca" && $row['nom']!="Mallorca" && $row['nom']!="Eivissa" $row['nom']!="Desconocido" && ){
+                                              if($row['nom']!="Menorca" && $row['nom']!="Mallorca" && $row['nom']!="Eivissa" && $row['nom']!="Desconocido" ){
                                                 echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                               }
                                             }
