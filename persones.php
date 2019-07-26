@@ -376,7 +376,7 @@
 
         $('#e6').change(function() {
           var pais = $("#e6 option:selected").text();
-          if(pais!="España"){
+          if(pais!="España" && pais!="Desconocido"){
             $('#e7 option').filter(function(){
                 return $(this).text()=="No Aplicable";
             }).prop('selected', true);
@@ -397,8 +397,8 @@
             if (this.readyState == 4 && this.status == 200) {
               var localitats = JSON.parse(this.responseText);
               var item0 = $("<option/>", {value:"0", text:"Selecciona"});
-              var item1 = $("<option/>", {value:"72", text:"Desconocido"});
               $(selectID).append(item0);
+              var item1 = $("<option/>", {value:"72", text:"Desconocido"});
               $(selectID).append(item1);
               for (l in localitats) {
                 var id = localitats[l].id;
@@ -425,6 +425,7 @@
           }
           else {
             $("#e8").empty();
+            alert("No a`plicable o buit");
           }
 
         });
