@@ -201,6 +201,9 @@ $nomTaula = "Persona";
           <li class="nav-item">
             <a class="nav-link" id="altre-tab" data-toggle="tab" href="#altre" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-user-circle"></i> Altre</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" id="docs-tab" data-toggle="tab" href="#docs" role="tab" aria-controls="docs" aria-selected="false"><i class="fas fa-file"></i> Documents</a>
+          </li>
         </ul>
         <!-- tab contents -->
         <div class="tab-content" id="myTabContent">
@@ -1121,6 +1124,104 @@ $nomTaula = "Persona";
                 </div>
             </div>
           </div>
+
+          <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+            <!-- Altre table -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-file"></i> Documents | <span><?php echo $nomComplet; ?></span>.</h6>
+
+                </div>
+                <div class="card-body">
+                  <div class="row mb-4" id="docs-botons">
+                      <div class=" col-md-6">
+                          <div class="btn-group"  role="group">
+                              <button type="button" class="btn btn-primary btn-new-doc" data-toggle="modal" data-target="#myNewModalDocs"><i class="fas fa-plus-circle"></i> Alta</button>
+                              <button type="button" class="btn btn-primary btn-edit-doc" data-toggle="modal" data-target="#myEditModalDocs"><i class="fa fa-edit"></i> Edita</button>
+                              <button type="button" class="btn btn-primary btn-delete-doc" data-toggle="modal" data-target="#myDeleteModalDocs"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          </div>
+                      </div>
+                      <div class="col-md-6"></div>
+                  </div>
+
+                  <!-- row -->
+                  <div class="row mb-4" >
+                    <div class="table-responsive overflow-hidden">
+                          <table class="table table-striped table-bordered table-hover display" id="dtDocs" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="none">Id Doc</th>
+                                    <th class="none">Id Persona</th>
+                                    <th>Temporada</th>
+                                    <th>Document</th>
+                                    <th>Continguts</th>
+                                    <th>Premsa</th>
+                                    <th class="none">Altres</th>
+                                    <th>Foto</th>
+                                    <th>Entre</th>
+                                    <th>Repor</th>
+                                    <th>Cartel</th>
+                                    <th>Llibre</th>
+                                    <th>Video</th>
+                                    <th class="none">Altre 1</th>
+                                    <th class="none">Altre 2</th>
+                                    <th class="none">Detalls</th>
+                                    <th class="none">Detalls Fotos</th>
+                                    <th class="none">Detalls Entrevistes</th>
+                                    <th class="none">Detalls Reportatges</th>
+                                    <th class="none">Detalls Cartells</th>
+                                    <th class="none">Detalls Llibres</th>
+                                    <th class="none">Detalls Videos</th>
+                                    <th class="none">Detalls Altre 1</th>
+                                    <th class="none">Detalls Altre 2</th>
+                                </tr>
+                            </thead>
+                              <tbody><?php
+                                        $sql ="SELECT * FROM document_entitat
+                                              WHERE id_entitat='".$_REQUEST['id']."'
+                                              ORDER BY temporada ASC";
+                                        $rs = mysqli_query($con01, $sql) or die("Error: ".mysqli_error($con01));
+                                        while ($row = mysqli_fetch_array($rs)){
+                                    ?>
+                                    <tr>
+                                      <td><?php echo $row['id']; ?></td>
+                                      <td><?php echo $row['id_entitat']; ?></td>
+                                      <td><?php echo $row['temporada']; ?></td>
+                                      <td><?php echo ($row['document']); ?></td>
+                                      <td><?php echo ($row['continguts']); ?></td>
+                                      <td><?php echo ($row['premsa']); ?></td>
+                                      <td><?php echo ($row['altres']); ?></td>
+                                      <td><?php echo $row['foto']; ?></td>
+                                      <td><?php echo $row['entrevista']; ?></td>
+                                      <td><?php echo $row['reportatge']; ?></td>
+                                      <td><?php echo $row['cartell']; ?></td>
+                                      <td><?php echo $row['llibre']; ?></td>
+                                      <td><?php echo $row['video']; ?></td>
+                                      <td><?php echo ($row['altre1']); ?></td>
+                                      <td><?php echo ($row['altre2']); ?></td>
+                                      <td><?php echo ($row['detalls']); ?></td>
+                                      <td><?php echo ($row['fotod']); ?></td>
+                                      <td><?php echo ($row['entrevistad']); ?></td>
+                                      <td><?php echo ($row['reportatged']); ?></td>
+                                      <td><?php echo ($row['cartelld']); ?></td>
+                                      <td><?php echo ($row['llibred']); ?></td>
+                                      <td><?php echo ($row['videod']); ?></td>
+                                      <td><?php echo ($row['altre1d']); ?></td>
+                                      <td><?php echo ($row['altre2d']); ?></td>
+                                    </tr>
+                                    <?php
+                                        }
+                                    ?>
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
+                      <!-- /.col -->
+                    </div>
+                  <!-- /.row -->
+                  </div>
+              </div>
+            </div>
+          </div>
         
         </div>
 
@@ -1175,6 +1276,11 @@ $nomTaula = "Persona";
   <?php include 'modals/modal_relat_new.php'; ?>
   <?php include 'modals/modal_relat_edit.php'; ?>
   <?php include 'modals/modal_relat_del.php'; ?>
+
+  <!-- Modals documents -->
+  <?php include 'modals/modal_persona_doc_new.php'; ?>
+  <?php include 'modals/modal_persona_doc_edit.php'; ?>
+  <?php include 'modals/modal_persona_doc_del.php'; ?>
 
 
   <?php include("common/end.php") ?>
@@ -1508,6 +1614,62 @@ $nomTaula = "Persona";
         });
 
         tAltre.buttons().container().appendTo( '#altre-botons .col-md-6:eq(1)' );
+
+
+        // Documents
+        var tDocs = $('#dtDocs').DataTable({
+            responsive: true,
+            select: true,
+            buttons: [
+                {
+                    extend:    'copyHtml5',
+                    text:      '<i class="fas fa-clone"></i> Copiar',
+                    titleAttr: 'Copia'
+                },
+                {
+                    extend:    'excelHtml5',
+                    text:      '<i class="fas fa-file-excel"></i> Excel',
+                    titleAttr: 'Excel'
+                },
+                {
+                    extend:    'csvHtml5',
+                    text:      '<i class="fas fa-file-csv"></i> CSV',
+                    titleAttr: 'CSV'
+                },
+                {
+                    extend:    'pdfHtml5',
+                    text:      '<i class="fas fa-file-pdf"></i> PDF',
+                    titleAttr: 'PDF'
+                }
+            ],
+            language: {
+              "lengthMenu": "Mostrar _MENU_ files per pàgina",
+              "zeroRecords": "No s'han trobat dades",
+              "info": "Mostrant pàgina _PAGE_ de _PAGES_",
+              "infoEmpty": "Sense files disponibles",
+              "infoFiltered": "(filtrats de _MAX_ de files)",
+              "search": "Cercar",
+              "sInfoPostFix":  "",
+              "sSearch":       "Filtrar:",
+              "sUrl": "",
+              "oPaginate": {
+                  "sFirst":    "Primer",
+                  "sPrevious": "Anterior",
+                  "sNext":     "Següent",
+                  "sLast":     "Darrer"
+              },
+              "buttons": {
+                              "copyTitle": '<i class="fas fa-clone"></i> Copiar Dades',
+                              "copyKeys": 'Premeu <i>ctrl</i> o <i>\u2318</i> + <i>C</i> per copiar les dades de la taula al vostre porta-retalls. <br><br>Per cancel·lar, feu clic en aquest missatge o premeu Esc.',
+                              "copySuccess": {
+                                  _: '%d linies copiades',
+                                  1: '1 linia copiada'
+                              }
+                          }
+            }
+        });
+
+        tDocs.buttons().container().appendTo( '#docs-botons .col-md-6:eq(1)' );
         
 
         var tRelatJugador = $('#dtRelatJugador').DataTable({
