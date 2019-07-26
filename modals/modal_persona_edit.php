@@ -118,12 +118,13 @@
                                           <select class="form-control" id="e6" name="pais" required>
                                             <option value=""></option>
                                             <option value="1">España</option>
+                                          <option value="160">Desconocido</option>
                                             <option value="">------------</option>
                                             <?php
                                               $queryPaisos = "SELECT * FROM paisos ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryPaisos) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                if($row['nom']!="España"){
+                                                if($row['nom']!="España" && $row['nom']!="Desconocido"){){
                                                   echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                                 }
                                               }
@@ -148,12 +149,13 @@
                                             <option value="51">Menorca</option>
                                             <option value="7">Mallorca</option>
                                             <option value="52">Eivissa</option>
+                                            <option value="56">Desconocido</option>
                                             <option value="">------------</option>
                                             <?php
                                               $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryProv) or die("Error: ".mysqli_error($con01));
                                               while ($row = mysqli_fetch_array($rs)){
-                                                if($row['nom']!="Menorca" && $row['nom']!="Mallorca" && $row['nom']!="Eivissa"){
+                                                if($row['nom']!="Menorca" && $row['nom']!="Mallorca" && $row['nom']!="Eivissa" && $row['nom']!="Desconocido"){
                                                   echo "<option value='".$row['id']."'>".($row['nom'])."</option>";
                                                 }
                                               }
