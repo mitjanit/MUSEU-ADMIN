@@ -37,7 +37,7 @@ $table = "Persona";
 $sqlLog = "INSERT INTO accions_user (user, tipus, taula, temps) VALUES ('".$user."','U','".$table."', CURRENT_TIMESTAMP)";
 mysqli_query($con01, $sqlLog) or die(mysqli_error());
 
-//header("Location: ../persones.php?&msgOk",TRUE, 302);
-//exit;
+header("Location: ../persones.php?&msgOk",TRUE, 302);
+exit;
 
 ?>
