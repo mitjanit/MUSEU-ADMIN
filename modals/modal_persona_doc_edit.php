@@ -14,7 +14,7 @@
                     <p id="editMessageDocs"></p>
                             <div class="row mb-4">
                                 <!-- row 0 -->
-                                <div class=" col-md-2">
+                                <div class=" col-md-3">
                                       <label for="registre">Registre:</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
@@ -25,7 +25,7 @@
                                         <input readonly type="text" name="id" class="form-control" id="iddpe"/>
                                       </div>
                                 </div>
-                                <div class=" col-md-2">
+                                <div class=" col-md-3">
                                       <label for="nome">Temporada (*):</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
@@ -40,7 +40,32 @@
                                       </div>
                                 </div>
 
-                                <div class=" col-md-4">
+                                <div class=" col-md-3">
+                                        <label for="nom">Vinculat a (*):</label>
+                                        <div class="input-group">
+                                          <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                              <i class="fa fa-info-circle"></i>
+                                            </div>
+                                          </div>
+                                          <select class="form-control" id="vinculatdpe" name="vinculat" required>
+                                            <option value=""></option>
+                                            <option value="0">Sense vincle</option>
+                                            <?php
+                                              $query = "SELECT * FROM clubs ORDER BY nom_esportiu ASC";
+                                              $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                              while ($row = mysqli_fetch_array($rs)){
+                                                echo "<option value='".$row['id']."'>".($row['nom_esportiu'])."</option>";
+                                              }
+                                            ?>
+                                          </select>
+                                          <div class="invalid-feedback">
+                                            <i class="fas fa-exclamation-circle"></i> Camp obligatori.
+                                          </div>
+                                        </div>
+                                  </div>
+
+                                <div class=" col-md-3">
                                       <label for="nom">Document :</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">
@@ -52,7 +77,11 @@
                                       </div>
                                 </div>
 
-                                <div class=" col-md-4">
+                              </div>
+
+                              <div class="row mb-4">
+
+                                <div class=" col-md-12">
                                       <label for="nom">Contingut :</label>
                                       <div class="input-group">
                                         <div class="input-group-prepend">

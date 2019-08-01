@@ -1152,7 +1152,9 @@ $nomTaula = "Persona";
                                 <tr>
                                     <th class="none">Id Doc</th>
                                     <th class="none">Id Persona</th>
+                                    <th class="none">Id Entitat</th>
                                     <th>Temporada</th>
+                                    <th>Vinculat</th>
                                     <th>Document</th>
                                     <th>Continguts</th>
                                     <th>Premsa</th>
@@ -1184,7 +1186,23 @@ $nomTaula = "Persona";
                                     <tr>
                                       <td><?php echo $row['id']; ?></td>
                                       <td><?php echo $row['id_persona']; ?></td>
+                                      <td><?php echo $row['id_club']; ?></td>
                                       <td><?php echo $row['temporada']; ?></td>
+                                      <td>
+                                        <?php 
+                                          if($row['id_club']!=NULL){
+                                            if($row['id_club']=="0"){
+                                                echo "Sense Vincle";
+                                              }
+                                            else {
+                                              $query = "SELECT * FROM clubs WHERE id='".$row['id_club']."'";
+                                              $rsd = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                              $rowd = mysqli_fetch_array($rsd);
+                                              echo $rowd['nom_esportiu'];
+                                            }
+                                          }
+                                        ?>
+                                      </td>
                                       <td><?php echo ($row['document']); ?></td>
                                       <td><?php echo ($row['continguts']); ?></td>
                                       <td><?php echo ($row['premsa']); ?></td>
@@ -2655,26 +2673,31 @@ $nomTaula = "Persona";
         
         $('#iddpe').val(data[0][0]);
         $('#idpe').val(data[0][1]);
-        $('#temporadadpe').val(data[0][2]);
-        $('#documentde').val(data[0][3]);
-        $('#contingutde').val(data[0][4]);
-        $('#premsade').val(data[0][5]);
-        $('#altresde').val(data[0][6]);
-        $('#fitxade').val(data[0][7]);
-        $('#fotosde').val(data[0][8]);
-        $('#entrevistade').val(data[0][9]);
-        $('#reportatgede').val(data[0][10]);
-        $('#altre1de').val(data[0][11]);
-        $('#altre2de').val(data[0][12]);
-        $('#altre3de').val(data[0][13]);
-        $('#detallsdpe').val(data[0][14]);
-        $('#detallsfitxade').val(data[0][15]);
-        $('#detallsfotosde').val(data[0][16]);
-        $('#detallsentrevistade').val(data[0][17]);
-        $('#detallsreportatgede').val(data[0][18]);
-        $('#detallsaltre1de').val(data[0][19]);
-        $('#detallsaltre2de').val(data[0][20]);
-        $('#detallsaltre3de').val(data[0][21]);
+        $('#idce').val(data[0][2]);
+        $('#temporadadpe').val(data[0][3]);
+        //Club Vinculat
+          $('#vinculatdpe option').filter(function(){
+              return $(this).text()==data[0][4];
+          }).prop('selected', true);
+        $('#documentde').val(data[0][5]);
+        $('#contingutde').val(data[0][6]);
+        $('#premsade').val(data[0][7]);
+        $('#altresde').val(data[0][8]);
+        $('#fitxade').val(data[0][9]);
+        $('#fotosde').val(data[0][10]);
+        $('#entrevistade').val(data[0][11]);
+        $('#reportatgede').val(data[0][12]);
+        $('#altre1de').val(data[0][13]);
+        $('#altre2de').val(data[0][14]);
+        $('#altre3de').val(data[0][15]);
+        $('#detallsdpe').val(data[0][16]);
+        $('#detallsfitxade').val(data[0][17]);
+        $('#detallsfotosde').val(data[0][18]);
+        $('#detallsentrevistade').val(data[0][19]);
+        $('#detallsreportatgede').val(data[0][20]);
+        $('#detallsaltre1de').val(data[0][21]);
+        $('#detallsaltre2de').val(data[0][22]);
+        $('#detallsaltre3de').val(data[0][23]);
 
         
       }
@@ -2700,8 +2723,9 @@ $nomTaula = "Persona";
       else { 
         txt = $("<p><b>Vols esborrar les dades del document?</b></p> "+
                       "<p><b> Persona: </b><?php echo $nomComplet;?>"+".</p>"+
-                      "<p><b> Temporada: </b>"+data[0][2]+".</p>"+
-                      "<p><b> Document: </b>"+data[0][3]+".</p>");
+                      "<p><b> Temporada: </b>"+data[0][3]+".</p>"+
+                      "<p><b> Vinculat: </b>"+data[0][4]+".</p>"+
+                      "<p><b> Document: </b>"+data[0][5]+".</p>");
         $('#iddocpd').val(data[0][0]);
       }
       $('#deleteMessageDocs').html(txt);

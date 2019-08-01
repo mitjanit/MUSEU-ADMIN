@@ -5,6 +5,7 @@
 $idp = $_REQUEST['idp'];
 $id = $_REQUEST['id'];
 $temporada = addslashes($_REQUEST['temporada']);
+$vinculat = $_REQUEST['vinculat'];
 $document = (addslashes($_REQUEST['document']));
 $continguts = (addslashes($_REQUEST['contingut']));
 $premsa = (addslashes($_REQUEST['premsa']));
@@ -27,7 +28,7 @@ $detallsaltre2 = (addslashes($_REQUEST['detallsaltre2']));
 $altre3 = (addslashes($_REQUEST['altre3']));
 $detallsaltre3 = (addslashes($_REQUEST['detallsaltre3']));
 
-$sql ="UPDATE document_persona SET temporada =  '".$temporada."', document = '".$document."', continguts = '".$continguts."', premsa = '".$premsa."', altres = '".$altres."', fitxa = '".$fitxa."', foto = '".$fotos."', entrevista = '".$entrevista."', reportatge =  '".$reportatge."', altre1 =  '".$altre1."', altre2 = '".$altre2."', altre3 = '".$altre3."', detalls = '".$detalls."', fitxad = '".$detallsfitxa."', fotod = '".$detallsfotos."', entrevistad = '".$detallsentrevista."', reportatged = '".$detallsreportatge."', altre1d = '".$detallsaltre1."', altre2d = '".$detallsaltre2."', altre3d = '".$detallsaltre3."' WHERE id='".$id."'";
+$sql ="UPDATE document_persona SET id_club='".$vinculat."', temporada =  '".$temporada."', document = '".$document."', continguts = '".$continguts."', premsa = '".$premsa."', altres = '".$altres."', fitxa = '".$fitxa."', foto = '".$fotos."', entrevista = '".$entrevista."', reportatge =  '".$reportatge."', altre1 =  '".$altre1."', altre2 = '".$altre2."', altre3 = '".$altre3."', detalls = '".$detalls."', fitxad = '".$detallsfitxa."', fotod = '".$detallsfotos."', entrevistad = '".$detallsentrevista."', reportatged = '".$detallsreportatge."', altre1d = '".$detallsaltre1."', altre2d = '".$detallsaltre2."', altre3d = '".$detallsaltre3."' WHERE id='".$id."'";
 echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 
