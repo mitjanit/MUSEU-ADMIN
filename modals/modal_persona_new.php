@@ -115,9 +115,9 @@
                                             </div>
                                           </div>
                                           <select class="form-control" id="pais" name="pais" required>
-                                            <option value=""></option>
+                                            <option value="160"></option>
                                             <option value="1">España</option>
-                                          <option value="160">Desconocido</option>
+                                            <option value="160">Desconocido</option>
                                             <option value="">------------</option>
                                             <?php
                                               $queryPaisos = "SELECT * FROM paisos ORDER BY nom ASC";
@@ -176,7 +176,7 @@
                                             </div>
                                           </div>
                                           <select class="form-control" id="poblacio" name="poblacio" required>
-                                            <option value=""></option>
+                                            <option value="72"></option>
                                             <?php
                                               $queryPob = "SELECT * FROM poblacions ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryPob) or die("Error: ".mysqli_error($con01));

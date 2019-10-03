@@ -169,7 +169,7 @@
                                   </div>
 
                                   <div class=" col-md-4">
-                                        <label for="poblacio">Població (*):</label>
+                                        <label for="poblacio">Població :</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -177,7 +177,7 @@
                                             </div>
                                           </div>
                                           <select class="form-control" id="e8" name="poblacio" required>
-                                            <option value=""></option>
+                                            <option value="72"></option>
                                             <?php
                                               $queryPob = "SELECT * FROM poblacions ORDER BY nom ASC";
                                               $rs = mysqli_query($con01, $queryPob) or die("Error: ".mysqli_error($con01));
