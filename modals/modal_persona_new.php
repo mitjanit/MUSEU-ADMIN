@@ -144,11 +144,11 @@
                                             </div>
                                           </div>
                                           <select class="form-control" id="provincia" name="provincia" required>
-                                            <option value="56">Desconocido</option>
+                                            <option value="56"></option>
                                             <option value="51">Menorca</option>
                                             <option value="7">Mallorca</option>
                                             <option value="52">Eivissa</option>
-                                            
+                                            <option value="56">Desconocido</option>
                                             <option value="">------------</option>
                                             <?php
                                               $queryProv = "SELECT * FROM provincies ORDER BY nom ASC";
