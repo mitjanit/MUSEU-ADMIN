@@ -64,7 +64,7 @@
                       <th>País</th>
                       <th class="none">Naixement</th>
                       <th class="none">Mort</th>
-                      <th class="none">Detalls Mort</th>
+                      <th class="none">Detalls</th>
                       <th class="none">Detalls</th>
                       <th class="none">Material</th>
                       <th class="none">Ficha</th>

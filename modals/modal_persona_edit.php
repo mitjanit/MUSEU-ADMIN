@@ -71,14 +71,14 @@
                                   </div>
 
                                   <div class=" col-md-4">
-                                        <label for="nom">Llinatge 2 (*):</label>
+                                        <label for="nom">Llinatge 2:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
                                               <i class="fa fa-info-circle"></i>
                                             </div>
                                           </div>
-                                          <input type="text" class="form-control" id="e4" name="llinatge2" required maxlength="30" />
+                                          <input type="text" class="form-control" id="e4" name="llinatge2" maxlength="30" />
                                           <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-circle"></i> Camp obligatori.
                                           </div>
@@ -108,7 +108,7 @@
                               <div class="row mb-4">
 
                                   <div class=" col-md-4">
-                                        <label for="pais">Pais (*):</label>
+                                        <label for="pais">Pais:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -116,9 +116,9 @@
                                             </div>
                                           </div>
                                           <select class="form-control" id="e6" name="pais" required>
-                                            <option value=""></option>
+                                            <option value="160"></option>
                                             <option value="1">España</option>
-                                          <option value="160">Desconocido</option>
+                                            <option value="160">Desconocido</option>
                                             <option value="">------------</option>
                                             <?php
                                               $queryPaisos = "SELECT * FROM paisos ORDER BY nom ASC";
@@ -137,7 +137,7 @@
                                   </div>
 
                                   <div class=" col-md-4">
-                                        <label for="provincia">Provincia (*):</label>
+                                        <label for="provincia">Provincia:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
@@ -145,7 +145,7 @@
                                             </div>
                                           </div>
                                           <select class="form-control" id="e7" name="provincia" required>
-                                            <option value=""></option>
+                                            <option value="56"></option>
                                             <option value="51">Menorca</option>
                                             <option value="7">Mallorca</option>
                                             <option value="52">Eivissa</option>
@@ -221,7 +221,7 @@
                                   </div>
 
                                   <div class=" col-md-6">
-                                        <label for="detalls">Detalls Mort:</label>
+                                        <label for="detalls">Detalls:</label>
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">

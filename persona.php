@@ -96,7 +96,7 @@ $nomTaula = "Persona";
                                           <th>Pais</th>
                                           <th>Naixement</th>
                                           <th>Mort</th>
-                                          <th>Detalls Mort</th>
+                                          <th>Detalls</th>
                                       </tr>
                                   </thead>
                                   <tbody>

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"gl_F",
+				"gl_FragCoord"
+			],
+			[
+				"vin",
+				"vincle"
+			],
+			[
 				"detallsal",
 				"detallsaltre2"
 			],
@@ -506,46 +514,11 @@
 			[
 				"set",
 				"setValue"
-			],
-			[
-				"mutat",
-				"mutateRate"
-			],
-			[
-				"Mut",
-				"Mutation"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "db/altaEntitat.php",
-			"settings":
-			{
-				"buffer_size": 1548,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "db/editaEntitat.php",
-			"settings":
-			{
-				"buffer_size": 1532,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "db/editaPersona.php",
-			"settings":
-			{
-				"buffer_size": 1909,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -591,6 +564,14 @@
 		"selected_items":
 		[
 			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
 				"Package Control: ins",
 				"Package Control: Install Package"
 			],
@@ -624,21 +605,44 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/museu/MUSEU-ADMIN",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db"
 	],
 	"file_history":
 	[
+		"/C/Users/ToniMitjanit/Desktop/shader04 - boxxxy/shader03/data/fx.frag",
+		"/C/Users/ToniMitjanit/Desktop/shader04 - boxxxy/shader03/data/fx.vert",
+		"/C/Users/ToniMitjanit/Desktop/shader03/shader03/data/fx.vert",
+		"/C/Users/ToniMitjanit/Desktop/shader03/shader03/data/fx.frag",
+		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/processing/shaders/18_line_sin.vert",
+		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/processing/shaders/18_line_sin.frag",
+		"/C/Users/ToniMitjanit/Desktop/myshaders/fshader.frag",
+		"/C/Users/ToniMitjanit/Desktop/shader02/shader02/data/fx.frag",
+		"/C/Users/ToniMitjanit/Desktop/shader02/shader02/data/fx.vert",
+		"/C/Users/ToniMitjanit/Desktop/myshaders/vshader.vert",
+		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/p5.js/s01_flat/sketch.js",
+		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/p5.js/s01_flat/flat.frag",
+		"/C/wamp/www/GLSL/flat.frag",
+		"/C/wamp/www/GLSL/sketch.js",
+		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/processing/_original/ColorFrag.glsl",
+		"/C/Users/ToniMitjanit/Desktop/myshaders/06_flong.frag",
+		"/C/Users/ToniMitjanit/Desktop/myshaders/06_flong.vert",
+		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/processing/shaders/06_flong.vert",
+		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/processing/shaders/06_flong.frag",
+		"/C/Users/ToniMitjanit/Desktop/shader01/data/shaders/fshader.frag",
+		"/C/Users/ToniMitjanit/Desktop/shader01/data/shaders/vshader.vert",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/persona.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaDocumentPersona.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaDocumentPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaEntitat.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaPersona.php",
 		"/C/Users/ToniMitjanit/Downloads/VoronoiSimplexTriTap.fs",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteDocumentPersona.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaDocumentPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaDocumentPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/entitat.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_new.php",
 		"/C/Users/ToniMitjanit/Desktop/document_persona.sql",
 		"/C/wamp/www/museu/MUSEU-ADMIN/entitats.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_edit.php",
@@ -656,7 +660,6 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_edit.php",
@@ -680,8 +683,6 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteRelatEntitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaRelatEntitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaRelatEntitat.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaEntitat.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaTrajectoria.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaTrajectoria.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteTrajectoria.php",
@@ -711,7 +712,6 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/login2.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/logout.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaEntitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaRelat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaRelat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deletePersona.php",
@@ -735,28 +735,7 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_competicio_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteTipusActivitats.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/array.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/comunitats.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/paisos.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/provincies.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_ok.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_jugador_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_arbit_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_jugador_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_arbit_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_entrenador_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_directiu_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_altre_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/json/provincies.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_demarcacio_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_demarcacio_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_demarcacio_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/connexions/connexio01.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/connexions/connexio.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_carrec_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_carrec_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_carrec_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_competicio_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modal_entitat_edit.php"
+		"/C/wamp/www/museu/MUSEU-ADMIN/comunitats.php"
 	],
 	"find":
 	{
@@ -801,573 +780,19 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "db/altaEntitat.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1548,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								777,
-								777
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										902,
-										903
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										752,
-										753
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 375.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "db/editaEntitat.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1532,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "db/editaPersona.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1900,
-								1900
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1178,
-										1179
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"region.greenish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1155,
-										1156
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 925.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 38.0
+		"height": 44.0
 	},
 	"input":
 	{
@@ -1382,11 +807,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.323773869439,
 			1.0
 		],
 		"rows":
@@ -1412,7 +844,7 @@
 	"project": "museuadmin.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 84.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1454,7 +886,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 260.0,
+	"side_bar_width": 250.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
