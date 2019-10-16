@@ -167,7 +167,19 @@
                                                 </div>
                                           </div>
 
-                                          <div class=" col-md-10">
+                                          <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="cfoton" name="cfoto" maxlength="12" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-8">
                                                 <label for="foto">Detalls Fotos:</label>
                                                 <div class="input-group">
                                                   <div class="input-group-prepend">
@@ -202,7 +214,19 @@
                                                 </div>
                                           </div>
 
-                                          <div class=" col-md-10">
+                                          <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="centrevistan" name="centrevista" maxlength="12" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-8">
                                                     <label for="foto">Detalls Entrevistes:</label>
                                                     <div class="input-group">
                                                       <div class="input-group-prepend">
@@ -234,6 +258,18 @@
                                                     </div>
                                                   </div>
                                                   <input type="number" min="0" value="0" class="form-control" id="reportatgen" name="reportatge" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="creportatgen" name="creportatge" maxlength="12" />
                                                 </div>
                                           </div>
 
@@ -273,7 +309,19 @@
                                                 </div>
                                           </div>
 
-                                          <div class=" col-md-10">
+                                          <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="ccartelln" name="ccartell" maxlength="12" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-8">
                                                         <label for="foto">Detalls Cartells:</label>
                                                         <div class="input-group">
                                                           <div class="input-group-prepend">
@@ -308,7 +356,19 @@
                                                 </div>
                                           </div>
 
-                                          <div class=" col-md-10">
+                                          <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="cllibren" name="cllibre" maxlength="12" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-8">
                                                             <label for="foto">Detalls Llibres:</label>
                                                             <div class="input-group">
                                                               <div class="input-group-prepend">
@@ -344,7 +404,19 @@
                                             </div>
                                       </div>    
 
-                                      <div class=" col-md-10">
+                                      <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="cvideon" name="cvideo" maxlength="12" />
+                                                </div>
+                                          </div>
+
+                                      <div class=" col-md-8">
                                                           <label for="foto">Detalls Videos:</label>
                                                           <div class="input-group">
                                                             <div class="input-group-prepend">
@@ -382,7 +454,19 @@
                                               </div>
                                         </div>
 
-                                        <div class=" col-md-10">
+                                        <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="caltre1n" name="caltre1" maxlength="12" />
+                                                </div>
+                                          </div>
+
+                                        <div class=" col-md-8">
                                                               <label for="foto">Detalls Altre 1:</label>
                                                               <div class="input-group">
                                                                 <div class="input-group-prepend">
@@ -418,7 +502,19 @@
                                                 </div>
                                           </div>
 
-                                          <div class=" col-md-10">
+                                          <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="caltre2n" name="caltre2" maxlength="12" />
+                                                </div>
+                                          </div>
+
+                                          <div class=" col-md-8">
                                                 <label for="detalls2">Detalls Altre 2:</label>
                                                 <div class="input-group">
                                                   <div class="input-group-prepend">
