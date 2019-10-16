@@ -273,7 +273,7 @@
                                                 </div>
                                           </div>
 
-                                          <div class=" col-md-10">
+                                          <div class=" col-md-8">
                                                     <label for="foto">Detalls Reportatges:</label>
                                                     <div class="input-group">
                                                       <div class="input-group-prepend">
