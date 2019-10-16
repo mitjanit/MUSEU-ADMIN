@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"preu",
+				"preuEnDolars"
+			],
+			[
+				"ma",
+				"matricula"
+			],
+			[
 				"gl_F",
 				"gl_FragCoord"
 			],
@@ -506,14 +514,6 @@
 			[
 				"w",
 				"width"
-			],
-			[
-				"G",
-				"GeneticGradient"
-			],
-			[
-				"set",
-				"setValue"
 			]
 		]
 	},
@@ -605,9 +605,30 @@
 	},
 	"expanded_folders":
 	[
+		"/C/wamp/www/museu/MUSEU-ADMIN",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals"
 	],
 	"file_history":
 	[
+		"/D/GITHUB/WEBDEV/WEBDEV/JAVASCRIPT/CLASSE/car list/Cotxo.js",
+		"/D/GITHUB/WEBDEV/WEBDEV/JAVASCRIPT/CLASSE/car list/LlistaCotxos.html",
+		"/C/Users/ToniMitjanit/Desktop/template.html",
+		"/C/Users/ToniMitjanit/Downloads/jquery-3.4.1.min.map",
+		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Truffaut/Jules.And.Jim.1962.1080p.BluRay.x264-.YTS.AM.srt",
+		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Vertigo-1958.EN.srt",
+		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Blackmail-1929.EN.srt",
+		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Under Capricorn (1949)23.976fps-107.03 min avi version-resync-reGroup-moreCompleted-CD2.srt",
+		"/C/Users/ToniMitjanit/Desktop/Cotxo.js",
+		"/C/Users/ToniMitjanit/Desktop/LlistaCotxos.html",
+		"/C/Users/ToniMitjanit/Desktop/exemple1.html",
+		"/C/Users/ToniMitjanit/Desktop/regExp.html",
+		"/C/Users/ToniMitjanit/Desktop/regExpressions.html",
+		"/C/Users/ToniMitjanit/Desktop/text Expressions regulars.html",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/persona.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/persones.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_poblacio_edit.php",
 		"/C/Users/ToniMitjanit/Desktop/shader04 - boxxxy/shader03/data/fx.frag",
 		"/C/Users/ToniMitjanit/Desktop/shader04 - boxxxy/shader03/data/fx.vert",
 		"/C/Users/ToniMitjanit/Desktop/shader03/shader03/data/fx.vert",
@@ -630,7 +651,6 @@
 		"/C/Users/ToniMitjanit/Desktop/shader01/data/shaders/fshader.frag",
 		"/C/Users/ToniMitjanit/Desktop/shader01/data/shaders/vshader.vert",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/persona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaDocumentPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaDocumentPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_edit.php",
@@ -646,10 +666,7 @@
 		"/C/Users/ToniMitjanit/Desktop/document_persona.sql",
 		"/C/wamp/www/museu/MUSEU-ADMIN/entitats.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/persones.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_act_edit2.php",
@@ -717,33 +734,18 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deletePersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_poblacio_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_demarcacio_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_demarcacio_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_demarcacio_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_poblacio_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_carrec_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_carrec_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_carrec_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_categoria_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_categoria_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_categoria_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_tipus_act_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_competicio_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_tipus_act_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_tipus_act_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_competicio_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteTipusActivitats.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/array.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/comunitats.php"
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_poblacio_new.php"
 	],
 	"find":
 	{
-		"height": 76.0
+		"height": 93.0
 	},
 	"find_in_files":
 	{
-		"height": 176.0,
+		"height": 184.0,
 		"where_history":
 		[
 			"C:\\wamp\\www\\museu\\MUSEU-ADMIN"
@@ -754,6 +756,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"llistaCompra",
+			"quijote",
+			"\\(",
+			".",
+			"@",
 			"btn-edit-docs",
 			"Spain",
 			"insignia",
@@ -766,7 +773,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 			"include 'modals/modal_"
@@ -774,7 +781,7 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": false
 	},
 	"groups":
@@ -783,16 +790,11 @@
 			"sheets":
 			[
 			]
-		},
-		{
-			"sheets":
-			[
-			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 44.0
+		"height": 55.0
 	},
 	"input":
 	{
@@ -807,18 +809,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.323773869439,
 			1.0
 		],
 		"rows":
@@ -844,7 +839,7 @@
 	"project": "museuadmin.sublime-project",
 	"replace":
 	{
-		"height": 84.0
+		"height": 160.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -886,7 +881,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 250.0,
+	"side_bar_width": 392.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

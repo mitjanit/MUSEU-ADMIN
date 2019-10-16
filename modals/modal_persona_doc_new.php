@@ -194,6 +194,18 @@
                                                 </div>
                                           </div>
 
+                                          <div class=" col-md-2">
+                                                <label for="foto">Codi (XXXXX-XXXXXX):</label>
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                      <i class="fa fa-info-circle"></i>
+                                                    </div>
+                                                  </div>
+                                                  <input type="text" class="form-control" id="cfitxan" name="cfitxa" maxlength="12" />
+                                                </div>
+                                          </div>
+
                                           <div class=" col-md-10">
                                                 <label for="foto">Detalls Fitxa:</label>
                                                 <div class="input-group">
