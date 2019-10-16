@@ -411,7 +411,7 @@
               }
             }
           };
-          xhttp.open("GET", "http://34.90.92.235/api/poblacions", true);
+          xhttp.open("GET", "http://34.90.211.155/api/poblacions", true);
           xhttp.send();
         }
 

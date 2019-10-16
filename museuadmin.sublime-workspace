@@ -605,21 +605,26 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/museu/MUSEU-ADMIN",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals"
+		"/C/wamp/www/museu/MUSEU-ADMIN"
 	],
 	"file_history":
 	[
+		"/C/Users/ToniMitjanit/Desktop/LlistaCotxos.html",
+		"/C/Users/ToniMitjanit/Desktop/selectorEditor.html",
+		"/C/Users/ToniMitjanit/Desktop/template.html",
+		"/C/Users/ToniMitjanit/Desktop/Traversing.html",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_edit.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_new.php",
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_edit.php",
 		"/D/GITHUB/WEBDEV/WEBDEV/JAVASCRIPT/CLASSE/car list/Cotxo.js",
 		"/D/GITHUB/WEBDEV/WEBDEV/JAVASCRIPT/CLASSE/car list/LlistaCotxos.html",
-		"/C/Users/ToniMitjanit/Desktop/template.html",
 		"/C/Users/ToniMitjanit/Downloads/jquery-3.4.1.min.map",
 		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Truffaut/Jules.And.Jim.1962.1080p.BluRay.x264-.YTS.AM.srt",
 		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Vertigo-1958.EN.srt",
 		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Blackmail-1929.EN.srt",
 		"/C/Users/ToniMitjanit/Desktop/HITCHCOOK/Under Capricorn (1949)23.976fps-107.03 min avi version-resync-reGroup-moreCompleted-CD2.srt",
 		"/C/Users/ToniMitjanit/Desktop/Cotxo.js",
-		"/C/Users/ToniMitjanit/Desktop/LlistaCotxos.html",
 		"/C/Users/ToniMitjanit/Desktop/exemple1.html",
 		"/C/Users/ToniMitjanit/Desktop/regExp.html",
 		"/C/Users/ToniMitjanit/Desktop/regExpressions.html",
@@ -650,16 +655,13 @@
 		"/C/Users/ToniMitjanit/Desktop/shaders/shaders/workshop code in different languages/src/processing/shaders/06_flong.frag",
 		"/C/Users/ToniMitjanit/Desktop/shader01/data/shaders/fshader.frag",
 		"/C/Users/ToniMitjanit/Desktop/shader01/data/shaders/vshader.vert",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaDocumentPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaDocumentPersona.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/altaEntitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaEntitat.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/editaPersona.php",
 		"/C/Users/ToniMitjanit/Downloads/VoronoiSimplexTriTap.fs",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/db/deleteDocumentPersona.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_persona_doc_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/entitat.php",
@@ -676,7 +678,6 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_relat_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_comp_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_entitat_doc_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_jugador_edit.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_new.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_trajectoria_entrenador_edit.php",
@@ -735,13 +736,11 @@
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_relat_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_del.php",
 		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_demarcacio_del.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_demarcacio_new.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_demarcacio_edit.php",
-		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_poblacio_new.php"
+		"/C/wamp/www/museu/MUSEU-ADMIN/modals/modal_demarcacio_new.php"
 	],
 	"find":
 	{
-		"height": 93.0
+		"height": 87.0
 	},
 	"find_in_files":
 	{
@@ -756,6 +755,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cartell",
 			"llistaCompra",
 			"quijote",
 			"\\(",
@@ -794,7 +794,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 55.0
+		"height": 49.0
 	},
 	"input":
 	{
@@ -839,7 +839,7 @@
 	"project": "museuadmin.sublime-project",
 	"replace":
 	{
-		"height": 160.0
+		"height": 94.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -881,7 +881,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 392.0,
+	"side_bar_width": 339.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
