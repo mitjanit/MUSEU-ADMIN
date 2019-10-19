@@ -1174,6 +1174,13 @@ $nomTaula = "Persona";
                                     <th class="none">Detalls Altre 1</th>
                                     <th class="none">Detalls Altre 2</th>
                                     <th class="none">Detalls Altre 3</th>
+                                    <th class="none">Codi Fitxa</th>
+                                    <th class="none">Codi Fotos</th>
+                                    <th class="none">Codi Entrevistes</th>
+                                    <th class="none">Codi Reportatges</th>
+                                    <th class="none">Codi Altre 1</th>
+                                    <th class="none">Codi Altre 2</th>
+                                    <th class="none">Codi Altre 3</th>
                                 </tr>
                             </thead>
                               <tbody><?php
@@ -1222,6 +1229,13 @@ $nomTaula = "Persona";
                                       <td><?php echo ($row['altre1d']); ?></td>
                                       <td><?php echo ($row['altre2d']); ?></td>
                                       <td><?php echo ($row['altre3d']); ?></td>
+                                      <td><?php echo ($row['cfitxa']); ?></td>
+                                      <td><?php echo ($row['cfoto']); ?></td>
+                                      <td><?php echo ($row['centrevista']); ?></td>
+                                      <td><?php echo ($row['creportatge']); ?></td>
+                                      <td><?php echo ($row['caltre1']); ?></td>
+                                      <td><?php echo ($row['caltre2']); ?></td>
+                                      <td><?php echo ($row['caltre3']); ?></td>
                                     </tr>
                                     <?php
                                         }
@@ -2698,7 +2712,14 @@ $nomTaula = "Persona";
         $('#detallsaltre1de').val(data[0][21]);
         $('#detallsaltre2de').val(data[0][22]);
         $('#detallsaltre3de').val(data[0][23]);
-
+        // Afegits codis
+        $('#cfitxade').val(data[0][24]);
+        $('#cfotode').val(data[0][25]);
+        $('#centrevistade').val(data[0][26]);
+        $('#creportatgede').val(data[0][27]);
+        $('#caltre1de').val(data[0][28]);
+        $('#caltre2de').val(data[0][29]);
+        $('#caltre3de').val(data[0][30]);
         
       }
       $('#editMessageDocs').html(txt);

@@ -372,7 +372,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="cllibrese" name="cllibres" maxlength="12" />
+                                                  <input type="text" class="form-control" id="cllibree" name="cllibre" maxlength="12" />
                                                 </div>
                                           </div>
 

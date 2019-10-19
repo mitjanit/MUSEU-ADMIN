@@ -27,7 +27,16 @@ $detallsaltre1 = (addslashes($_REQUEST['detallsaltre1']));
 $altre2 = (addslashes($_REQUEST['altre2']));
 $detallsaltre2 = (addslashes($_REQUEST['detallsaltre2']));
 
-$sql ="INSERT INTO document_entitat (id_entitat, temporada, document, continguts, premsa, altres, foto, entrevista, reportatge, cartell, llibre, video, altre1, altre2, detalls, fotod, entrevistad, reportatged, cartelld, llibred, videod, altre1d, altre2d) VALUES ('".$id."', '".$temporada."', '".$document."', '".$continguts."', '".$premsa."', '".$altres."', '".$fotos."', '".$entrevista."', '".$reportatge."', '".$cartell."', '".$llibre."', '".$video."', '".$altre1."', '".$altre2."', '".$detalls."', '".$detallsfotos."', '".$detallsentrevista."', '".$detallsreportatge."', '".$detallscartell."', '".$detallsllibre."', '".$detallsvideo."', '".$detallsaltre1."', '".$detallsaltre2."')";
+$cfoto = (addslashes($_REQUEST['cfoto']));
+$centrevista = (addslashes($_REQUEST['centrevista']));
+$creportatge = (addslashes($_REQUEST['creportatge']));
+$ccartell = (addslashes($_REQUEST['ccartell']));
+$cllibre = (addslashes($_REQUEST['cllibre']));
+$cvideo = (addslashes($_REQUEST['cvideo']));
+$caltre1 = (addslashes($_REQUEST['caltre1']));
+$caltre2 = (addslashes($_REQUEST['caltre2']));
+
+$sql ="INSERT INTO document_entitat (id_entitat, temporada, document, continguts, premsa, altres, foto, entrevista, reportatge, cartell, llibre, video, altre1, altre2, detalls, fotod, entrevistad, reportatged, cartelld, llibred, videod, altre1d, altre2d, cfoto, centrevista, creportatge, ccartell, cllibre, cvideo, caltre1, caltre2) VALUES ('".$id."', '".$temporada."', '".$document."', '".$continguts."', '".$premsa."', '".$altres."', '".$fotos."', '".$entrevista."', '".$reportatge."', '".$cartell."', '".$llibre."', '".$video."', '".$altre1."', '".$altre2."', '".$detalls."', '".$detallsfotos."', '".$detallsentrevista."', '".$detallsreportatge."', '".$detallscartell."', '".$detallsllibre."', '".$detallsvideo."', '".$detallsaltre1."', '".$detallsaltre2."', '".$cfoto."', '".$centrevista."', '".$creportatge."', '".$ccartell."', '".$cllibre."', '".$cvideo."', '".$caltre1."', '".$caltre2."')";
 echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 

@@ -28,7 +28,15 @@ $detallsaltre2 = (addslashes($_REQUEST['detallsaltre2']));
 $altre3 = (addslashes($_REQUEST['altre3']));
 $detallsaltre3 = (addslashes($_REQUEST['detallsaltre3']));
 
-$sql ="UPDATE document_persona SET id_club='".$vinculat."', temporada =  '".$temporada."', document = '".$document."', continguts = '".$continguts."', premsa = '".$premsa."', altres = '".$altres."', fitxa = '".$fitxa."', foto = '".$fotos."', entrevista = '".$entrevista."', reportatge =  '".$reportatge."', altre1 =  '".$altre1."', altre2 = '".$altre2."', altre3 = '".$altre3."', detalls = '".$detalls."', fitxad = '".$detallsfitxa."', fotod = '".$detallsfotos."', entrevistad = '".$detallsentrevista."', reportatged = '".$detallsreportatge."', altre1d = '".$detallsaltre1."', altre2d = '".$detallsaltre2."', altre3d = '".$detallsaltre3."' WHERE id='".$id."'";
+$cfitxa = (addslashes($_REQUEST['cfitxa']));
+$cfoto = (addslashes($_REQUEST['cfoto']));
+$centrevista = (addslashes($_REQUEST['centrevista']));
+$creportatge = (addslashes($_REQUEST['creportatge']));
+$caltre1 = (addslashes($_REQUEST['caltre1']));
+$caltre2 = (addslashes($_REQUEST['caltre2']));
+$caltre3 = (addslashes($_REQUEST['caltre3']));
+
+$sql ="UPDATE document_persona SET id_club='".$vinculat."', temporada =  '".$temporada."', document = '".$document."', continguts = '".$continguts."', premsa = '".$premsa."', altres = '".$altres."', fitxa = '".$fitxa."', foto = '".$fotos."', entrevista = '".$entrevista."', reportatge =  '".$reportatge."', altre1 =  '".$altre1."', altre2 = '".$altre2."', altre3 = '".$altre3."', detalls = '".$detalls."', fitxad = '".$detallsfitxa."', fotod = '".$detallsfotos."', entrevistad = '".$detallsentrevista."', reportatged = '".$detallsreportatge."', altre1d = '".$detallsaltre1."', altre2d = '".$detallsaltre2."', altre3d = '".$detallsaltre3."', cfitxa = '".$cfitxa."', cfoto = '".$cfoto."', centrevista = '".$centrevista."', creportatge = '".$creportatge."', caltre1 = '".$caltre1."', caltre2 = '".$caltre2."', caltre3 = '".$caltre3."' WHERE id='".$id."'";
 echo $sql."<br/>";
 mysqli_query($con01, $sql) or die(mysqli_error());
 

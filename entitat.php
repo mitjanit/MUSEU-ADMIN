@@ -215,7 +215,14 @@
                                   <th class="none">Detalls Videos</th>
                                   <th class="none">Detalls Altre 1</th>
                                   <th class="none">Detalls Altre 2</th>
-                                  
+                                  <th class="none">Codi Foto</th>
+                                  <th class="none">Codi Entrevista</th>
+                                  <th class="none">Codi Reportage</th>
+                                  <th class="none">Codi Cartel</th>
+                                  <th class="none">Codi Llibre</th>
+                                  <th class="none">Codi Video</th>
+                                  <th class="none">Codi Altre 1</th>
+                                  <th class="none">Codi Altre 2</th>
                               </tr>
                           </thead>
                           <tbody><?php
@@ -250,6 +257,14 @@
                                   <td><?php echo ($row['videod']); ?></td>
                                   <td><?php echo ($row['altre1d']); ?></td>
                                   <td><?php echo ($row['altre2d']); ?></td>
+                                  <td><?php echo ($row['cfoto']); ?></td>
+                                  <td><?php echo ($row['centrevista']); ?></td>
+                                  <td><?php echo ($row['creportatge']); ?></td>
+                                  <td><?php echo ($row['ccartell']); ?></td>
+                                  <td><?php echo ($row['cllibre']); ?></td>
+                                  <td><?php echo ($row['cvideo']); ?></td>
+                                  <td><?php echo ($row['caltre1']); ?></td>
+                                  <td><?php echo ($row['caltre2']); ?></td>
                                 </tr>
                                 <?php
                                     }
@@ -969,6 +984,14 @@
             $('#detallsvideoe').val(data[0][21]);
             $('#detallsaltre1e').val(data[0][22]);
             $('#detallsaltre2e').val(data[0][23]);
+            $('#cfotoe').val(data[0][24]);
+            $('#centrevistae').val(data[0][25]);
+            $('#creportatgee').val(data[0][26]);
+            $('#ccartelle').val(data[0][27]);
+            $('#cllibree').val(data[0][28]);
+            $('#cvideoe').val(data[0][29]);
+            $('#caltre1e').val(data[0][30]);
+            $('#caltre2e').val(data[0][31]);
 
             
           }
