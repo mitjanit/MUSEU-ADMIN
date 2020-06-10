@@ -9,6 +9,7 @@
                   </button>
                 </div>
                 <form role="form" name="modalFormNewRelat" id="modalFormNewRelat" class="new-relat-validation" novalidate action="db/altaRelat.php" method="get">
+                  <input type="hidden" name="relats" id="relats" />
                   <div id="newBody" class="modal-body">
                       <div class="row mb-4">
                           <!-- row 0 -->
