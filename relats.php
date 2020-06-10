@@ -248,7 +248,7 @@ $nomTaula = "Relats";
                         return $(this).text()==data[0][4];
                     }).prop('selected', true);
 
-                    $('#relate').attr("value", data[0][5]);
+                    $('#relate').html(data[0][5]);
                 }
 
 
