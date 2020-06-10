@@ -263,6 +263,7 @@ $nomTaula = "Relats";
                           "<p><b> Role: </b>"+data[0][2]+".</p>"+
                           "<p><b> Temporada: </b>"+data[0][3]+".</p>");
                   $('#deleteBodyRelat').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
+                  $('#deleteBodyRelat').append('<input type="hidden" name="idp" id="idp" value="'+data[0][1]+'" />');
                 }
 
               $('#deleteMessageRelat').html(txt);

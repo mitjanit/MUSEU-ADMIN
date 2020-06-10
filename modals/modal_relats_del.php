@@ -10,8 +10,7 @@
                   </button>
                 </div>
                 <form role="form" name="modalFormDeleteRelat" id="modalFormDeleteRelat" action="db/deleteRelat.php" method="get">
-                    <input type="hidden" name="id" id="idrelatd" />
-                    <input type="hidden" id="idp" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
+                    <input type="hidden" name="relats" id="relats" />
                     <div id="deleteBodyRelat" class="modal-body">
                         <p id="deleteMessageRelat"></p>
                     </div>
