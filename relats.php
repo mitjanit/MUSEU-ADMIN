@@ -123,9 +123,9 @@ $nomTaula = "Relats";
 
   <?php include 'modals/modal_ok.php'; ?>
 
-  <?php include 'modals/modal_relat_new.php'; ?>
-  <?php include 'modals/modal_relat_edit.php'; ?>
-  <?php include 'modals/modal_relat_del.php'; ?>
+  <?php include 'modals/modal_relats_new.php'; ?>
+  <?php include 'modals/modal_relats_edit.php'; ?>
+  <?php include 'modals/modal_relats_del.php'; ?>
 
   <?php include("common/end.php") ?>
 
@@ -196,7 +196,7 @@ $nomTaula = "Relats";
         });
 
 
-        // Editar Tipus Activitat
+        // Editar Relat
 
         $(".btn-edit").click(function() {
 
@@ -207,7 +207,7 @@ $nomTaula = "Relats";
 
                 var numSelected = table.rows( { selected: true }).count();
                 if(numSelected==0) {
-                    var txt = $('<b>ERROR: No has seleccionat cap càrrec per editar.</b>');
+                    var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
                     $('#editMessage').html(txt);
                 }
                 else {
@@ -236,7 +236,7 @@ $nomTaula = "Relats";
         });
 
 
-        // Eliminar Tipus Activitat
+        // Eliminar Relat
 
         $(".btn[data-target='#myDeleteModal']").click(function() {
 
@@ -246,11 +246,11 @@ $nomTaula = "Relats";
                 var numSelected = table.rows( { selected: true }).count();
                 var txt;
                 if(numSelected==0) {
-                  txt = $('<b>ERROR: No has seleccionat cap càrrec per eliminar.</b>');}
+                  txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
                 else { 
-                  txt = $("<p><b>Vols esborrar les dades del càrrec?</b></br/> "+
-                          "<p><b> Càrrec: </b>"+data[0][1]+".</p>"+
-                          "<p><b> Descripció: </b>"+data[0][2]+".</p>");
+                  txt = $("<p><b>Vols esborrar les dades del relat?</b></br/> "+
+                          "<p><b> ID: </b>"+data[0][1]+".</p>"+
+                          "<p><b> Persona: </b>"+data[0][2]+".</p>");
                   $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
