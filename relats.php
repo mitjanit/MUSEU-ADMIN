@@ -68,7 +68,7 @@ $nomTaula = "Relats";
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT c.id as id, p.nom_esportiu as persona, c.role as role, c.temporada as temporada, e.nom as vinculat, c.comentari as comentari FROM caixo_persona as c, persones as p, clubs as e WHERE c.id_persona=p.id AND c.club=e.id ORDER BY id ASC";
+                        $query_rsGrups = "SELECT c.id as id, p.nom_esportiu as persona, c.role as role, c.temporada as temporada, e.nom_esportiu as vinculat, c.comentari as comentari FROM caixo_persona as c, persones as p, clubs as e WHERE c.id_persona=p.id AND c.club=e.id ORDER BY id ASC";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>
