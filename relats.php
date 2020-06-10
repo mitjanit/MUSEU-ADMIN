@@ -67,7 +67,7 @@ $nomTaula = "Relats";
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT c.id as id, p.id as id_persona, c.role as role, c.temporada as temporada, c.comentari as comentari FROM caixo_persona as c, persona as p WHERE c.id_persona=p.id ORDER BY id ASC";
+                        $query_rsGrups = "SELECT c.id as id, p.id as id_persona, c.role as role, c.temporada as temporada, c.comentari as comentari FROM caixo_persona as c, persones as p WHERE c.id_persona=p.id ORDER BY id ASC";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>
