@@ -258,8 +258,10 @@ $nomTaula = "Relats";
                   txt = $('<b>ERROR: No has seleccionat cap relat per eliminar.</b>');}
                 else { 
                   txt = $("<p><b>Vols esborrar les dades del relat?</b></br/> "+
-                          "<p><b> ID: </b>"+data[0][1]+".</p>"+
-                          "<p><b> Persona: </b>"+data[0][2]+".</p>");
+                          "<p><b> ID: </b>"+data[0][0]+".</p>"+
+                          "<p><b> Persona: </b>"+data[0][1]+".</p>"+
+                          "<p><b> Role: </b>"+data[0][2]+".</p>"+
+                          "<p><b> Temporada: </b>"+data[0][3]+".</p>");
                   $('#deleteBodyRelat').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
