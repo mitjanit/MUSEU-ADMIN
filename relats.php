@@ -271,8 +271,8 @@ $nomTaula = "Relats";
                 
           });
 
-          $('#btnDelete').click(function() {
-            $('form[name="modalFormDelete"]').submit();
+          $('#btnDeleteRelat').click(function() {
+            $('form[name="modalFormDeleteRelat"]').submit();
           });
 
 
