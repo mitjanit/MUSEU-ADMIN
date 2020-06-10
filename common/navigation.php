@@ -53,6 +53,7 @@
             <a class="collapse-item" href="persones.php">Persones</a>
             <a class="collapse-item" href="carrecs.php">Càrrecs</a>
             <a class="collapse-item" href="demarcacions.php">Demarcacions</a>
+            <a class="collapse-item" href="relats.php">Relats</a>
           </div>
         </div>
       </li>
