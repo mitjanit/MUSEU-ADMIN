@@ -67,14 +67,21 @@ $nomTaula = "Relats";
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT c.id as id, p.id as id_persona, c.role as role, c.temporada as temporada, c.comentari as comentari FROM caixo_persona as c, persones as p WHERE c.id_persona=p.id ORDER BY id ASC";
+                        $query_rsGrups = "SELECT c.id as id, p.nom_esportiu as persona, c.role as role, c.temporada as temporada, c.comentari as comentari FROM caixo_persona as c, persones as p WHERE c.id_persona=p.id ORDER BY id ASC";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo ($row['id_persona']); ?></td>
-                            <td><?php echo ($row['role']); ?></td>
+                            <td><?php echo ($row['persona']); ?></td>
+                            <td><?php 
+                                if($row['role']=="J"){
+                                  echo "Jugador";
+                                }
+                                else if($row['role']=="E"){
+                                  echo "Entrenador";
+                                }
+                                ?></td>
                             <td><?php echo ($row['temporada']); ?></td>
                             <td><?php echo ($row['comentari']); ?></td>
                         </tr>
