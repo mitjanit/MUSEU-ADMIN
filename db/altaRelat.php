@@ -5,7 +5,7 @@
 
 $id = (addslashes($_REQUEST['id']));
 $idp = $_REQUEST['idp'];
-$role = $_REQUEST['role'];
+$role = $_REQUEST['rolen'];
 $temporada = (addslashes($_REQUEST['temporada']));
 $club = $_REQUEST['club'];
 $relat = (addslashes($_REQUEST['relat']));
