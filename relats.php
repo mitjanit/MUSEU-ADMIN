@@ -260,10 +260,10 @@ $nomTaula = "Relats";
                   txt = $("<p><b>Vols esborrar les dades del relat?</b></br/> "+
                           "<p><b> ID: </b>"+data[0][1]+".</p>"+
                           "<p><b> Persona: </b>"+data[0][2]+".</p>");
-                  $('#deleteBody').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
+                  $('#deleteBodyRelat').append('<input type="hidden" name="id" id="id" value="'+data[0][0]+'" />');
                 }
 
-              $('#deleteMessage').html(txt);
+              $('#deleteMessageRelat').html(txt);
 
                 
           });
