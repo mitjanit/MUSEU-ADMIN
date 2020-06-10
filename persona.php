@@ -2368,27 +2368,27 @@ $nomTaula = "Persona";
     // Modal NEW Relat 
     $(".btn-new-relatJugador").click(function() {
         $('.infoRelat').html("Jugador");
-        $('#role').val("J"); 
+        $('#rolen').val("J"); 
     });
 
     $(".btn-new-relatEntrenador").click(function() {
         $('.infoRelat').html("Entrenador");
-        $('#role').val("E"); 
+        $('#rolen').val("E"); 
     });
 
     $(".btn-new-relatArbit").click(function() {
         $('.infoRelat').html("Arbit");
-        $('#role').val("A"); 
+        $('#rolen').val("A"); 
     });
 
     $(".btn-new-relatDirectiu").click(function() {
         $('.infoRelat').html("Directiu");
-        $('#role').val("D"); 
+        $('#rolen').val("D"); 
     });
 
     $(".btn-new-relatAltre").click(function() {
         $('.infoRelat').html("Altre Càrrec");
-        $('#role').val("O"); 
+        $('#rolen').val("O"); 
     });
 
     // End Modal NEW Relat
