@@ -240,8 +240,8 @@ $nomTaula = "Relats";
         });
 
         $('#btnEdit').click(function() {
-            $('form[name="modalFormEdit"]').validator();
-            $('form[name="modalFormEdit"]').submit();
+            $('form[name="modalFormEditRelat"]').validator();
+            $('form[name="modalFormEditRelat"]').submit();
         });
 
 

@@ -9,6 +9,7 @@
                   </button>
                 </div>
                 <form role="form" name="modalFormEditRelat" id="modalFormEditRelat" class="edit-relat-validation" novalidate action="db/editaRelat.php" method="get">
+                  <input type="hidden" name="relats" id="relats" />
                   <input type="hidden" id="rolee" name="role" />
                   <input type="hidden" id="idpe" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
