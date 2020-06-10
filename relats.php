@@ -81,6 +81,15 @@ $nomTaula = "Relats";
                                 else if($row['role']=="E"){
                                   echo "Entrenador";
                                 }
+                                else if($row['role']=="D"){
+                                  echo "Directiu";
+                                }
+                                else if($row['role']=="A"){
+                                  echo "Arbit";
+                                }
+                                else if($row['role']=="O"){
+                                  echo "Altre";
+                                }
                                 ?></td>
                             <td><?php echo ($row['temporada']); ?></td>
                             <td><?php echo ($row['comentari']); ?></td>
