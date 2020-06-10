@@ -217,12 +217,12 @@ $nomTaula = "Relats";
                 var numSelected = table.rows( { selected: true }).count();
                 if(numSelected==0) {
                     var txt = $('<b>ERROR: No has seleccionat cap relat per editar.</b>');
-                    $('#editMessage').html(txt);
+                    $('#editMessageRelat').html(txt);
                 }
                 else {
                     var txt = $('<b></b>');
                     esEditable = true;
-                    $('#editMessage').html(txt);
+                    $('#editMessageRelat').html(txt);
                 }
 
                 if(esEditable){
