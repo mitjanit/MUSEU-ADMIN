@@ -9,8 +9,6 @@
                   </button>
                 </div>
                 <form role="form" name="modalFormNewRelat" id="modalFormNewRelat" class="new-relat-validation" novalidate action="db/altaRelat.php" method="get">
-                  <input type="hidden" id="rolen" name="rolen" value="" />
-                  <input type="hidden" id="idp" name="idp" value="<?php echo $_REQUEST['id']; ?>" />
                   <div id="newBody" class="modal-body">
                       <div class="row mb-4">
                           <!-- row 0 -->
@@ -34,7 +32,7 @@
                                       <i class="fa fa-info-circle"></i>
                                     </div>
                                   </div>
-                                  <select class="form-control" id="clubjn" name="club" required>
+                                  <select class="form-control" id="idp" name="idp" required>
                                     <option value=""></option>
                                     <?php
                                       $query = "SELECT * FROM persones ORDER BY nom_esportiu ASC";
