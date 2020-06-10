@@ -67,7 +67,7 @@ $nomTaula = "Relats";
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT * FROM caixo_persona ORDER BY nom ASC";
+                        $query_rsGrups = "SELECT * FROM caixo_persona ORDER BY id ASC";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>
