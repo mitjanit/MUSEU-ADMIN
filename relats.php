@@ -62,12 +62,13 @@ $nomTaula = "Relats";
                       <th>Persona</th>
                       <th>Role</th>
                       <th>Temporada</th>
+                      <th>Vinculat</th>
                       <th>Comentari</th>
                     </tr>
                   </thead>
                   <tbody>
                         <?php 
-                        $query_rsGrups = "SELECT c.id as id, p.nom_esportiu as persona, c.role as role, c.temporada as temporada, c.comentari as comentari FROM caixo_persona as c, persones as p WHERE c.id_persona=p.id ORDER BY id ASC";
+                        $query_rsGrups = "SELECT c.id as id, p.nom_esportiu as persona, c.role as role, c.temporada as temporada, e.nom as vinculat, c.comentari as comentari FROM caixo_persona as c, persones as p, clubs as e WHERE c.id_persona=p.id AND c.club=e.id ORDER BY id ASC";
                         $rs = mysqli_query($con01, $query_rsGrups) or die("Error: ".mysqli_error($con01));
                         while ($row = mysqli_fetch_array($rs)){
                         ?>
@@ -92,6 +93,7 @@ $nomTaula = "Relats";
                                 }
                                 ?></td>
                             <td><?php echo ($row['temporada']); ?></td>
+                            <td><?php echo ($row['vinculat']); ?></td>
                             <td><?php echo ($row['comentari']); ?></td>
                         </tr>
                         <?php 
@@ -227,13 +229,18 @@ $nomTaula = "Relats";
 
                 if(esEditable){
 
-                    $('#e0').attr("value", data[0][0]);
-                    $('#e1').attr("value", data[0][1]);
-                    // Directiu selected option
-                    $('#e2 option').filter(function(){
-                        return $(this).text()==data[0][3];
+                    $('#ide').attr("value", data[0][0]);
+                    // Person selected option
+                    $('#idpe option').filter(function(){
+                        return $(this).text()==data[0][1];
                     }).prop('selected', true);
-                    $('#e3').attr("value", data[0][2]);
+                    // Role
+                    $('#rolee option').filter(function(){
+                        return $(this).text()==data[0][2];
+                    }).prop('selected', true);
+
+                    $('#temporadae').attr("value", data[0][3]);
+                    $('#temporadae').attr("value", data[0][4]);
                 }
 
 
