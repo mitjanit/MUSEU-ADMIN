@@ -14,7 +14,7 @@
                   <div id="newBody" class="modal-body">
                       <div class="row mb-4">
                           <!-- row 0 -->
-                          <div class=" col-md-2">
+                          <div class=" col-md-1">
                               <label for="registre">Identificador:</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -38,7 +38,28 @@
                               </div>
                           </div>
 
-                          <div class=" col-md-3">
+                          <div class=" col-md-2">
+                              <label for="nome">Role (*):</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <div class="input-group-text">
+                                        <i class="fa fa-info-circle"></i>
+                                      </div>
+                                    </div>
+                                    <select class="form-control" name="rolen" id="rolen" required  />
+                                      <option value="J">Jugador</option>
+                                      <option value="E">Entrenador</option>
+                                      <option value="A">Arbit</option>
+                                      <option value="D">Directiu</option>
+                                      <option value="O">Altre</option>
+                                  </select>
+                                    <div class="invalid-feedback">
+                                      <i class="fas fa-exclamation-circle"></i> Camp obligatori.
+                                    </div>
+                                  </div>
+                          </div>
+
+                          <div class=" col-md-2">
                               <label for="nome">Temporada (*):</label>
                                   <div class="input-group">
                                     <div class="input-group-prepend">
