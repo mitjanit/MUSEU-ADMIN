@@ -45,8 +45,8 @@ $nomTaula = "Relats";
                     <?php if($_SESSION['role']=="A" || $_SESSION['role']=="E") { ?>
                       <div class="btn-group"  role="group">
                           <button type="button" class="btn btn-primary btn-new" data-toggle="modal" data-target="#myNewModalRelat"><i class="fas fa-plus-circle"></i> Alta</button>
-                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-edit"></i> Edita</button>
-                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModal"><i class="fas fa-minus-circle"></i> Elimina</button>
+                          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#myEditModalRelat"><i class="fa fa-edit"></i> Edita</button>
+                          <button type="button" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#myDeleteModalRelat"><i class="fas fa-minus-circle"></i> Elimina</button>
                       </div>
                     <?php } ?>
                   </div>
