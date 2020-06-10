@@ -24,7 +24,7 @@
                                           <i class="fa fa-info-circle"></i>
                                         </div>
                                     </div>
-                                    <input readonly type="text" name="id" class="form-control" id="ide" placeholder="Identificador" />
+                                    <input readonly type="text" name="id" class="form-control" id="e0" />
                                 </div>
                           </div>
 
