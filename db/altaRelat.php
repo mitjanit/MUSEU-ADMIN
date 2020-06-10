@@ -24,10 +24,10 @@ echo $sqlLog."<br/>";
 mysqli_query($con01, $sqlLog) or die(mysqli_error());
 
 if(isset($_REQUEST['relats'])){
-	header("Location: ../persona.php?id=".$idp."&msgOk",TRUE, 302);
+	header("Location: ../relats.php?msgOk",TRUE, 302);
 }
 else {
-	header("Location: ../relats.php?msgOk",TRUE, 302);
+	header("Location: ../persona.php?id=".$idp."&msgOk",TRUE, 302);
 }
 exit;
 
