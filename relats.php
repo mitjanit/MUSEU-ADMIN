@@ -247,7 +247,7 @@ $nomTaula = "Relats";
 
         // Eliminar Relat
 
-        $(".btn[data-target='#myDeleteModal']").click(function() {
+        $(".btn[data-target='#myDeleteModalRelat']").click(function() {
 
                 var table = $('#dt').DataTable();
                 var data=table.rows( { selected: true }).data();
