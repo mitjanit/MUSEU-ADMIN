@@ -16,8 +16,8 @@
                       <p id="editMessageRelat"></p>
                       <div class="row mb-2">
                           <!-- row 0 -->
-                          <div class=" col-md-2">
-                              <label for="registre">Identificador:</label>
+                          <div class=" col-md-1">
+                              <label for="registre">Id:</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">

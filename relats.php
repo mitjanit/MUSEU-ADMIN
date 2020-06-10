@@ -230,17 +230,25 @@ $nomTaula = "Relats";
                 if(esEditable){
 
                     $('#ide').attr("value", data[0][0]);
-                    // Person selected option
+                    
+                    // Persona selected option
                     $('#idpe option').filter(function(){
                         return $(this).text()==data[0][1];
                     }).prop('selected', true);
+                    
                     // Role
                     $('#rolee option').filter(function(){
                         return $(this).text()==data[0][2];
                     }).prop('selected', true);
 
                     $('#temporadae').attr("value", data[0][3]);
-                    $('#temporadae').attr("value", data[0][4]);
+                    
+                    //Vinculat
+                    $('#clube option').filter(function(){
+                        return $(this).text()==data[0][4];
+                    }).prop('selected', true);
+
+                    $('#relate').attr("value", data[0][5]);
                 }
 
 
