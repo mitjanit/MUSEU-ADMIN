@@ -244,6 +244,7 @@ $nomTaula = "Relats";
                     $('#temporadae').attr("value", data[0][3]);
                     
                     //Vinculat
+                    alert(data[0][4]);
                     $('#clube option').filter(function(){
                         return $(this).text()==data[0][4];
                     }).prop('selected', true);
