@@ -27,15 +27,27 @@
                           </div>
 
                           <div class=" col-md-4">
-                            <label for="jugador"><span class="infoRelat"></span>:</label>
-                              <div class="input-group">
-                                <div class="input-group-prepend">
+                                <label for="nom">Persona (*):</label>
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
                                     <div class="input-group-text">
                                       <i class="fa fa-info-circle"></i>
                                     </div>
+                                  </div>
+                                  <select class="form-control" id="clubjn" name="club" required>
+                                    <option value=""></option>
+                                    <?php
+                                      $query = "SELECT * FROM persones ORDER BY nom_esportiu ASC";
+                                      $rs = mysqli_query($con01, $query) or die("Error: ".mysqli_error($con01));
+                                      while ($row = mysqli_fetch_array($rs)){
+                                        echo "<option value='".$row['id']."'>".($row['nom_esportiu'])."</option>";
+                                      }
+                                    ?>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                    <i class="fas fa-exclamation-circle"></i> Camp obligatori.
+                                  </div>
                                 </div>
-                                <input readonly type="text" name="persona" class="form-control" id="entrenador" value="<?php echo $nomComplet; ?>" />
-                              </div>
                           </div>
 
                           <div class=" col-md-2">
