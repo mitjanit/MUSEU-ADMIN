@@ -58,7 +58,7 @@
                                         <i class="fa fa-info-circle"></i>
                                       </div>
                                     </div>
-                                    <select class="form-control" name="rolee" id="rolee" required  />
+                                    <select class="form-control" name="role" id="rolee" required  />
                                       <option value="J">Jugador</option>
                                       <option value="E">Entrenador</option>
                                       <option value="A">Arbit</option>
