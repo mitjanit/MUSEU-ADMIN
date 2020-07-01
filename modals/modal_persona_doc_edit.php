@@ -204,7 +204,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="cfitxade" name="cfitxa" maxlength="12" />
+                                                  <input type="text" class="form-control" id="cfitxade" name="cfitxa" maxlength="50" />
                                                 </div>
                                           </div>
 
@@ -251,7 +251,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="cfotode" name="cfoto" maxlength="12" />
+                                                  <input type="text" class="form-control" id="cfotode" name="cfoto" maxlength="50" />
                                                 </div>
                                           </div>
 
@@ -298,7 +298,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="centrevistade" name="centrevista" maxlength="12" />
+                                                  <input type="text" class="form-control" id="centrevistade" name="centrevista" maxlength="50" />
                                                 </div>
                                           </div>
 
@@ -345,7 +345,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="creportatgede" name="creportatge" maxlength="12" />
+                                                  <input type="text" class="form-control" id="creportatgede" name="creportatge" maxlength="50" />
                                                 </div>
                                           </div>
 
@@ -468,7 +468,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="caltre1de" name="caltre1" maxlength="12" />
+                                                  <input type="text" class="form-control" id="caltre1de" name="caltre1" maxlength="50" />
                                                 </div>
                                           </div>
 
@@ -516,7 +516,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="caltre2de" name="caltre2" maxlength="12" />
+                                                  <input type="text" class="form-control" id="caltre2de" name="caltre2" maxlength="50" />
                                                 </div>
                                           </div>
 
@@ -563,7 +563,7 @@
                                                       <i class="fa fa-info-circle"></i>
                                                     </div>
                                                   </div>
-                                                  <input type="text" class="form-control" id="caltre3de" name="caltre3" maxlength="12" />
+                                                  <input type="text" class="form-control" id="caltre3de" name="caltre3" maxlength="50" />
                                                 </div>
                                           </div>
 
